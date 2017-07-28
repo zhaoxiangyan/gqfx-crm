@@ -1,0 +1,263 @@
+<template>
+<div id="wrapper">
+		<nav class="navbar-default navbar-static-side" role="navigation">
+			<div class="sidebar-collapse">
+				<ul class="nav metismenu skin-3" id="side-menu">
+					<li class="nav-header">
+						<div class="dropdown profile-element"><span><img src="../assets/img/logo-w.png" class="img-responsive"></span>
+							<span class="block m-t-xs text-white"> <strong class="font-bold">Admin user name</strong></span>
+						</div>
+						<div class="logo-element">
+							GQ
+						</div>
+					</li>
+					<li class="active">
+						<a href="index.html"><i class="fa fa-th-large"></i> <span class="nav-label">Dashboard</span></a>
+					</li>
+					<li>
+						<a href="client/index.html"><i class="fa fa-users"></i> <span class="nav-label">Client</span></a>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-snowflake-o"></i> <span class="nav-label">Manage</span><span class="fa arrow"></span></a>
+						<ul class="nav nav-second-level collapse">
+							<li><a href="manage/account.html">Account Opening</a></li>
+							<li><a href="manage/deposit.html">Deposit</a></li>
+							<li><a href="manage/withdrawal.html">Withdrawal</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="infomation/index.html"><i class="fa fa-flag"></i> <span class="nav-label">infomation</span></a>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-puzzle-piece "></i> <span class="nav-label">Campaign</span><span class="fa arrow"></span></a>
+						<ul class="nav nav-second-level collapse">
+							<li><a href="campaign/bonus.html">Bonus</a></li>
+							<li><a href="campaign/bonuslog.html">Bonus Log</a></li>
+							<li><a href="campaign/point.html">Point</a></li>
+							<li><a href="campaign/list.html">Campaign List</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="inquery/index.html"><i class="fa fa-inbox"></i> <span class="nav-label">Inquery</span></a>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">Report</span><span class="fa arrow"></span></a>
+						<ul class="nav nav-second-level collapse">
+							<li><a href="report/history.html">Transaction History</a></li>
+							<li><a href="report/result.html">Transaction Result</a></li>
+							<li><a href="report/commission.html">Commission</a></li>
+							<li><a href="report/d-w.html">Deposit Withdrawal</a></li>
+							<li><a href="report/volume.html">Transaction Volume</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-pie-chart"></i> <span class="nav-label">IB Management</span><span class="fa arrow"></span></a>
+						<ul class="nav nav-second-level collapse">
+							<li><a href="ib/rank.html">Rank Request</a></li>
+							<li><a href="ib/data.html">IB Data</a></li>
+							<li><a href="ib/scheme.html">Commission Scheme</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-envelope"></i> <span class="nav-label">Mail</span><span class="fa arrow"></span></a>
+						<ul class="nav nav-second-level collapse">
+							<li><a href="mail/stepmail.html">Step Mail</a></li>
+							<li><a href="mail/maillog.html">Mail Log</a></li>
+							<li><a href="mail/trigger.html">Trigger Mail</a></li>
+							<li><a href="mail/template.html">Mail Template</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="media/index.html"><i class="fa fa-photo"></i> <span class="nav-label">Media Library</span></a>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-cogs"></i> <span class="nav-label">System Settings</span><span class="fa arrow"></span></a>
+						<ul class="nav nav-second-level collapse">
+							<li><a href="system/user.html">Admin User</a></li>
+							<li><a href="system/role.html">System Role</a></li>
+							<li><a href="system/level.html">Client Level</a></li>
+							<li><a href="system/rank.html">Ranks</a></li>
+							<li><a href="system/account-group.html">Account Group</a></li>
+							<li><a href="system/d-w.html">D/W Settings</a></li>
+							<li><a href="system/email-profile.html">Email Profile</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<div id="page-wrapper" class="gray-bg">
+			<div class="row border-bottom">
+				<nav class="navbar navbar-static-top white-bg" role="navigation" style="margin-bottom: 0">
+					<div class="navbar-header">
+						<a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+					</div>
+					<ul class="nav navbar-top-links navbar-right">
+						<li>
+							<span class="m-r-sm text-muted welcome-message">Welcome to GQFX Admin.</span>
+						</li>
+						<li class="dropdown">
+							<a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+								<i class="fa fa-envelope"></i> <span class="label label-warning">12</span>
+							</a>
+							<ul class="dropdown-menu dropdown-messages">
+								<li>
+									<div class="dropdown-messages-box">
+										<div>
+											<small class="pull-right">20m ago</small>
+											<strong>Mike Loreipsum started following Monica Smith</strong>.
+											<br>
+											<small class="text-muted">11:37 - 2017-03-05</small>
+										</div>
+									</div>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<div class="dropdown-messages-box">
+										<div>
+											<small class="pull-right">1h ago</small>
+											<strong>Chris Johnatan Overtunk started following Monica Smith</strong>.
+											<br>
+											<small class="text-muted">10:30 - 2017-03-05</small>
+										</div>
+									</div>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<div class="dropdown-messages-box">
+										<div>
+											<small class="pull-right">2h ago</small>
+											<strong>Monica Smith love Kim Smith</strong>.
+											<br>
+											<small class="text-muted">10:30 - 2017-03-05</small>
+										</div>
+									</div>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<div class="dropdown-messages-box">
+										<div>
+											<small class="pull-right">3h ago</small>
+											<strong>Monica Smith love Kim Smith</strong>.
+											<br>
+											<small class="text-muted">10:30 - 2017-03-05</small>
+										</div>
+									</div>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<div class="dropdown-messages-box">
+										<div>
+											<small class="pull-right">10h ago</small>
+											<strong>Monica Smith love Kim Smith</strong>.
+											<br>
+											<small class="text-muted">10:30 - 2017-03-05</small>
+										</div>
+									</div>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<div class="text-center link-block">
+										<a href="inquery/index.html">
+											<i class="fa fa-envelope"></i> <strong>Read All Messages</strong>
+										</a>
+									</div>
+								</li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+								<i class="fa fa-bell"></i>  <span class="label label-primary">8</span>
+							</a>
+							<ul class="dropdown-menu dropdown-alerts">
+								<li>
+									<a href="manage/withdrawal.html">
+										<div>
+											<i class="fa fa-suitcase fa-fw"></i> Withdrawal Request
+											<span class="pull-right badge badge-danger m-t-xs">15</span>
+										</div>
+									</a>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<a href="manage/account.html">
+										<div>
+											<i class="fa fa-address-card-o fa-fw"></i> Document Request
+											<span class="pull-right badge badge-success m-t-xs">15</span>
+										</div>
+									</a>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<a href="ib/rank.html">
+										<div>
+											<i class="fa fa-pie-chart fa-fw"></i> Rank Request
+											<span class="pull-right badge badge-info m-t-xs">2</span>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+								<img src="../assets/img/flags/16/United-Kingdom.png" alt="EN">
+							</a>
+							<ul class="dropdown-menu">
+								<li>
+									<a class="btn active"><img src="../assets/img/flags/16/United-Kingdom.png" alt="EN"> English</a>
+								</li>
+								<li>
+									<a class="btn"><img src="../assets/img/flags/16/china.png"> Chinese</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="login.html">
+								<i class="fa fa-sign-out"></i> Log out
+							</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+			
+			<div class="wrapper wrapper-content">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="ibox float-e-margins">
+							<div class="ibox-title">
+								<h5>Alerts</h5>
+							</div>
+							<div class="ibox-content">
+								<h3>Alert 1</h3>
+								<button class="btn btn-primary btn-sm alert-save">Save Changes</button>
+								<h3>Alert 2</h3>
+								<button class="btn btn-default btn-sm alert-delete"><i class="fa fa-trash"></i></button>
+								<button class="btn btn-default btn-sm alert-delete text-danger"><i class="fa fa-trash"></i> Delete</button>
+								<h3>Alert 3</h3>
+								<button class="btn btn-danger btn-sm alert-error">Error</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<div class="footer">
+				<div>
+					<strong>Copyright</strong> GQ capital &copy; 2017
+				</div>
+			</div>
+		</div>
+	</div>
+
+</template>
+<script>
+import Sweetalert from '../assets/js/plugins/sweetalert/sweetalert.min.js'
+export default {
+    name: 'alerts',
+    components: {
+       Sweetalert
+    } 
+}
+</script>
+<style scoped>
+@import '../assets/css/plugins/sweetalert/sweetalert.css';
+</style>
