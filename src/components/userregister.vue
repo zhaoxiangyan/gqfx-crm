@@ -33,10 +33,7 @@
                                     <a href="#" role="menuitem"><img src="../assets/English.png" alt="..." > English</a>
                                 </li>
                                 <li role="presentation">
-                                    <a href="#" role="menuitem" ><img src="../assets/China.png" alt="..." > 中文简体</a>
-                                </li>
-                                <li role="presentation" >
-                                    <a href="#" role="menuitem"><img src="../assets/Japan.png" alt="..." > 日本语</a>
+                                    <router-link to="/cn/userregister" role="menuitem" ><img src="../assets/China.png" alt="..." > 中文简体</router-link>
                                 </li>
                             </ul>
                         </li>

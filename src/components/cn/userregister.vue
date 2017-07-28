@@ -4,7 +4,7 @@
    <div class="nav">
        <div class="nav_header" v-bind:class="[ collapsestate ? '' : 'width90']">
            <div class="nav_brand">
-              <img class="nav_brand_logo" src="../../assets/logo.png" >
+              <img class="nav_brand_logo" src="../../assets/logo-w.png" >
            </div>
        </div>
        <div class="nav_container clearfixx" v-bind:class="[ collapsestate ? '' : 'margin-left90']">
@@ -15,8 +15,8 @@
                <li class="dropdown">
                   <a id="toggleQuick" @click="togglestate=!togglestate">快捷导航<i class="fa fa-angle-down"></i></a>
                   <span v-show="togglestate">
-                        <div><i class="fa fa-angle-right"></i><router-link to="/userlogin">登录</router-link></div>
-                        <div><i class="fa fa-angle-right"></i><router-link to="/userregister">注册</router-link></div>
+                        <div><i class="fa fa-angle-right"></i><router-link to="/cn/userlogin">登录</router-link></div>
+                        <div><i class="fa fa-angle-right"></i><router-link to="/cn/userregister">注册</router-link></div>
                   </span>
                </li>
             </ul>
@@ -30,13 +30,10 @@
                             </a>
                             <ul class="dropdown-menu" role="menu">
                                 <li role="presentation">
-                                    <a href="#" role="menuitem" onclick="setLanguage('cn')"><img src="../../assets/China.png" alt="..." > 中文简体</a>
+                                    <a href="#" role="menuitem" ><img src="../../assets/China.png" alt="..." > 中文简体</a>
                                 </li>
-                                <li role="presentation" onclick="setLanguage('tk')">
-                                    <a href="#" role="menuitem"><img src="../../assets/Japan.png" alt="..." > 日本语</a>
-                                </li>
-                                <li role="presentation" onclick="setLanguage('en')">
-                                    <a href="#" role="menuitem"><img src="../../assets/English.png" alt="..." > English</a>
+                                <li role="presentation" >
+                                    <router-link to="/userregister" role="menuitem"><img src="../../assets/English.png" alt="..." > English</router-link>
                                 </li>
                             </ul>
                         </li>
@@ -315,7 +312,7 @@ ul,li{
                 float: left;
                 height: 66px;
                 img{height: 42px;
-                    margin:12px 0 0 19px;}
+                    margin:12px 0 0 11px;}
             }
         }
         .nav_container{
