@@ -364,7 +364,8 @@
 									</div>
 								</div>
 								<div class="ibox-content p-xs">
-									<div id="donut-chart"></div>
+									<!-- <div id="donut-chart"></div> -->
+									<donut-chart id="donut" :data="donutData" colors='["#ff6384","#36a2eb","#ffce56"]' resize="true"></donut-chart>
 								</div>
 							</div>
 						</div>
@@ -379,31 +380,39 @@
 			</div> 
 </template>
 <script>
-import '../../assets/css/plugins/morris/morris-0.4.3.min.css';
+// import '../../assets/css/plugins/morris/morris-0.4.3.min.css';
 // import Raphael from '../../assets/js/plugins/morris/raphael.js'
-import Morri from '../../assets/js/plugins/morris/morris.js'
-
+// import Morri from '../../assets/js/plugins/morris/morris.js'
+import Raphael from 'raphael/raphael'
+global.Raphael = Raphael
+import {DonutChart} from 'vue-morris'
 export default {
     name: 'index',
     data () {
       return {
-     
+         donutData:[
+			 {label:'Trader',value:20125},
+			 {label:'IB',value: 2587},
+			 {label:'MIB',value:151},
+			 {label:'PIB',value:36}
+		 ]
       }
     },
     components: {
-    //   Raphael,
-	  Morri
+      Raphael,
+	//   Morri
+	   DonutChart
     },
     mounted: function(){
-		Morris.Donut({
-			element: 'donut-chart',
-			data: [{ label: "Trader", value: 20125 },
-					{ label: "IB", value: 2587 },
-					{ label: "MIB", value: 151 },
-					{ label: "PIB", value: 36 } ],
-			resize: true,
-			colors: ['#87d6c6', '#54cdb4','#1ab394'],
-		});
+		// Morris.Donut({
+		// 	element: 'donut-chart',
+		// 	data: [{ label: "Trader", value: 20125 },
+		// 			{ label: "IB", value: 2587 },
+		// 			{ label: "MIB", value: 151 },
+		// 			{ label: "PIB", value: 36 } ],
+		// 	resize: true,
+		// 	colors: ['#87d6c6', '#54cdb4','#1ab394'],
+		// });
 		$('.collapse-link').on('click', function () {
 		    var ibox = $(this).closest('div.ibox');
 		    var button = $(this).find('i');
