@@ -364,8 +364,7 @@
 									</div>
 								</div>
 								<div class="ibox-content p-xs">
-									<!-- <div id="donut-chart"></div> -->
-									<donut-chart id="donut" :data="donutData" colors='["#ff6384","#36a2eb","#ffce56"]' resize="true"></donut-chart>
+									<donut-chart id="donut" :data="donutData" colors='["#ff6384","#36a2eb","#ffce56","#000"]' ></donut-chart>
 								</div>
 							</div>
 						</div>
@@ -395,24 +394,15 @@ export default {
 			 {label:'IB',value: 2587},
 			 {label:'MIB',value:151},
 			 {label:'PIB',value:36}
+			//  resize:true 设置自动调整大小会报错冲突
 		 ]
       }
     },
     components: {
-      Raphael,
-	//   Morri
+       Raphael,
 	   DonutChart
     },
     mounted: function(){
-		// Morris.Donut({
-		// 	element: 'donut-chart',
-		// 	data: [{ label: "Trader", value: 20125 },
-		// 			{ label: "IB", value: 2587 },
-		// 			{ label: "MIB", value: 151 },
-		// 			{ label: "PIB", value: 36 } ],
-		// 	resize: true,
-		// 	colors: ['#87d6c6', '#54cdb4','#1ab394'],
-		// });
 		$('.collapse-link').on('click', function () {
 		    var ibox = $(this).closest('div.ibox');
 		    var button = $(this).find('i');
@@ -421,7 +411,8 @@ export default {
 		    button.toggleClass('fa-chevron-up').toggleClass('fa-chevron-down');
 		    ibox.toggleClass('').toggleClass('border-bottom');
 		    setTimeout(function () {
-		        ibox.resize();
+		        ibox.resize();    
+				// 会报错-->raphael
 		        ibox.find('[id^=map-]').resize();
 		    }, 50);
 		});

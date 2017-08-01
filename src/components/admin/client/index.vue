@@ -160,15 +160,34 @@
 								<div class="row">
 									<div class="col-sm-3">
 										<label>Signup Date</label>
-										<div class="form-group"><input name="daterange" class="form-control" type="text"></div>
+										<div class="form-group">
+										   <div class="input-group">
+											 <input class="form-control" type="text" data-provide="datepicker">
+											 <div class="input-group-addon" style="border-right:0;">to</div>
+											 <input class="form-control" type="text" data-provide="datepicker">
+										  </div>  
+										<!--  <input name="daterange" class="form-control" type="text"> -->
+										</div>
 									</div>
 									<div class="col-sm-3">
 										<label>Last Login</label>
-										<div class="form-group"><input name="daterange" class="form-control" type="text"></div>
+										<div class="form-group">
+										   <div class="input-group">
+											 <input class="form-control" type="text" data-provide="datepicker">
+											 <div class="input-group-addon" style="border-right:0;">to</div>
+											 <input class="form-control" type="text" data-provide="datepicker">
+										  </div> 
+										</div>
 									</div>
 									<div class="col-sm-3">
 										<label>Last Deposit Date</label>
-										<div class="form-group"><input name="daterange" class="form-control" type="text"></div>
+										<div class="form-group">
+										   <div class="input-group">
+											 <input class="form-control" type="text" data-provide="datepicker">
+											 <div class="input-group-addon" style="border-right:0;">to</div>
+											 <input class="form-control" type="text" data-provide="datepicker">
+										  </div> 
+										</div>
 									</div>
 									<div class="col-sm-3">
 										<label>Male/Female</label>
@@ -1405,13 +1424,15 @@
 </div>    	
 </template>
 <script>
-import '../../../assets/css/plugins/daterangepicker/daterangepicker-bs3.css'
+// import '../../../assets/css/plugins/daterangepicker/daterangepicker-bs3.css'
 import '../../../assets/css/plugins/datapicker/datepicker3.css'
 import '../../../assets/css/plugins/footable/footable.core.css'
 import '../../../assets/css/plugins/select/bootstrap-select.css'
-import '../../../assets/css/plugins/jasny/jasny-bootstrap.min.css'
+// import '../../../assets/css/plugins/jasny/jasny-bootstrap.min.css'
 
-import Jasny from '../../../assets/js/plugins/jasny/jasny-bootstrap.min.js'
+// import Mom from '../../../assets/js/plugins/fullcalendar/moment.min.js'
+// import  Dat from '../../../assets/js/plugins/daterangepicker/daterangepicker.js'  
+// import Jasny from '../../../assets/js/plugins/jasny/jasny-bootstrap.min.js'
 // import Select from '../../assets/js/plugins/select/bootstrap-select.min.js'
 import Footable from '../../../assets/js/plugins/footable/footable.all.min.js'
 import Datepicker from '../../../assets/js/plugins/datapicker/bootstrap-datepicker.js'
@@ -1419,7 +1440,9 @@ import Datepicker from '../../../assets/js/plugins/datapicker/bootstrap-datepick
 export default {
     name: 'client-index',
 	components:{
-       Jasny,
+		// Mom,
+		// Dat,
+    //    Jasny,
     //    Select,
        Footable,
        Datepicker
@@ -1432,25 +1455,22 @@ export default {
 					tablet: 1024
 				}
 		});
-        $('input[name="daterange"]').daterangepicker({
-				timePicker: false,
-		});
         $('.datepicker').datepicker({
 			format: 'yyyy/dd/mm',
 			startDate: '-3d'
 		});
 		$('.collapse-link').on('click', function () {
-		    var ibox = $(this).closest('div.ibox');
-		    var button = $(this).find('i');
-		    var content = ibox.find('div.ibox-content');
-		    content.slideToggle(200);
-		    button.toggleClass('fa-chevron-up').toggleClass('fa-chevron-down');
-		    ibox.toggleClass('').toggleClass('border-bottom');
-		    setTimeout(function () {
-		        ibox.resize();
-		        ibox.find('[id^=map-]').resize();
-		    }, 50);
-		});
+			var ibox = $(this).closest('div.ibox');
+			var button = $(this).find('i');
+			var content = ibox.find('div.ibox-content');
+			content.slideToggle(200);
+			button.toggleClass('fa-chevron-up').toggleClass('fa-chevron-down');
+			ibox.toggleClass('').toggleClass('border-bottom');
+			setTimeout(function () {
+				ibox.resize();
+				ibox.find('[id^=map-]').resize();
+			}, 50);
+        });
     }
 }
 </script>

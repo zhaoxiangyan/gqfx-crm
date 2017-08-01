@@ -6,20 +6,26 @@ import router from './router'
 // import ElementUI from 'element-ui'
 // import 'element-ui/lib/theme-default/index.css'
 
-
+import $ from 'jquery'
+// import jQuery from 'jquery'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/js/bootstrap.min.js'
 import 'font-awesome/css/font-awesome.min.css'
 import 'animate.css/animate.css'
-import './assets/css/style.css'
-// import Cta from 'cta'
 
-import Bootstrap from './assets/js/bootstrap.min.js'
-import Menu from './assets/js/plugins/metisMenu/jquery.metisMenu.js'
+// import Cta from 'cta'
+import 'summernote/dist/summernote.css'
+import 'summernote/dist/summernote.js'
+import 'summernote/dist/lang/summernote-zh-CN.js'
+
+
+// import Bootstrap from './assets/js/bootstrap.min.js'
+// import Menu from './assets/js/plugins/metisMenu/jquery.metisMenu.js'
 import Slimscroll from './assets/js/plugins/slimscroll/jquery.slimscroll.min.js'
-import Custum from './assets/js/custum.js'
+
 import Pace from './assets/js/plugins/pace/pace.min.js'
 import Validate from './assets/js/jquery.validate.min.js'
-import Morris from './assets/js/plugins/morris/morris.js'
+// import Morris from './assets/js/plugins/morris/morris.js'
 // import Lightbox from './assets/js/plugins/lightbox/lightbox.min.js'
 Vue.config.productionTip = false
 // Vue.use(ElementUI)
@@ -27,15 +33,16 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
+  $,
   // jQuery,
-  Bootstrap,
-  Menu,
+  // Bootstrap,
+  // Menu,
   Slimscroll,
   // Cta,
   // Custum,
   // Pace,
   Validate,
-  Morris,
+  // Morris,
   // Lightbox,
   template: '<App/>',
   components: { App }

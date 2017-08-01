@@ -5,12 +5,17 @@
 </template>
 
 <script>
+import Custum from './assets/js/custum.js'
 export default {
-  name: 'app'
+  name: 'app',
+  components: {
+    Custum
+  }
 }
 </script>
 
 <style>
+@import './assets/css/style.css';
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

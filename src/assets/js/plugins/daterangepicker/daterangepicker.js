@@ -1293,8 +1293,17 @@
 
     };
 
-    $.fn.daterangepicker = function (options, cb) {
-        this.each(function () {
+    // $.fn.daterangepicker = function (options, cb) {
+    //     this.each(function () {
+    //         var el = $(this);
+    //         if (el.data('daterangepicker'))
+    //             el.data('daterangepicker').remove();
+    //         el.data('daterangepicker', new DateRangePicker(el, options, cb));
+    //     });
+    //     return this;
+    // };
+    $.fn.daterangepicker=function(options,cb){
+                   this.each(function () {
             var el = $(this);
             if (el.data('daterangepicker'))
                 el.data('daterangepicker').remove();

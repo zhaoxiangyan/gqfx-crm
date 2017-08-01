@@ -46,10 +46,10 @@ export default new Router({
         //     path: '/admin/agent/statistics',
         //     component: resolve => require(['../components/admin/agent/statistics.vue'], resolve)
         // }, 
-        // {
-        //     path: '/admin/approval/account',
-        //     component: resolve => require(['../components/admin/approval/account.vue'], resolve)
-        // }, 
+        {
+            path: '/admin/approval/account',
+            component: resolve => require(['../components/admin/approval/account.vue'], resolve)
+        }, 
         // {
         //     path: '/admin/approval/deposit',
         //     component: resolve => require(['../components/admin/approval/deposit.vue'], resolve)
@@ -74,10 +74,10 @@ export default new Router({
         //     path: '/admin/campaign/list-edit',
         //     component: resolve => require(['../components/admin/campaign/list-edit.vue'], resolve)
         // }, 
-        // {
-        //     path: '/admin/campaign/list-new',
-        //     component: resolve => require(['../components/admin/campaign/list-new.vue'], resolve)
-        // }, 
+        {
+            path: '/admin/campaign/list-new',
+            component: resolve => require(['../components/admin/campaign/list-new.vue'], resolve)
+        }, 
         // {
         //     path: '/admin/campaign/list',
         //     component: resolve => require(['../components/admin/campaign/list.vue'], resolve)
@@ -89,7 +89,7 @@ export default new Router({
         {
             path: '/admin/client/index',
             component: resolve => require(['../components/admin/client/index.vue'], resolve)
-        }       
+        },       
         // {
         //     path: '/admin/client/edit',
         //     component: resolve => require(['../components/admin/client/edit.vue'], resolve)
@@ -138,10 +138,10 @@ export default new Router({
         //     path: '/admin/mail/template-edit',
         //     component: resolve => require(['../components/admin/mail/template-edit.vue'], resolve)
         // },
-        // {
-        //     path: '/admin/mail/template-new',
-        //     component: resolve => require(['../components/admin/mail/template-new.vue'], resolve)
-        // },
+        {
+            path: '/admin/mail/template-new',
+            component: resolve => require(['../components/admin/mail/template-new.vue'], resolve)
+        }
         // {
         //     path: '/admin/mail/template',
         //     component: resolve => require(['../components/admin/mail/template.vue'], resolve)

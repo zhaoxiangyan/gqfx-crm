@@ -92,8 +92,13 @@
 </div>
 </template>
 <script>
+// import MetisMenu from '../../assets/js/plugins/metisMenu/jquery.metisMenu.js'
+import MetisMenu from 'metismenu'
 export default {
     name: 'sidebar',
+	components: {
+      MetisMenu
+	},
 	mounted: function(){
           $('#side-menu').metisMenu();
 	}
