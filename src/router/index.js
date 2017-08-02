@@ -34,42 +34,42 @@ export default new Router({
             path: '/',
             component: resolve => require(['../components/admin/index.vue'], resolve)
         },
-        // {
-        //     path: '/admin/agent/relationship',
-        //     component: resolve => require(['../components/admin/agent/relationship.vue'], resolve)
-        // },
-        // {
-        //     path: '/admin/agent/scheme',
-        //     component: resolve => require(['../components/admin/agent/scheme.vue'], resolve)
-        // },  
-        // {
-        //     path: '/admin/agent/statistics',
-        //     component: resolve => require(['../components/admin/agent/statistics.vue'], resolve)
-        // }, 
+        {
+            path: '/admin/agent/relationship',
+            component: resolve => require(['../components/admin/agent/relationship.vue'], resolve)
+        },
+        {
+            path: '/admin/agent/scheme',
+            component: resolve => require(['../components/admin/agent/scheme.vue'], resolve)
+        },  
+        {
+            path: '/admin/agent/statistics',
+            component: resolve => require(['../components/admin/agent/statistics.vue'], resolve)
+        }, 
         {
             path: '/admin/approval/account',
             component: resolve => require(['../components/admin/approval/account.vue'], resolve)
         }, 
-        // {
-        //     path: '/admin/approval/deposit',
-        //     component: resolve => require(['../components/admin/approval/deposit.vue'], resolve)
-        // }, 
-        // {
-        //     path: '/admin/approval/rank',
-        //     component: resolve => require(['../components/admin/approval/rank.vue'], resolve)
-        // }, 
-        // {
-        //     path: '/admin/approval/withdrawal',
-        //     component: resolve => require(['../components/admin/approval/withdrawal.vue'], resolve)
-        // },       
-        // {
-        //     path: '/admin/campaign/bonus',
-        //     component: resolve => require(['../components/admin/campaign/bonus.vue'], resolve)
-        // }, 
-        // {
-        //     path: '/admin/campaign/bonuslog',
-        //     component: resolve => require(['../components/admin/campaign/bonuslog.vue'], resolve)
-        // }, 
+        {
+            path: '/admin/approval/deposit',
+            component: resolve => require(['../components/admin/approval/deposit.vue'], resolve)
+        }, 
+        {
+            path: '/admin/approval/rank',
+            component: resolve => require(['../components/admin/approval/rank.vue'], resolve)
+        }, 
+        {
+            path: '/admin/approval/withdrawal',
+            component: resolve => require(['../components/admin/approval/withdrawal.vue'], resolve)
+        },       
+        {
+            path: '/admin/campaign/bonus',
+            component: resolve => require(['../components/admin/campaign/bonus.vue'], resolve)
+        }, 
+        {
+            path: '/admin/campaign/bonuslog',
+            component: resolve => require(['../components/admin/campaign/bonuslog.vue'], resolve)
+        }, 
         // {
         //     path: '/admin/campaign/list-edit',
         //     component: resolve => require(['../components/admin/campaign/list-edit.vue'], resolve)
@@ -78,14 +78,14 @@ export default new Router({
             path: '/admin/campaign/list-new',
             component: resolve => require(['../components/admin/campaign/list-new.vue'], resolve)
         }, 
-        // {
-        //     path: '/admin/campaign/list',
-        //     component: resolve => require(['../components/admin/campaign/list.vue'], resolve)
-        // }, 
-        // {
-        //     path: '/admin/campaign/point',
-        //     component: resolve => require(['../components/admin/campaign/point.vue'], resolve)
-        // }, 
+        {
+            path: '/admin/campaign/list',
+            component: resolve => require(['../components/admin/campaign/list.vue'], resolve)
+        }, 
+        {
+            path: '/admin/campaign/point',
+            component: resolve => require(['../components/admin/campaign/point.vue'], resolve)
+        }, 
         {
             path: '/admin/client/index',
             component: resolve => require(['../components/admin/client/index.vue'], resolve)
@@ -106,18 +106,18 @@ export default new Router({
         //     path: '/admin/infomation/info-new',
         //     component: resolve => require(['../components/admin/infomation/info-new.vue'], resolve)
         // },      
-        // {
-        //     path: '/admin/infomation/index',
-        //     component: resolve => require(['../components/admin/infomation/index.vue'], resolve)
-        // },      
-        // {
-        //     path: '/admin/inquery/index',
-        //     component: resolve => require(['../components/admin/inquery/index.vue'], resolve)
-        // },                     
-        // {
-        //     path: '/admin/mail/maillog',
-        //     component: resolve => require(['../components/admin/mail/maillog.vue'], resolve)
-        // },  
+        {
+            path: '/admin/infomation/index',
+            component: resolve => require(['../components/admin/infomation/index.vue'], resolve)
+        },      
+        {
+            path: '/admin/inquery/index',
+            component: resolve => require(['../components/admin/inquery/index.vue'], resolve)
+        },                     
+        {
+            path: '/admin/mail/maillog',
+            component: resolve => require(['../components/admin/mail/maillog.vue'], resolve)
+        },  
         // {
         //     path: '/admin/mail/stepmail-edit',
         //     component: resolve => require(['../components/admin/mail/stepmail-edit.vue'], resolve)
@@ -126,10 +126,10 @@ export default new Router({
         //     path: '/admin/mail/stepmail-new',
         //     component: resolve => require(['../components/admin/mail/stepmail-new.vue'], resolve)
         // },
-        // {
-        //     path: '/admin/mail/stepmail',
-        //     component: resolve => require(['../components/admin/mail/stepmail.vue'], resolve)
-        // },
+        {
+            path: '/admin/mail/stepmail',
+            component: resolve => require(['../components/admin/mail/stepmail.vue'], resolve)
+        },
         // {
         //     path: '/admin/mail/template-css',
         //     component: resolve => require(['../components/admin/mail/template-css.vue'], resolve)
@@ -141,19 +141,19 @@ export default new Router({
         {
             path: '/admin/mail/template-new',
             component: resolve => require(['../components/admin/mail/template-new.vue'], resolve)
-        }
-        // {
-        //     path: '/admin/mail/template',
-        //     component: resolve => require(['../components/admin/mail/template.vue'], resolve)
-        // },
+        },
+        {
+            path: '/admin/mail/template',
+            component: resolve => require(['../components/admin/mail/template.vue'], resolve)
+        },
         // {
         //     path: '/admin/mail/trigger-edit',
         //     component: resolve => require(['../components/admin/mail/trigger-edit.vue'], resolve)
         // },
-        // {
-        //     path: '/admin/mail/trigger',
-        //     component: resolve => require(['../components/admin/mail/trigger.vue'], resolve)
-        // },  
+        {
+            path: '/admin/mail/trigger',
+            component: resolve => require(['../components/admin/mail/trigger.vue'], resolve)
+        },  
         // {
         //     path: '/admin/mail/email-templates/01',
         //     component: resolve => require(['../components/admin/mail/email-templates/01.vue'], resolve)
@@ -166,78 +166,78 @@ export default new Router({
         //     path: '/admin/mail/email-templates/03',
         //     component: resolve => require(['../components/admin/mail/email-templates/03'], resolve)
         // }, 
-        // {
-        //     path: '/admin/media/index',
-        //     component: resolve => require(['../components/admin/media/index.vue'], resolve)
-        // },
-        // {
-        //      path: '/admin/report/commission',
-        //      component: resolve => require(['../components/admin/report/commission.vue'], resolve)
-        // },
-        // {
-        //      path: '/admin/report/deposit',
-        //      component: resolve => require(['../components/admin/report/deposit.vue'], resolve)
-        // },
-        // {
-        //      path: '/admin/report/history',
-        //      component: resolve => require(['../components/admin/report/history.vue'], resolve)
-        // },
-        // {
-        //      path: '/admin/report/ranking',
-        //      component: resolve => require(['../components/admin/report/ranking.vue'], resolve)
-        // },
-        // {
-        //      path: '/admin/report/summary',
-        //      component: resolve => require(['../components/admin/report/summary.vue'], resolve)
-        // },
-        // {
-        //      path: '/admin/report/transfer',
-        //      component: resolve => require(['../components/admin/report/transfer.vue'], resolve)
-        // },
-        // {
-        //      path: '/admin/report/volume',
-        //      component: resolve => require(['../components/admin/report/volume.vue'], resolve)
-        // },
-        // {
-        //      path: '/admin/report/withdrawal',
-        //      component: resolve => require(['../components/admin/report/withdrawal.vue'], resolve)
-        // },
-        // {
-        //      path: '/admin/system/account-group',
-        //      component: resolve => require(['../components/admin/system/account-group.vue'], resolve)
-        // },
-        // {
-        //      path: '/admin/system/d-w',
-        //      component: resolve => require(['../components/admin/system/d-w.vue'], resolve)
-        // },
-        // {
-        //      path: '/admin/system/demo',
-        //      component: resolve => require(['../components/admin/system/demo.vue'], resolve)
-        // },
-        // {
-        //      path: '/admin/system/eamil-profile',
-        //      component: resolve => require(['../components/admin/system/email-profile.vue'], resolve)
-        // },
-        // {
-        //      path: '/admin/system/level',
-        //      component: resolve => require(['../components/admin/system/level.vue'], resolve)
-        // },
-        // {
-        //      path: '/admin/system/rank',
-        //      component: resolve => require(['../components/admin/system/rank.vue'], resolve)
-        // },
-        // {
-        //      path: '/admin/system/rate',
-        //      component: resolve => require(['../components/admin/system/rate.vue'], resolve)
-        // },
-        // {
-        //      path: '/admin/system/role',
-        //      component: resolve => require(['../components/admin/system/role.vue'], resolve)
-        // },
-        // {
-        //      path: '/admin/system/user',
-        //      component: resolve => require(['../components/admin/system/user.vue'], resolve)
-        // }
+        {
+            path: '/admin/media/index',
+            component: resolve => require(['../components/admin/media/index.vue'], resolve)
+        },
+        {
+             path: '/admin/report/commission',
+             component: resolve => require(['../components/admin/report/commission.vue'], resolve)
+        },
+        {
+             path: '/admin/report/deposit',
+             component: resolve => require(['../components/admin/report/deposit.vue'], resolve)
+        },
+        {
+             path: '/admin/report/history',
+             component: resolve => require(['../components/admin/report/history.vue'], resolve)
+        },
+        {
+             path: '/admin/report/ranking',
+             component: resolve => require(['../components/admin/report/ranking.vue'], resolve)
+        },
+        {
+             path: '/admin/report/summary',
+             component: resolve => require(['../components/admin/report/summary.vue'], resolve)
+        },
+        {
+             path: '/admin/report/transfer',
+             component: resolve => require(['../components/admin/report/transfer.vue'], resolve)
+        },
+        {
+             path: '/admin/report/volume',
+             component: resolve => require(['../components/admin/report/volume.vue'], resolve)
+        },
+        {
+             path: '/admin/report/withdrawal',
+             component: resolve => require(['../components/admin/report/withdrawal.vue'], resolve)
+        },
+        {
+             path: '/admin/system/account-group',
+             component: resolve => require(['../components/admin/system/account-group.vue'], resolve)
+        },
+        {
+             path: '/admin/system/d-w',
+             component: resolve => require(['../components/admin/system/d-w.vue'], resolve)
+        },
+        {
+             path: '/admin/system/demo',
+             component: resolve => require(['../components/admin/system/demo.vue'], resolve)
+        },
+        {
+             path: '/admin/system/email-profile',
+             component: resolve => require(['../components/admin/system/email-profile.vue'], resolve)
+        },
+        {
+             path: '/admin/system/level',
+             component: resolve => require(['../components/admin/system/level.vue'], resolve)
+        },
+        {
+             path: '/admin/system/rank',
+             component: resolve => require(['../components/admin/system/rank.vue'], resolve)
+        },
+        {
+             path: '/admin/system/rate',
+             component: resolve => require(['../components/admin/system/rate.vue'], resolve)
+        },
+        {
+             path: '/admin/system/role',
+             component: resolve => require(['../components/admin/system/role.vue'], resolve)
+        },
+        {
+             path: '/admin/system/user',
+             component: resolve => require(['../components/admin/system/user.vue'], resolve)
+        }
       ]
     },
     // Trade Monitor路由地址

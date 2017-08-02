@@ -21,9 +21,10 @@ import 'summernote/dist/lang/summernote-zh-CN.js'
 
 // import Bootstrap from './assets/js/bootstrap.min.js'
 // import Menu from './assets/js/plugins/metisMenu/jquery.metisMenu.js'
-import Slimscroll from './assets/js/plugins/slimscroll/jquery.slimscroll.min.js'
+// import Slimscroll from './assets/js/plugins/slimscroll/jquery.slimscroll.min.js'
+// 暂停使用，需要时再cnpm install jquery-slimscroll
 
-import Pace from './assets/js/plugins/pace/pace.min.js'
+// import Pace from './assets/js/plugins/pace/pace.min.js'
 import Validate from './assets/js/jquery.validate.min.js'
 // import Morris from './assets/js/plugins/morris/morris.js'
 // import Lightbox from './assets/js/plugins/lightbox/lightbox.min.js'
@@ -37,7 +38,7 @@ new Vue({
   // jQuery,
   // Bootstrap,
   // Menu,
-  Slimscroll,
+  // Slimscroll,
   // Cta,
   // Custum,
   // Pace,
