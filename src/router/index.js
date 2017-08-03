@@ -4,6 +4,7 @@ import Router from 'vue-router'
 Vue.use(Router)
 
 export default new Router({
+   linkActiveClass:'active',  
   // mode: 'history',
   routes: [
     // 用户登录、用户注册、管理员登录 路由地址
