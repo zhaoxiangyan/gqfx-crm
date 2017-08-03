@@ -1,5 +1,5 @@
 <template>
-<div class=" animated fadeInRight">
+<div class=" ">
 			
 			<div class="row wrapper border-bottom white-bg page-heading">
 				<div class="col-lg-10">
@@ -8,7 +8,7 @@
 				</div>
 			</div>
 			
-			<div class="wrapper wrapper-content">
+			<div class="wrapper wrapper-content animated fadeInRight">
 				<div class="row">
 					<div class="col-lg-12">
 						<div class="ibox float-e-margins">
@@ -221,7 +221,7 @@
 				</div>
 			</div>
 			
-			<div class="wrapper wrapper-content">
+			<div class="wrapper wrapper-content animated fadeInRight">
 				<div class="row">
 					<div class="col-lg-12">
 						<div class="ibox float-e-margins">
@@ -261,11 +261,11 @@
 												<td>Default</td>
 												<td>Level-01</td>
 												<td>Trader</td>
-												<td>22001177</td>
+												<td>22001165</td>
 												<td>abcd12345@mail.com</td>
 												<td>London</td>
-												<td>2017-02-10 14:30</td>
-												<td>2017-03-10 10:51</td>
+												<td>2017-02-11 14:30</td>
+												<td>2017-03-21 10:51</td>
 												<td>Registered</td>
 												<td>Verified</td>
 												<td>
@@ -286,11 +286,11 @@
 												<td>FX-01</td>
 												<td>Level-01</td>
 												<td>Trader</td>
-												<td>22001177</td>
+												<td>22001147</td>
 												<td>testsample@qq.com</td>
 												<td>Hongkong</td>
-												<td>2017-02-10 14:30</td>
-												<td>2017-03-10 10:51</td>
+												<td>2017-02-02 14:30</td>
+												<td>2017-03-25 10:51</td>
 												<td>Registered</td>
 												<td>Pending</td>
 												<td>
@@ -311,11 +311,11 @@
 												<td>FX-01</td>
 												<td>Level-01</td>
 												<td>Trader</td>
-												<td>22001177</td>
+												<td>22001114</td>
 												<td>abcd12345@mail.com</td>
 												<td>London</td>
-												<td>2017-02-10 14:30</td>
-												<td>2017-03-10 10:51</td>
+												<td>2017-02-24 14:30</td>
+												<td>2017-03-18 10:51</td>
 												<td>Registered</td>
 												<td>Requested</td>
 												<td>
@@ -336,11 +336,11 @@
 												<td>FX-01</td>
 												<td>Level-01</td>
 												<td>Trader</td>
-												<td>22001177</td>
+												<td>22001145</td>
 												<td>abcd12345@mail.com</td>
 												<td>London</td>
-												<td>2017-02-10 14:30</td>
-												<td>2017-03-10 10:51</td>
+												<td>2017-02-18 14:30</td>
+												<td>2017-03-19 10:51</td>
 												<td>Registered</td>
 												<td>Requested</td>
 												<td>

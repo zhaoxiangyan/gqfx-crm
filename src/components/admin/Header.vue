@@ -73,9 +73,9 @@
 								<li class="divider"></li>
 								<li>
 									<div class="text-center link-block">
-										<a href="inquery/index.html">
+										<router-link to="/admin/inquery/index">
 											<i class="fa fa-envelope"></i> <strong>Read All Messages</strong>
-										</a>
+										</router-link>
 									</div>
 								</li>
 							</ul>
@@ -86,30 +86,30 @@
 							</a>
 							<ul class="dropdown-menu dropdown-alerts">
 								<li>
-									<a href="approval/withdrawal.html">
+									<router-link to="/admin/approval/withdrawal">
 										<div>
 											<i class="fa fa-suitcase fa-fw"></i> Withdrawal Request
 											<span class="pull-right badge badge-danger m-t-xs">15</span>
 										</div>
-									</a>
+									</router-link>
 								</li>
 								<li class="divider"></li>
 								<li>
-									<a href="approval/account.index.html">
+									<router-link to="/admin/approval/account">
 										<div>
 											<i class="fa fa-address-card-o fa-fw"></i> Document Request
 											<span class="pull-right badge badge-success m-t-xs">15</span>
 										</div>
-									</a>
+									</router-link>
 								</li>
 								<li class="divider"></li>
 								<li>
-									<a href="approval/rank.html">
+									<router-link to="/admin/approval/rank">
 										<div>
 											<i class="fa fa-pie-chart fa-fw"></i> Rank Request
 											<span class="pull-right badge badge-info m-t-xs">2</span>
 										</div>
-									</a>
+									</router-link>
 								</li>
 							</ul>
 						</li>
@@ -127,7 +127,7 @@
 							</ul>
 						</li>
 						<li>
-							<router-link to="/userlogin">
+							<router-link to="/adminlogin">
 								<i class="fa fa-sign-out"></i> Log out
 							</router-link>
 						</li>
@@ -169,5 +169,17 @@ export default {
 <style scoped>
 .navbar-right{
 	margin-right:0px;
+}
+.nav>li.active{
+	border-left:none;
+	background:none;
+}
+.nav>li.active>a{
+	color:#999c9c;
+}
+.dropdown-menu>.active>a{
+	color:#333;
+	color:inherit;
+	background:#fff;
 }
 </style>
