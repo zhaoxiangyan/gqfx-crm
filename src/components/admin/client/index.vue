@@ -472,22 +472,32 @@
       sortable>
     </el-table-column>
 	<el-table-column 
-	   label="Action">
+	   label="Action"
+	   width="100">
 	   <template scope="scope">
-	          <div class="btn-group">
 	            <button class="btn btn-default btn-sm text-info dropdown-toggle" data-toggle="dropdown">Actions <span class="caret"></span></button>
 				<ul class="dropdown-menu">
 					<li><a href="#" data-toggle="modal" data-target="#client"><i class="fa fa-user-circle fa-fw"></i>Cilent</a></li>
 					<li><a href="#" data-toggle="modal" data-target="#account"><i class="fa fa-cube fa-fw"></i>Account</a></li>
 					<li><a href="edit.html"><i class="fa fa-edit fa-fw"></i>Edit</a></li>
-					<li><a href="#"><span class="text-danger"><i class="fa fa-trash fa-fw"></i>Delete</span></a></li>
+					<li><a href="javascript:void(0)"><span class="text-danger"><i class="fa fa-trash fa-fw"></i>Delete</span></a></li>
 				</ul>
-			  </div>	
 	   </template>
 	</el-table-column>
   </el-table>
 </template>
 								</div>
+<template>
+<el-pagination
+      @size-change="handleSizeChange"
+      @current-change="handleCurrentChange"
+      :current-page="currentPage"
+      :page-sizes="[10, 25, 50, 100]"
+      :page-size="100"
+      layout="total, sizes, prev, pager, next "
+      :total="100">
+    </el-pagination>
+</template>
 							</div>
 							<div class="ibox-footer">
 								<p>Process search results.</p>
@@ -497,7 +507,7 @@
 									<button type="button" class="btn btn-default text-info" data-toggle="modal" data-target="#point">Point</button>
 								</div>
 								<div class="input-group col-md-4">
-									<select class="form-control">
+									<select class="form-control" style="height:34px;">
 										<option selected>Client Level</option>
 										<option>Level-01</option>
 										<option>Level-02</option>
@@ -1747,7 +1757,9 @@ export default {
 				lastLogin: '2017-08-07 17:46',
 				registration: 'Registered',
 				verification: 'Verified'	
-			}]
+			}],
+			// 分页
+			currentPage: 4
         }	
 	},
 	components:{
@@ -1766,7 +1778,14 @@ export default {
 	methods: {
 		formatter(row, column) {
            return row.address;
-        }
+        },
+		// 饿了么分页
+		handleSizeChange(val) {
+        console.log(`每页 ${val} 条`);
+		},
+		handleCurrentChange(val) {
+			console.log(`当前页: ${val}`);
+		}
 	},
     mounted: function(){
         $('.footable').footable({
@@ -1812,11 +1831,22 @@ export default {
 	width:100%;
 }
 /*底部表格样式重置*/
-.el-table th>.cell{
+.el-table .cell{
 	font-size:13px;
 	line-height:1.4;
 }
 .ibox-content tr:last-child .dropdown-menu{
 	z-index:999;
+}
+.ibox-content td .dropdown-menu{
+	top:0px;
+}
+.ibox-content tr:last-child .dropdown-menu{
+	top:-74px;
+}
+/*分页*/
+.el-pagination{
+	text-align:right;
+	padding:8px 0;
 }
 </style>

@@ -16,7 +16,7 @@
 							<div class="form-group"><label class="col-sm-2 control-label">Sent Date</label>
 								<div class="col-sm-10">
 									<div class="form-inline">
-										<div class="input-group date">
+										<!--<div class="input-group date">
 											<span class="input-group-addon"><i class="fa fa-calendar"></i></span><input class="form-control" type="text" data-provide="datepicker">
 										</div>
 										<select class="form-control">
@@ -59,7 +59,16 @@
 											<option>45</option>
 											<option>50</option>
 											<option>55</option>
-										</select>
+										</select>-->
+<template>
+    <div class="block">
+    <el-date-picker
+      v-model="value"
+      type="datetime"
+      placeholder="Select date time">
+    </el-date-picker>
+	</div>
+</template>										
 									</div>
 								</div>
 							</div>
@@ -164,11 +173,11 @@
 </template>
 <script>
 // import '../../../assets/css/plugins/daterangepicker/daterangepicker-bs3.css'
-import '../../../assets/css/plugins/datapicker/datepicker3.css'
+// import '../../../assets/css/plugins/datapicker/datepicker3.css'
 // import '../../../assets/css/plugins/summernote/summernote.css'
 import '../../../assets/css/plugins/summernote/codemirror.min.css'
 import '../../../assets/css/plugins/summernote/monokai.min.css'
-import Datepicker from '../../../assets/js/plugins/datapicker/bootstrap-datepicker.js'
+// import Datepicker from '../../../assets/js/plugins/datapicker/bootstrap-datepicker.js'
 // import Xml from '../../../assets/js/plugins/summernote/xml.min.js'
 // import Formatting from '../../../assets/js/plugins/summernote/formatting.min.js'
 // import Clipboardmin from '../../../assets/js/plugins/clipboard/clipboard.min.js'
@@ -176,8 +185,14 @@ import Clipboard from 'clipboard'
 import CodeMirror from '../../../assets/js/plugins/summernote/codemirror.min.js'
 export default {
     name: 'message',
+	props: ["value"],
+	data () {
+       return {
+		   value: ''
+	   };
+	},
 	components:{
-      Datepicker,
+    //   Datepicker,
     //   Xml,
     //   Formatting,
       Clipboard,
