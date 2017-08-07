@@ -79,7 +79,7 @@
 									<div class="col-sm-3">
 										<label>Client Level</label>
 										<div class="form-group">
-											<select class="selectpicker form-control" data-width="100%" data-size="4" multiple>
+											<select class="selectpicker form-control" data-width="100%" data-size="5" multiple>
 												<option>Level-01</option>
 												<option>Level-02</option>
 												<option>Level-03</option>
@@ -93,7 +93,7 @@
 									<div class="col-sm-3">
 										<label>Rank</label>
 										<div class="form-group">
-											<select class="selectpicker form-control" data-width="100%" data-size="5" multiple >
+											<select class="selectpicker form-control" data-width="100%" data-size="5" multiple>
 												<option>Trader</option>
 												<option>IB</option>
 												<option>MIB</option>
@@ -104,7 +104,7 @@
 									<div class="col-sm-3">
 										<label>Account Group</label>
 										<div class="form-group">
-											<select class="selectpicker form-control" data-width="100%" data-size="5" multiple >
+											<select class="selectpicker form-control" data-width="100%" data-size="5" multiple>
 												<option>Default</option>
 												<option>FX-01</option>
 												<option>FX-02</option>
@@ -228,7 +228,7 @@
 							<div class="ibox-title">
 								<h5>Total: 11,700</h5>
 								<div class="ibox-tools">
-									<a class="btn btn-xs btn-default btn-rounded" href="javascript:void(0)">CSV Download</a>
+									<a class="btn btn-xs btn-default btn-rounded" href="#">CSV Download</a>
 									<a class="collapse-link">
 										<i class="fa fa-chevron-up"></i>
 									</a>
@@ -236,22 +236,22 @@
 							</div>
 							<div class="ibox-content">
 								<div class="table-responsive">
-									<table class="footable table table-hover toggle-arrow-tiny">
+									<table class="table" data-paging="true" data-sorting="true">
 										<thead>
 											<tr>
-												<th data-toggle="true">Cilent ID</th>
-												<th data-class="expand">Name</th>
-												<th data-hide="phone">Ac.Group</th>
-												<th data-hide="phone">Client Level</th>
-												<th data-hide="phone">Rank</th>
-												<th data-hide="phone">Agent ID</th>
-												<th data-hide="phone,tablet">E-mail</th>
-												<th data-hide="phone,tablet">City</th>
-												<th data-hide="phone">Signup Date</th>
-												<th data-hide="phone,tablet">Last Login</th>
-												<th data-hide="phone,tablet">Registration</th>
-												<th data-class="expand">Verification</th>
-												<th data-class="expand">Action</th>
+												<th >Cilent ID</th>
+												<th >Name</th>
+												<th data-breakpoints="sm">Ac.Group</th>
+												<th data-breakpoints="sm">Client Level</th>
+												<th data-breakpoints="sm">Rank</th>
+												<th data-breakpoints="sm">Agent ID</th>
+												<th data-breakpoints="sm md">E-mail</th>
+												<th data-breakpoints="sm md">City</th>
+												<th data-breakpoints="sm">Signup Date</th>
+												<th data-breakpoints="sm md">Last Login</th>
+												<th data-breakpoints="sm md">Registration</th>
+												<th >Verification</th>
+												<th >Action</th>
 											</tr>
 										</thead>
 										<tbody>
@@ -356,21 +356,21 @@
 												</td>
 											</tr>
 										</tbody>
-										<tfoot>
+										<!--<tfoot>
 											<tr>
 												<td colspan="4">Showing 1 to 25 of 57 entries</td>
 												<td colspan="9">
 													<ul class="pagination pull-right"></ul>
 												</td>
 											</tr>
-										</tfoot>
+										</tfoot>-->
 									</table>
 								</div>
 							</div>
 							<div class="ibox-footer">
 								<p>Process search results.</p>
 								<div class="col-md-4">
-									<router-link to="/admin/client/message" class="btn btn-primary">Send Message</router-link>
+									<a href="message.html" class="btn btn-primary">Send Message</a>
 									<button type="button" class="btn btn-default text-info" data-toggle="modal" data-target="#bonus">Bonus</button>
 									<button type="button" class="btn btn-default text-info" data-toggle="modal" data-target="#point">Point</button>
 								</div>
@@ -1426,21 +1426,17 @@
 <script>
 // import '../../../assets/css/plugins/daterangepicker/daterangepicker-bs3.css'
 import '../../../assets/css/plugins/datapicker/datepicker3.css'
-import '../../../assets/css/plugins/footable/footable.core.css'
-// import '../../../assets/css/plugins/footable3/footable.bootstrap.min.css'
-// import '../../../assets/css/plugins/select/bootstrap-select.css'
+// import '../../../assets/css/plugins/footable/footable.core.css'
+import '../../../assets/css/plugins/footable3/footable.bootstrap.min.css'
+import '../../../assets/css/plugins/select/bootstrap-select.css'
 // import '../../../assets/css/plugins/jasny/jasny-bootstrap.min.css'
 
-// import Mom from '../../../assets/js/plugins/fullcalendar/moment.min.js'
+// import Moment from 'moment'
 // import  Dat from '../../../assets/js/plugins/daterangepicker/daterangepicker.js'  
 // import Jasny from '../../../assets/js/plugins/jasny/jasny-bootstrap.min.js'
-// import Selectt from '../../../assets/js/plugins/select/bootstrap-select.min.js'
-// import Bootstrapselect from 'bootstrap-select'
-// import 'bootstrap-select/dist/css/bootstrap-select.css'
-// import 'bootstrap-select/dist/js/i18n/defaults-es_CL.js'
-// import Multiselect from 'vue-multiselect'
-import Footable from '../../../assets/js/plugins/footable/footable.all.min.js'
-// import Footable3 from '../../../assets/js/plugins/footable3/footable.min.js'
+// import Select from '../../assets/js/plugins/select/bootstrap-select.min.js'
+// import Footable from '../../../assets/js/plugins/footable/footable.all.min.js'
+// import FooTable from '../../../assets/js/plugins/footable3/footable.js'
 import Datepicker from '../../../assets/js/plugins/datapicker/bootstrap-datepicker.js'
 // import Cta from '../../assets/js/plugins/cta/cta.min.js'
 export default {
@@ -1449,26 +1445,22 @@ export default {
 		// Mom,
 		// Dat,
     //    Jasny,
-	//    Selectt,
-    //    Bootstrapselect,
-	// Multiselect,
+    //    Select,
     //    Footable,
-	//    Footable3,
+	//    FooTable,
+	//   Moment,
        Datepicker
     //    Cta
 	},
     mounted: function(){
-        $('.footable').footable({
-				breakpoints: {
-					phone: 640,
-					tablet: 1024
-				}
+        // $('.table').footable();
+		jQuery(function($){
+          	$('.table').footable();
+        });
+        $('.datepicker').datepicker({
+			format: 'yyyy/dd/mm',
+			startDate: '-3d'
 		});
-
-        // $('.datepicker').datepicker({
-		// 	format: 'yyyy/dd/mm',
-		// 	startDate: '-3d'
-		// });
 		$('.collapse-link').on('click', function () {
 			var ibox = $(this).closest('div.ibox');
 			var button = $(this).find('i');

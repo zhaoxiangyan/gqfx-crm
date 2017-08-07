@@ -16,9 +16,12 @@ import 'animate.css/animate.css'
 // import Cta from 'cta'
 import 'summernote/dist/summernote.css'
 import 'summernote/dist/summernote.js'
-import 'summernote/dist/lang/summernote-zh-CN.js'
+// import 'summernote/dist/lang/summernote-zh-CN.js'
 
+// import Bootstrapselect from 'bootstrap-select'
+// import 'bootstrap-select/dist/css/bootstrap-select.css'
 
+// import  './assets/js/plugins/footable3/footable.js'
 // import Bootstrap from './assets/js/bootstrap.min.js'
 // import Menu from './assets/js/plugins/metisMenu/jquery.metisMenu.js'
 // import Slimscroll from './assets/js/plugins/slimscroll/jquery.slimscroll.min.js'
@@ -35,6 +38,7 @@ new Vue({
   el: '#app',
   router,
   $,
+  // FOOTABLE,
   // jQuery,
   // Bootstrap,
   // Menu,
