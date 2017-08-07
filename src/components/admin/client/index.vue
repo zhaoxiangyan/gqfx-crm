@@ -51,7 +51,7 @@
 									<div class="col-sm-3">
 										<label>Status</label>
 										<div class="form-group">
-											<select class="selectpicker form-control" data-width="100%" data-size="10" multiple>
+											<!--<select class="selectpicker form-control" data-width="100%" data-size="10" multiple>
 												<optgroup label="Registration">
 													<option>Temporary</option>
 													<option>Registered</option>
@@ -67,7 +67,22 @@
 													<option>Normal</option>
 													<option>Black List</option>
 												</optgroup>
-											</select>
+											</select>-->
+<template>
+  <el-select v-model="value1" multiple placeholder="Nothing selected"  >
+    <el-option-group
+      v-for="group in options1"
+      :key="group.label"
+      :label="group.label">
+      <el-option
+        v-for="item in group.options"
+        :key="item.value"
+        :label="item.label"
+        :value="item.value">
+      </el-option>
+    </el-option-group>
+  </el-select>
+</template>									
 										</div>
 									</div>
 									<div class="col-sm-3">
@@ -79,55 +94,61 @@
 									<div class="col-sm-3">
 										<label>Client Level</label>
 										<div class="form-group">
-											<select class="selectpicker form-control" data-width="100%" data-size="4" multiple>
-												<option>Level-01</option>
-												<option>Level-02</option>
-												<option>Level-03</option>
-												<option>Level-04</option>
-												<option>VIP-01</option>
-												<option>VIP-02</option>
-												<option>Diamond</option>
-											</select>
+<template>
+  <el-select v-model="value2" multiple placeholder="Nothing selected">
+    <el-option
+      v-for="item in options2"
+      :key="item.value"
+      :label="item.label"
+      :value="item.value">
+    </el-option>
+  </el-select>
+</template>
 										</div>
 									</div>
 									<div class="col-sm-3">
 										<label>Rank</label>
 										<div class="form-group">
-											<select class="selectpicker form-control" data-width="100%" data-size="5" multiple >
-												<option>Trader</option>
-												<option>IB</option>
-												<option>MIB</option>
-												<option>PIB</option>
-											</select>
+<template>
+  <el-select v-model="value3" multiple placeholder="Nothing selected">
+    <el-option
+      v-for="item in options3"
+      :key="item.value"
+      :label="item.label"
+      :value="item.value">
+    </el-option>
+  </el-select>
+</template>
 										</div>
 									</div>
 									<div class="col-sm-3">
 										<label>Account Group</label>
 										<div class="form-group">
-											<select class="selectpicker form-control" data-width="100%" data-size="5" multiple >
-												<option>Default</option>
-												<option>FX-01</option>
-												<option>FX-02</option>
-											</select>
+<template>
+  <el-select v-model="value4" multiple placeholder="Nothing selected">
+    <el-option
+      v-for="item in options4"
+      :key="item.value"
+      :label="item.label"
+      :value="item.value">
+    </el-option>
+  </el-select>
+</template>
 										</div>
 									</div>
 									<div class="col-sm-3">
 										<label>Month of Birth</label>
 										<div class="form-group">
-											<select class="selectpicker form-control" data-width="100%" data-size="5" multiple>
-												<option>Jan:01</option>
-												<option>Feb:02</option>
-												<option>Mar:03</option>
-												<option>Apl:04</option>
-												<option>May:05</option>
-												<option>Jun:06</option>
-												<option>Jul:07</option>
-												<option>Aug:08</option>
-												<option>Sep:09</option>
-												<option>Oct:10</option>
-												<option>Nov:11</option>
-												<option>Dec:12</option>
-											</select>
+<template>
+  <el-select v-model="value5" multiple placeholder="Nothing selected">
+    <el-option
+      v-for="item in options5"
+      :key="item.value"
+      :label="item.label"
+      :value="item.value">
+    </el-option>
+  </el-select>
+</template>
 										</div>
 									</div>
 								</div>
@@ -161,41 +182,59 @@
 									<div class="col-sm-3">
 										<label>Signup Date</label>
 										<div class="form-group">
-										   <div class="input-group">
-											 <input class="form-control" type="text" data-provide="datepicker">
-											 <div class="input-group-addon" style="border-right:0;">to</div>
-											 <input class="form-control" type="text" data-provide="datepicker">
-										  </div>  
+<template>
+  <div class="block">
+    <el-date-picker
+      v-model="value7"
+      type="daterange"
+      placeholder="Select date range">
+    </el-date-picker>
+  </div>
+</template>
 										<!--  <input name="daterange" class="form-control" type="text"> -->
 										</div>
 									</div>
 									<div class="col-sm-3">
 										<label>Last Login</label>
 										<div class="form-group">
-										   <div class="input-group">
-											 <input class="form-control" type="text" data-provide="datepicker">
-											 <div class="input-group-addon" style="border-right:0;">to</div>
-											 <input class="form-control" type="text" data-provide="datepicker">
-										  </div> 
+<template>
+  <div class="block">
+    <el-date-picker
+      v-model="value8"
+      type="daterange"
+      placeholder="Select date range">
+    </el-date-picker>
+  </div>
+</template>
 										</div>
 									</div>
 									<div class="col-sm-3">
 										<label>Last Deposit Date</label>
 										<div class="form-group">
-										   <div class="input-group">
-											 <input class="form-control" type="text" data-provide="datepicker">
-											 <div class="input-group-addon" style="border-right:0;">to</div>
-											 <input class="form-control" type="text" data-provide="datepicker">
-										  </div> 
+<template>
+  <div class="block">
+    <el-date-picker
+      v-model="value9"
+      type="daterange"
+      placeholder="Select date range">
+    </el-date-picker>
+  </div>
+</template>
 										</div>
 									</div>
 									<div class="col-sm-3">
 										<label>Male/Female</label>
 										<div class="form-group">
-											<select class="selectpicker form-control" data-width="100%" multiple>
-												<option>Male</option>
-												<option>Female</option>
-											</select>
+<template>
+  <el-select v-model="value6" multiple placeholder="Nothing selected">
+    <el-option
+      v-for="item in options6"
+      :key="item.value"
+      :label="item.label"
+      :value="item.value">
+    </el-option>
+  </el-select>
+</template>
 										</div>
 									</div>
 								</div>
@@ -236,7 +275,7 @@
 							</div>
 							<div class="ibox-content">
 								<div class="table-responsive">
-									<table class="footable table table-hover toggle-arrow-tiny">
+									<!--<table class="footable table table-hover toggle-arrow-tiny">
 										<thead>
 											<tr>
 												<th data-toggle="true">Cilent ID</th>
@@ -364,7 +403,90 @@
 												</td>
 											</tr>
 										</tfoot>
-									</table>
+									</table>-->
+<template>
+  <el-table
+    :data="tableData"
+    border
+    style="width: 100%"
+    :default-sort = "{prop: 'date', order: 'descending'}"
+    >
+    <el-table-column
+      prop="clientID"
+      label="Client ID"
+      sortable>
+    </el-table-column>
+    <el-table-column
+      prop="name"
+      label="Name"
+      sortable>
+    </el-table-column>
+    <el-table-column
+      prop="group"
+      label="Ac.Group"
+      sortable>
+    </el-table-column>
+	<el-table-column
+      prop="clientLevel"
+      label="ClientLevel"
+      sortable>
+    </el-table-column>
+    <el-table-column
+      prop="rank"
+      label="Rank"
+      sortable>
+    </el-table-column>
+    <el-table-column
+      prop="agentID"
+      label="Agent ID"
+      sortable>
+    </el-table-column>
+	<el-table-column
+      prop="email"
+      label="E-mail"
+      sortable>
+    </el-table-column>
+    <el-table-column
+      prop="city"
+      label="City"
+      sortable>
+    </el-table-column>
+    <el-table-column
+      prop="signupDate"
+      label="Signup Date"
+      sortable>
+    </el-table-column>
+	<el-table-column
+      prop="lastLogin"
+      label="Last Login"
+      sortable>
+    </el-table-column>
+    <el-table-column
+      prop="registration"
+      label="Registration"
+      sortable>
+    </el-table-column>
+    <el-table-column
+      prop="verification"
+      label="Verification"
+      sortable>
+    </el-table-column>
+	<el-table-column 
+	   label="Action">
+	   <template scope="scope">
+	          <div class="btn-group">
+	            <button class="btn btn-default btn-sm text-info dropdown-toggle" data-toggle="dropdown">Actions <span class="caret"></span></button>
+				<ul class="dropdown-menu">
+					<li><a href="#" data-toggle="modal" data-target="#client"><i class="fa fa-user-circle fa-fw"></i>Cilent</a></li>
+					<li><a href="#" data-toggle="modal" data-target="#account"><i class="fa fa-cube fa-fw"></i>Account</a></li>
+					<li><a href="edit.html"><i class="fa fa-edit fa-fw"></i>Edit</a></li>
+					<li><a href="#"><span class="text-danger"><i class="fa fa-trash fa-fw"></i>Delete</span></a></li>
+				</ul>
+			  </div>	
+	   </template>
+	</el-table-column>
+  </el-table>
+</template>
 								</div>
 							</div>
 							<div class="ibox-footer">
@@ -1425,11 +1547,12 @@
 </template>
 <script>
 // import '../../../assets/css/plugins/daterangepicker/daterangepicker-bs3.css'
-import '../../../assets/css/plugins/datapicker/datepicker3.css'
+// import '../../../assets/css/plugins/datapicker/datepicker3.css'
 import '../../../assets/css/plugins/footable/footable.core.css'
 // import '../../../assets/css/plugins/footable3/footable.bootstrap.min.css'
 // import '../../../assets/css/plugins/select/bootstrap-select.css'
 // import '../../../assets/css/plugins/jasny/jasny-bootstrap.min.css'
+import 'vue-multiselect/dist/vue-multiselect.min.css'
 
 // import Mom from '../../../assets/js/plugins/fullcalendar/moment.min.js'
 // import  Dat from '../../../assets/js/plugins/daterangepicker/daterangepicker.js'  
@@ -1438,24 +1561,212 @@ import '../../../assets/css/plugins/footable/footable.core.css'
 // import Bootstrapselect from 'bootstrap-select'
 // import 'bootstrap-select/dist/css/bootstrap-select.css'
 // import 'bootstrap-select/dist/js/i18n/defaults-es_CL.js'
-// import Multiselect from 'vue-multiselect'
+import Multiselect from 'vue-multiselect'
 import Footable from '../../../assets/js/plugins/footable/footable.all.min.js'
 // import Footable3 from '../../../assets/js/plugins/footable3/footable.min.js'
-import Datepicker from '../../../assets/js/plugins/datapicker/bootstrap-datepicker.js'
+// import Datepicker from '../../../assets/js/plugins/datapicker/bootstrap-datepicker.js'
 // import Cta from '../../assets/js/plugins/cta/cta.min.js'
+// import ElementUI from 'element-ui'
+// import 'element-ui/lib/theme-default/index.css'
+// Vue.use(ElementUI)
 export default {
     name: 'client-index',
+	data () {
+		return {
+			options1: [{
+				label: 'Registration',
+				options: [{
+					value: 'Temporary',
+					label: 'Temporary'
+				}, {
+					value: 'Registered',
+					label: 'Registered'
+				}, {
+					value: 'Unsubscribe',
+					label: 'Unsubscribe'
+				}]
+				}, {
+				label: 'Verification',
+				options: [{
+					value: 'Pending',
+					label: 'Pending'
+				}, {
+					value: 'Requested',
+					label: 'Requested'
+				}, {
+					value: 'Verified',
+					label: 'Verified'
+				}, {
+					value: 'Declined',
+					label: 'Declined'
+				}]
+			    }, {
+                label: 'Client Status',
+				options: [{
+					value: 'Normal',
+					label: 'Normal'
+				},{
+					value: 'Black List',
+					label: 'Black List'
+				}]
+				}],
+			value1: '',
+			options2: [{
+				value: 'Level-01',
+				label: 'Level-01'
+				}, {
+				value: 'Level-02',
+				label: 'Level-02'
+				}, {
+				value: 'Level-03',
+				label: 'Level-03'
+				}, {
+				value: 'Level-04',
+				label: 'Level-04'
+				}, {
+				value: 'VIP-01',
+				label: 'VIP-01'
+				}, {
+				value: 'VIP-02',
+				label: 'VIP-02'
+				}, {
+				value: 'Diamond',
+				label: 'Diamond'
+			}],
+			value2: [],
+			options3: [{
+				value: 'Trader',
+				label: 'Trader'
+				}, {
+				value: 'IB',
+				label: 'IB'
+				}, {
+				value: 'MIB',
+				label: 'MIB'
+				}, {
+				value: 'PIB',
+				label: 'PIB'
+			}],
+			value3: [],
+			options4: [{
+				value: 'Default',
+				label: 'Default'
+				}, {
+				value: 'FX-01',
+				label: 'FX-01'
+				}, {
+				value: 'FX-02',
+				label: 'FX-02'
+			}],
+			value4: [],
+			options5: [{
+				value: 'Jan:01',
+				label: 'Jan:01'
+				}, {
+				value: 'Feb:02',
+				label: 'Feb:02'
+				}, {
+				value: 'Mar:03',
+				label: 'Mar:03'
+				}, {
+				value: 'Apl:04',
+				label: 'Apl:04'
+				}, {
+				value: 'May:05',
+				label: 'May:05'
+				}, {
+				value: 'Jun:06',
+				label: 'Jun:06'
+				}, {
+				value: 'Jul:07',
+				label: 'Jul:07'
+				}, {
+				value: 'Aug:08',
+				label: 'Aug:08'
+				}, {
+				value: 'Sep:09',
+				label: 'Sep:09'
+				}, {
+				value: 'Oct:10',
+				label: 'Oct:10'
+				}, {
+				value: 'Nov:11',
+				label: 'Nov:11'
+				}, {
+				value: 'Dec:12',
+				label: 'Dec:12'
+			}],
+			value5: [],
+			options6: [{
+				value: 'Male',
+				label: 'Male'
+				}, {
+				value: 'Female',
+				label: 'Female'
+			}],
+			value6: [],
+			value7: '',
+			value8: '',
+			value9: '',
+			tableData: [{
+				clientID: '22558833',
+				name: 'Patrick Smith',
+				group: 'Default',
+				clientLevel: 'Level-01',
+				rank: 'Trader',
+				agentID: '22001177',
+				email: '987670346@qq.com',
+				city: 'Shenzhen',
+				signupDate: '2017-02-10 14:30',
+				lastLogin: '2017-08-07 17:46',
+				registration: 'Registered',
+				verification: 'Verified'
+			    },{
+				clientID: '22558833',
+				name: 'Patrick Smith',
+				group: 'Default',
+				clientLevel: 'Level-01',
+				rank: 'Trader',
+				agentID: '22001177',
+				email: '987670346@qq.com',
+				city: 'Shenzhen',
+				signupDate: '2017-02-10 14:30',
+				lastLogin: '2017-08-07 17:46',
+				registration: 'Registered',
+				verification: 'Verified'
+			    },{
+				clientID: '22558833',
+				name: 'Patrick Smith',
+				group: 'Default',
+				clientLevel: 'Level-01',
+				rank: 'Trader',
+				agentID: '22001177',
+				email: '987670346@qq.com',
+				city: 'Shenzhen',
+				signupDate: '2017-02-10 14:30',
+				lastLogin: '2017-08-07 17:46',
+				registration: 'Registered',
+				verification: 'Verified'	
+			}]
+        }	
+	},
 	components:{
 		// Mom,
 		// Dat,
     //    Jasny,
 	//    Selectt,
     //    Bootstrapselect,
-	// Multiselect,
+	Multiselect
+	// ElementUI,
     //    Footable,
 	//    Footable3,
-       Datepicker
+    //    Datepicker
     //    Cta
+	},
+	methods: {
+		formatter(row, column) {
+           return row.address;
+        }
 	},
     mounted: function(){
         $('.footable').footable({
@@ -1485,3 +1796,27 @@ export default {
     }
 }
 </script>
+<style scoped>
+/*多选select 时间范围选择 样式重置*/
+.el-select {
+	width:100%;
+}
+.el-select input{
+	height:34px;
+}
+.form-control{
+	height:36px;
+	border-color:#bfcbd9;
+}
+.el-date-editor--daterange.el-input{
+	width:100%;
+}
+/*底部表格样式重置*/
+.el-table th>.cell{
+	font-size:13px;
+	line-height:1.4;
+}
+.ibox-content tr:last-child .dropdown-menu{
+	z-index:999;
+}
+</style>
