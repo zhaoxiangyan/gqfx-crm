@@ -12,12 +12,18 @@
     import vHead from './Header.vue'
     import vSidebar from './Sidebar.vue'
     // import {mapGetters} from 'vuex'
+    import cn from 'element-ui/lib/locale/lang/zh-CN'
+    import locale from 'element-ui/lib/locale'
+    // locale.use(cn)
     export default {
       components: {
         vHead, vSidebar
       },
+      created: function(){
+          locale.use(cn);
+      },
       computed: {
-
+        //    locale.use(cn)
       }
     }
 </script>

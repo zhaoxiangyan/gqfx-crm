@@ -4,11 +4,9 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import ElementUI from 'element-ui'
-// import en from 'element-ui/lib/locale/lang/en'
-// import cn from 'element-ui/lib/locale/lang/zh-CN'
-
-import 'element-ui/lib/theme-default/index.css'
-
+// import 'element-ui/lib/theme-default/index.css'
+// 自定义element-UI主题色
+import './assets/css/element-theme/index.css'
 
 import $ from 'jquery'
 // import jQuery from 'jquery'
@@ -37,8 +35,6 @@ import Validate from './assets/js/jquery.validate.min.js'
 // import Lightbox from './assets/js/plugins/lightbox/lightbox.min.js'
 Vue.config.productionTip = false
 Vue.use(ElementUI)
-
-// locale.use(en)
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

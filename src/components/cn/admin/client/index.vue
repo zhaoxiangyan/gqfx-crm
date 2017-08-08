@@ -1,10 +1,10 @@
 <template>
-<div>
+<div class=" ">
 			
 			<div class="row wrapper border-bottom white-bg page-heading">
 				<div class="col-lg-10">
-					<h2 class="pull-left m-r-sm">Client</h2>
-					<div class="heading-tools"><a href="#" class="btn btn-sm btn-default" data-cta-target=".new" data-disable-scroll="true"><i class="fa fa-plus fa-fw"></i>New</a></div>
+					<h2 class="pull-left m-r-sm">客户</h2>
+					<div class="heading-tools"><a href="javascript:void(0)" class="btn btn-sm btn-default" @click="modalshow()"><i class="fa fa-plus fa-fw"></i>New</a></div>
 				</div>
 			</div>
 			
@@ -13,7 +13,7 @@
 					<div class="col-lg-12">
 						<div class="ibox float-e-margins">
 							<div class="ibox-title">
-								<h5>Search</h5>
+								<h5>搜索</h5>
 								<div class="ibox-tools">
 									<a class="collapse-link">
 										<i class="fa fa-chevron-up"></i>
@@ -23,35 +23,35 @@
 							<div class="ibox-content">
 								<div class="row">
 								  <div class="col-sm-3">
-										<label>Client ID</label>
+										<label>客户ID</label>
 										<div class="form-group"><input class="form-control"></div>
 									</div>
 									<div class="col-sm-3">
-										<label>Name</label>
+										<label>名字</label>
 										<div class="form-group"><input class="form-control"></div>
 									</div>
 									<div class="col-sm-3">
-										<label>MT5 Account</label>
+										<label>MT5账户</label>
 										<div class="form-group"><input class="form-control"></div>
 									</div>
 									<div class="col-sm-3">
-										<label>Phone</label>
+										<label>电话</label>
 										<div class="form-group"><input class="form-control"></div>
 									</div>
 								</div>
 								<div class="row">
 									<div class="col-sm-3">
-										<label>E-mail</label>
+										<label>电子邮件</label>
 										<div class="form-group"><input class="form-control"></div>
 									</div>
 									<div class="col-sm-3">
-										<label>Agent ID</label>
+										<label>代理人ID</label>
 										<div class="form-group"><input class="form-control"></div>
 									</div>
 									<div class="col-sm-3">
-										<label>Status</label>
+										<label>状态</label>
 										<div class="form-group">
-											<select class="selectpicker form-control" data-width="100%" data-size="10" multiple>
+											<!--<select class="selectpicker form-control" data-width="100%" data-size="10" multiple>
 												<optgroup label="Registration">
 													<option>Temporary</option>
 													<option>Registered</option>
@@ -67,91 +67,112 @@
 													<option>Normal</option>
 													<option>Black List</option>
 												</optgroup>
-											</select>
+											</select>-->
+<template>
+  <el-select v-model="value1" multiple placeholder="请选择"  >
+    <el-option-group
+      v-for="group in options1"
+      :key="group.label"
+      :label="group.label">
+      <el-option
+        v-for="item in group.options"
+        :key="item.value"
+        :label="item.label"
+        :value="item.value">
+      </el-option>
+    </el-option-group>
+  </el-select>
+</template>									
 										</div>
 									</div>
 									<div class="col-sm-3">
-										<label>National ID</label>
+										<label>身份证</label>
 										<div class="form-group"><input class="form-control"></div>
 									</div>
 								</div>
 								<div class="row">
 									<div class="col-sm-3">
-										<label>Client Level</label>
+										<label>客户等级</label>
 										<div class="form-group">
-											<select class="selectpicker form-control" data-width="100%" data-size="5" multiple>
-												<option>Level-01</option>
-												<option>Level-02</option>
-												<option>Level-03</option>
-												<option>Level-04</option>
-												<option>VIP-01</option>
-												<option>VIP-02</option>
-												<option>Diamond</option>
-											</select>
+<template>
+  <el-select v-model="value2" multiple placeholder="请选择">
+    <el-option
+      v-for="item in options2"
+      :key="item.value"
+      :label="item.label"
+      :value="item.value">
+    </el-option>
+  </el-select>
+</template>
 										</div>
 									</div>
 									<div class="col-sm-3">
-										<label>Rank</label>
+										<label>排名</label>
 										<div class="form-group">
-											<select class="selectpicker form-control" data-width="100%" data-size="5" multiple>
-												<option>Trader</option>
-												<option>IB</option>
-												<option>MIB</option>
-												<option>PIB</option>
-											</select>
+<template>
+  <el-select v-model="value3" multiple placeholder="请选择">
+    <el-option
+      v-for="item in options3"
+      :key="item.value"
+      :label="item.label"
+      :value="item.value">
+    </el-option>
+  </el-select>
+</template>
 										</div>
 									</div>
 									<div class="col-sm-3">
-										<label>Account Group</label>
+										<label>账户组</label>
 										<div class="form-group">
-											<select class="selectpicker form-control" data-width="100%" data-size="5" multiple>
-												<option>Default</option>
-												<option>FX-01</option>
-												<option>FX-02</option>
-											</select>
+<template>
+  <el-select v-model="value4" multiple placeholder="请选择">
+    <el-option
+      v-for="item in options4"
+      :key="item.value"
+      :label="item.label"
+      :value="item.value">
+    </el-option>
+  </el-select>
+</template>
 										</div>
 									</div>
 									<div class="col-sm-3">
-										<label>Month of Birth</label>
+										<label>出生月份</label>
 										<div class="form-group">
-											<select class="selectpicker form-control" data-width="100%" data-size="5" multiple>
-												<option>Jan:01</option>
-												<option>Feb:02</option>
-												<option>Mar:03</option>
-												<option>Apl:04</option>
-												<option>May:05</option>
-												<option>Jun:06</option>
-												<option>Jul:07</option>
-												<option>Aug:08</option>
-												<option>Sep:09</option>
-												<option>Oct:10</option>
-												<option>Nov:11</option>
-												<option>Dec:12</option>
-											</select>
+<template>
+  <el-select v-model="value5" multiple placeholder="请选择">
+    <el-option
+      v-for="item in options5"
+      :key="item.value"
+      :label="item.label"
+      :value="item.value">
+    </el-option>
+  </el-select>
+</template>
 										</div>
 									</div>
 								</div>
 								<div class="row">
 									<div class="col-sm-3">
-										<label>Transaction Volume</label>
+										<label>交易量</label>
 										<div class="form-group">
 										  <div class="input-group"><input class="form-control" type="text"><span class="input-group-addon no-borders">～</span><input class="form-control" type="text"></div>
 										</div>
 									</div>
 									<div class="col-sm-3">
-										<label>Transaction Balance</label>
+										<label>事务的平衡</label>
 										<div class="form-group">
 											<div class="input-group"><input class="form-control" type="text"><span class="input-group-addon no-borders">～</span><input class="form-control" type="text"></div>
 										</div>
 									</div>
 									<div class="col-sm-3">
-										<label>Commission Amount</label>
+										<label>佣金金额</label>
 										<div class="form-group">
 											<div class="input-group"><input class="form-control" type="text"><span class="input-group-addon no-borders">～</span><input class="form-control" type="text"></div>
 										</div>
 									</div>
 									<div class="col-sm-3">
-										<label>Point</label>
+										<label>点</label>
 										<div class="form-group">
 											<div class="input-group"><input class="form-control" type="text"><span class="input-group-addon no-borders">～</span><input class="form-control" type="text"></div>
 										</div>
@@ -159,35 +180,72 @@
 								</div>
 								<div class="row">
 									<div class="col-sm-3">
-										<label>Signup Date</label>
-										<div class="form-group"><input name="daterange" class="form-control" type="text"></div>
-									</div>
-									<div class="col-sm-3">
-										<label>Last Login</label>
-										<div class="form-group"><input name="daterange" class="form-control" type="text"></div>
-									</div>
-									<div class="col-sm-3">
-										<label>Last Deposit Date</label>
-										<div class="form-group"><input name="daterange" class="form-control" type="text"></div>
-									</div>
-									<div class="col-sm-3">
-										<label>Male/Female</label>
+										<label>注册日期</label>
 										<div class="form-group">
-											<select class="selectpicker form-control" data-width="100%" multiple>
-												<option>Male</option>
-												<option>Female</option>
-											</select>
+<template>
+  <div class="block">
+    <el-date-picker
+      v-model="value7"
+      type="daterange"
+      placeholder="请选择日期范围">
+    </el-date-picker>
+  </div>
+</template>
+										<!--  <input name="daterange" class="form-control" type="text"> -->
+										</div>
+									</div>
+									<div class="col-sm-3">
+										<label>最后一次登录</label>
+										<div class="form-group">
+<template>
+  <div class="block">
+    <el-date-picker
+      v-model="value8"
+      type="daterange"
+      placeholder="请选择日期范围">
+    </el-date-picker>
+  </div>
+</template>
+										</div>
+									</div>
+									<div class="col-sm-3">
+										<label>最后存款日期</label>
+										<div class="form-group">
+<template>
+  <div class="block">
+    <el-date-picker
+      v-model="value9"
+      type="daterange"
+      placeholder="请选择日期范围">
+    </el-date-picker>
+  </div>
+</template>
+										</div>
+									</div>
+									<div class="col-sm-3">
+										<label>男/女</label>
+										<div class="form-group">
+<template>
+  <el-select v-model="value6" multiple placeholder="请选择性别">
+    <el-option
+      v-for="item in options6"
+      :key="item.value"
+      :label="item.label"
+      :value="item.value">
+    </el-option>
+  </el-select>
+</template>
 										</div>
 									</div>
 								</div>
 							</div>
 							<div class="ibox-footer">
 								<div class="pull-left">
-									<button class="btn btn-primary">Search</button>
-									<button class="btn btn-default">Reset</button>
+									<button class="btn btn-primary">搜索</button>
+									<button class="btn btn-default">重置</button>
 								</div>
 								<div class="input-group input-sm pull-right">
-									<span class="input-group-addon no-borders">Show</span>
+									<span class="input-group-addon no-borders">显示</span>
 									<select class="form-control">
 										<option>10</option>
 										<option selected>25</option>
@@ -207,9 +265,9 @@
 					<div class="col-lg-12">
 						<div class="ibox float-e-margins">
 							<div class="ibox-title">
-								<h5>Total: 11,700</h5>
+								<h5>总: 11,700</h5>
 								<div class="ibox-tools">
-									<a class="btn btn-xs btn-default btn-rounded" href="#">CSV Download</a>
+									<a class="btn btn-xs btn-default btn-rounded" href="javascript:void(0)">CSV下载</a>
 									<a class="collapse-link">
 										<i class="fa fa-chevron-up"></i>
 									</a>
@@ -217,7 +275,7 @@
 							</div>
 							<div class="ibox-content">
 								<div class="table-responsive">
-									<table class="footable table table-hover toggle-arrow-tiny">
+									<!--<table class="footable table table-hover toggle-arrow-tiny">
 										<thead>
 											<tr>
 												<th data-toggle="true">Cilent ID</th>
@@ -242,11 +300,11 @@
 												<td>Default</td>
 												<td>Level-01</td>
 												<td>Trader</td>
-												<td>22001177</td>
+												<td>22001165</td>
 												<td>abcd12345@mail.com</td>
 												<td>London</td>
-												<td>2017-02-10 14:30</td>
-												<td>2017-03-10 10:51</td>
+												<td>2017-02-11 14:30</td>
+												<td>2017-03-21 10:51</td>
 												<td>Registered</td>
 												<td>Verified</td>
 												<td>
@@ -267,11 +325,11 @@
 												<td>FX-01</td>
 												<td>Level-01</td>
 												<td>Trader</td>
-												<td>22001177</td>
+												<td>22001147</td>
 												<td>testsample@qq.com</td>
 												<td>Hongkong</td>
-												<td>2017-02-10 14:30</td>
-												<td>2017-03-10 10:51</td>
+												<td>2017-02-02 14:30</td>
+												<td>2017-03-25 10:51</td>
 												<td>Registered</td>
 												<td>Pending</td>
 												<td>
@@ -292,11 +350,11 @@
 												<td>FX-01</td>
 												<td>Level-01</td>
 												<td>Trader</td>
-												<td>22001177</td>
+												<td>22001114</td>
 												<td>abcd12345@mail.com</td>
 												<td>London</td>
-												<td>2017-02-10 14:30</td>
-												<td>2017-03-10 10:51</td>
+												<td>2017-02-24 14:30</td>
+												<td>2017-03-18 10:51</td>
 												<td>Registered</td>
 												<td>Requested</td>
 												<td>
@@ -317,11 +375,11 @@
 												<td>FX-01</td>
 												<td>Level-01</td>
 												<td>Trader</td>
-												<td>22001177</td>
+												<td>22001145</td>
 												<td>abcd12345@mail.com</td>
 												<td>London</td>
-												<td>2017-02-10 14:30</td>
-												<td>2017-03-10 10:51</td>
+												<td>2017-02-18 14:30</td>
+												<td>2017-03-19 10:51</td>
 												<td>Registered</td>
 												<td>Requested</td>
 												<td>
@@ -345,18 +403,111 @@
 												</td>
 											</tr>
 										</tfoot>
-									</table>
+									</table>-->
+<template>
+  <el-table
+    :data="tableData"
+    border
+    style="width: 100%"
+    :default-sort = "{prop: 'date', order: 'descending'}"
+    >
+    <el-table-column
+      prop="clientID"
+      label="客户ID"
+      sortable>
+    </el-table-column>
+    <el-table-column
+      prop="name"
+      label="名字"
+      sortable>
+    </el-table-column>
+    <el-table-column
+      prop="group"
+      label="Ac.Group"
+      sortable>
+    </el-table-column>
+	<el-table-column
+      prop="clientLevel"
+      label="客户等级"
+      sortable>
+    </el-table-column>
+    <el-table-column
+      prop="rank"
+      label="排名"
+      sortable>
+    </el-table-column>
+    <el-table-column
+      prop="agentID"
+      label="代理人ID"
+      sortable>
+    </el-table-column>
+	<el-table-column
+      prop="email"
+      label="电子邮件"
+      sortable>
+    </el-table-column>
+    <el-table-column
+      prop="city"
+      label="城市"
+      sortable>
+    </el-table-column>
+    <el-table-column
+      prop="signupDate"
+      label="注册日期"
+      sortable>
+    </el-table-column>
+	<el-table-column
+      prop="lastLogin"
+      label="最后一次登录"
+      sortable>
+    </el-table-column>
+    <el-table-column
+      prop="registration"
+      label="登记"
+      sortable>
+    </el-table-column>
+    <el-table-column
+      prop="verification"
+      label="验证"
+      sortable>
+    </el-table-column>
+	<el-table-column 
+	   label="操作"
+	   width="100">
+	   <template scope="scope">
+	            <button class="btn btn-default btn-sm text-info dropdown-toggle" data-toggle="dropdown">Actions <span class="caret"></span></button>
+				<ul class="dropdown-menu">
+					<li><a href="#" data-toggle="modal" data-target="#client"><i class="fa fa-user-circle fa-fw"></i>Cilent</a></li>
+					<li><a href="#" data-toggle="modal" data-target="#account"><i class="fa fa-cube fa-fw"></i>Account</a></li>
+					<li><router-link to="/admin/client/edit"><i class="fa fa-edit fa-fw"></i>Edit</router-link></li>
+					<li><a href="javascript:void(0)"><span class="text-danger"><i class="fa fa-trash fa-fw"></i>Delete</span></a></li>
+				</ul>
+	   </template>
+	</el-table-column>
+  </el-table>
+</template>
 								</div>
+<template>
+<el-pagination
+      @size-change="handleSizeChange"
+      @current-change="handleCurrentChange"
+      :current-page="currentPage"
+      :page-sizes="[10, 25, 50, 100]"
+      :page-size="100"
+      layout="total, sizes, prev, pager, next "
+      :total="100">
+    </el-pagination>
+</template>
 							</div>
 							<div class="ibox-footer">
 								<p>Process search results.</p>
 								<div class="col-md-4">
-									<a href="message.html" class="btn btn-primary">Send Message</a>
+									<router-link to="/admin/client/message" class="btn btn-primary">Send Message</router-link>
 									<button type="button" class="btn btn-default text-info" data-toggle="modal" data-target="#bonus">Bonus</button>
 									<button type="button" class="btn btn-default text-info" data-toggle="modal" data-target="#point">Point</button>
 								</div>
 								<div class="input-group col-md-4">
-									<select class="form-control">
+									<select class="form-control" style="height:34px;">
 										<option selected>Client Level</option>
 										<option>Level-01</option>
 										<option>Level-02</option>
@@ -378,8 +529,8 @@
 			</div>
 
 	<!-- Modal New -->
-	<div class="modal modal-2 new">
-		<span class="modal-close-btn"></span>
+	<div class="modal modal-2 new animated  pulse" v-bind:class="{ show: show }">
+		<span class="modal-close-btn" @click="modalshow()"></span>
 		<div class="row">
 			<div class="col-lg-6 col-lg-offset-3">
 				<div class="ibox">
@@ -1405,52 +1556,305 @@
 </div>    	
 </template>
 <script>
-import '../../../../assets/css/plugins/daterangepicker/daterangepicker-bs3.css'
-import '../../../../assets/css/plugins/datapicker/datepicker3.css'
-import '../../../../assets/css/plugins/footable/footable.core.css'
-import '../../../../assets/css/plugins/select/bootstrap-select.css'
-import '../../../../assets/css/plugins/jasny/jasny-bootstrap.min.css'
+// import '../../../assets/css/plugins/daterangepicker/daterangepicker-bs3.css'
+// import '../../../assets/css/plugins/datapicker/datepicker3.css'
+// import '../../../assets/css/plugins/footable/footable.core.css'
+// import '../../../assets/css/plugins/footable3/footable.bootstrap.min.css'
+// import '../../../assets/css/plugins/select/bootstrap-select.css'
+// import '../../../assets/css/plugins/jasny/jasny-bootstrap.min.css'
+import 'vue-multiselect/dist/vue-multiselect.min.css'
 
-import Jasny from '../../../../assets/js/plugins/jasny/jasny-bootstrap.min.js'
-// import Select from '../../assets/js/plugins/select/bootstrap-select.min.js'
-import Footable from '../../../../assets/js/plugins/footable/footable.all.min.js'
-import Datepicker from '../../../../assets/js/plugins/datapicker/bootstrap-datepicker.js'
+// import Mom from '../../../assets/js/plugins/fullcalendar/moment.min.js'
+// import  Dat from '../../../assets/js/plugins/daterangepicker/daterangepicker.js'  
+// import Jasny from '../../../assets/js/plugins/jasny/jasny-bootstrap.min.js'
+// import Selectt from '../../../assets/js/plugins/select/bootstrap-select.min.js'
+// import Bootstrapselect from 'bootstrap-select'
+// import 'bootstrap-select/dist/css/bootstrap-select.css'
+// import 'bootstrap-select/dist/js/i18n/defaults-es_CL.js'
+import Multiselect from 'vue-multiselect'
+// import Footable from '../../../assets/js/plugins/footable/footable.all.min.js'
+// import Footable3 from '../../../assets/js/plugins/footable3/footable.min.js'
+// import Datepicker from '../../../assets/js/plugins/datapicker/bootstrap-datepicker.js'
 // import Cta from '../../assets/js/plugins/cta/cta.min.js'
+// import cta from 'cta/dist/cta.js'
+// import ElementUI from 'element-ui'
+// import 'element-ui/lib/theme-default/index.css'
+// Vue.use(ElementUI)
 export default {
     name: 'client-index',
+	data () {
+		return {
+			// new 打开模态框
+			show:false,
+			options1: [{
+				label: 'Registration',
+				options: [{
+					value: 'Temporary',
+					label: 'Temporary'
+				}, {
+					value: 'Registered',
+					label: 'Registered'
+				}, {
+					value: 'Unsubscribe',
+					label: 'Unsubscribe'
+				}]
+				}, {
+				label: 'Verification',
+				options: [{
+					value: 'Pending',
+					label: 'Pending'
+				}, {
+					value: 'Requested',
+					label: 'Requested'
+				}, {
+					value: 'Verified',
+					label: 'Verified'
+				}, {
+					value: 'Declined',
+					label: 'Declined'
+				}]
+			    }, {
+                label: 'Client Status',
+				options: [{
+					value: 'Normal',
+					label: 'Normal'
+				},{
+					value: 'Black List',
+					label: 'Black List'
+				}]
+				}],
+			value1: '',
+			options2: [{
+				value: 'Level-01',
+				label: 'Level-01'
+				}, {
+				value: 'Level-02',
+				label: 'Level-02'
+				}, {
+				value: 'Level-03',
+				label: 'Level-03'
+				}, {
+				value: 'Level-04',
+				label: 'Level-04'
+				}, {
+				value: 'VIP-01',
+				label: 'VIP-01'
+				}, {
+				value: 'VIP-02',
+				label: 'VIP-02'
+				}, {
+				value: 'Diamond',
+				label: 'Diamond'
+			}],
+			value2: [],
+			options3: [{
+				value: 'Trader',
+				label: 'Trader'
+				}, {
+				value: 'IB',
+				label: 'IB'
+				}, {
+				value: 'MIB',
+				label: 'MIB'
+				}, {
+				value: 'PIB',
+				label: 'PIB'
+			}],
+			value3: [],
+			options4: [{
+				value: 'Default',
+				label: 'Default'
+				}, {
+				value: 'FX-01',
+				label: 'FX-01'
+				}, {
+				value: 'FX-02',
+				label: 'FX-02'
+			}],
+			value4: [],
+			options5: [{
+				value: 'Jan:01',
+				label: 'Jan:01'
+				}, {
+				value: 'Feb:02',
+				label: 'Feb:02'
+				}, {
+				value: 'Mar:03',
+				label: 'Mar:03'
+				}, {
+				value: 'Apl:04',
+				label: 'Apl:04'
+				}, {
+				value: 'May:05',
+				label: 'May:05'
+				}, {
+				value: 'Jun:06',
+				label: 'Jun:06'
+				}, {
+				value: 'Jul:07',
+				label: 'Jul:07'
+				}, {
+				value: 'Aug:08',
+				label: 'Aug:08'
+				}, {
+				value: 'Sep:09',
+				label: 'Sep:09'
+				}, {
+				value: 'Oct:10',
+				label: 'Oct:10'
+				}, {
+				value: 'Nov:11',
+				label: 'Nov:11'
+				}, {
+				value: 'Dec:12',
+				label: 'Dec:12'
+			}],
+			value5: [],
+			options6: [{
+				value: 'Male',
+				label: 'Male'
+				}, {
+				value: 'Female',
+				label: 'Female'
+			}],
+			value6: [],
+			value7: '',
+			value8: '',
+			value9: '',
+			tableData: [{
+				clientID: '22558833',
+				name: 'Patrick Smith',
+				group: 'Default',
+				clientLevel: 'Level-01',
+				rank: 'Trader',
+				agentID: '22001177',
+				email: '987670346@qq.com',
+				city: 'Shenzhen',
+				signupDate: '2017-02-10 14:30',
+				lastLogin: '2017-08-07 17:46',
+				registration: 'Registered',
+				verification: 'Verified'
+			    },{
+				clientID: '22558833',
+				name: 'Patrick Smith',
+				group: 'Default',
+				clientLevel: 'Level-01',
+				rank: 'Trader',
+				agentID: '22001177',
+				email: '987670346@qq.com',
+				city: 'Shenzhen',
+				signupDate: '2017-02-10 14:30',
+				lastLogin: '2017-08-07 17:46',
+				registration: 'Registered',
+				verification: 'Verified'
+			    },{
+				clientID: '22558833',
+				name: 'Patrick Smith',
+				group: 'Default',
+				clientLevel: 'Level-01',
+				rank: 'Trader',
+				agentID: '22001177',
+				email: '987670346@qq.com',
+				city: 'Shenzhen',
+				signupDate: '2017-02-10 14:30',
+				lastLogin: '2017-08-07 17:46',
+				registration: 'Registered',
+				verification: 'Verified'	
+			}],
+			// 分页
+			currentPage: 4
+        }	
+	},
 	components:{
-       Jasny,
-    //    Select,
-       Footable,
-       Datepicker
+		// Mom,
+		// Dat,
+    //    Jasny,
+	//    Selectt,
+    //    Bootstrapselect,
+	Multiselect
+	// ElementUI,
+    //    Footable,
+	//    Footable3,
+    //    Datepicker
     //    Cta
 	},
+	methods: {
+		// new模态框
+		modalshow(){
+			this.show = !this.show;
+			$("body").toggleClass("disable-scroll");
+		},
+		formatter(row, column) {
+           return row.address;
+        },
+		// 饿了么分页
+		handleSizeChange(val) {
+        console.log(`每页 ${val} 条`);
+		},
+		handleCurrentChange(val) {
+			console.log(`当前页: ${val}`);
+		}
+	},
     mounted: function(){
-        $('.footable').footable({
-				breakpoints: {
-					phone: 640,
-					tablet: 1024
-				}
-		});
-        $('input[name="daterange"]').daterangepicker({
-				timePicker: false,
-		});
-        $('.datepicker').datepicker({
-			format: 'yyyy/dd/mm',
-			startDate: '-3d'
-		});
+        // $('.footable').footable({
+		// 		breakpoints: {
+		// 			phone: 640,
+		// 			tablet: 1024
+		// 		}
+		// });
+
+        // $('.datepicker').datepicker({
+		// 	format: 'yyyy/dd/mm',
+		// 	startDate: '-3d'
+		// });
 		$('.collapse-link').on('click', function () {
-		    var ibox = $(this).closest('div.ibox');
-		    var button = $(this).find('i');
-		    var content = ibox.find('div.ibox-content');
-		    content.slideToggle(200);
-		    button.toggleClass('fa-chevron-up').toggleClass('fa-chevron-down');
-		    ibox.toggleClass('').toggleClass('border-bottom');
-		    setTimeout(function () {
-		        ibox.resize();
-		        ibox.find('[id^=map-]').resize();
-		    }, 50);
-		});
+			var ibox = $(this).closest('div.ibox');
+			var button = $(this).find('i');
+			var content = ibox.find('div.ibox-content');
+			content.slideToggle(200);
+			button.toggleClass('fa-chevron-up').toggleClass('fa-chevron-down');
+			ibox.toggleClass('').toggleClass('border-bottom');
+			setTimeout(function () {
+				ibox.resize();
+				ibox.find('[id^=map-]').resize();
+			}, 50);
+        });
+		// $.support.transition = false;
     }
 }
 </script>
+<style scoped>
+/*多选select 时间范围选择 样式重置*/
+.el-select {
+	width:100%;
+}
+.el-select input{
+	height:34px;
+}
+.form-control{
+	height:36px;
+	border-color:#bfcbd9;
+}
+.el-date-editor--daterange.el-input{
+	width:100%;
+}
+/*底部表格样式重置*/
+.el-table .cell{
+	font-size:13px;
+	line-height:1.4;
+}
+.ibox-content tr:last-child .dropdown-menu{
+	z-index:999;
+}
+.ibox-content td .dropdown-menu{
+	top:0px;
+}
+.ibox-content tr:last-child .dropdown-menu{
+	top:-74px;
+}
+/*分页*/
+.el-pagination{
+	text-align:right;
+	padding:8px 0;
+}
+</style>
