@@ -12,6 +12,13 @@
     import vHead from './Header.vue'
     import vSidebar from './Sidebar.vue'
     // import {mapGetters} from 'vuex'
+    // element-UI国际化English
+    import en from 'element-ui/lib/locale/lang/en'
+    import locale from 'element-ui/lib/locale'
+    locale.use(en)
+    // element-UI国际化Japanse
+    // import ja from 'element-ui/lib/locale/lang/ja'
+    // locale.use(ja)
     export default {
       components: {
         vHead, vSidebar
