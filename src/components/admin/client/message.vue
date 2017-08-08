@@ -61,14 +61,13 @@
 											<option>55</option>
 										</select>-->
 <template>
-    <div class="block">
     <el-date-picker
       v-model="value"
       type="datetime"
-      placeholder="Select date time">
+      placeholder="Select date time" 
+	  >
     </el-date-picker>
-	</div>
-</template>										
+</template>							
 									</div>
 								</div>
 							</div>
@@ -185,11 +184,14 @@ import Clipboard from 'clipboard'
 import CodeMirror from '../../../assets/js/plugins/summernote/codemirror.min.js'
 export default {
     name: 'message',
-	props: ["value"],
+	// props: ["value1"],
 	data () {
        return {
 		   value: ''
 	   };
+	},
+	methods: {
+		
 	},
 	components:{
     //   Datepicker,
