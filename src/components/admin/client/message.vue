@@ -181,7 +181,7 @@ import '../../../assets/css/plugins/summernote/monokai.min.css'
 // import Formatting from '../../../assets/js/plugins/summernote/formatting.min.js'
 // import Clipboardmin from '../../../assets/js/plugins/clipboard/clipboard.min.js'
 import Clipboard from 'clipboard'
-import CodeMirror from '../../../assets/js/plugins/summernote/codemirror.min.js'
+import codemirror from '../../../assets/js/plugins/summernote/codemirror.min.js'
 export default {
     name: 'message',
 	// props: ["value1"],
@@ -197,22 +197,22 @@ export default {
     //   Datepicker,
     //   Xml,
     //   Formatting,
-      Clipboard,
-	  CodeMirror
+      Clipboard
+	//   codemirror
 	},
     mounted: function(){
         $('.summernote1').summernote({
 			height:150,    //set editable area's height
-			htmlMode:true
+			codemirror: {
+				theme: 'monokai'
+			}
+			// htmlMode:true
 		});
-			// codemirror: { // codemirror options
-			//   theme: 'monokai'
-			// }
 		$('.summernote2').summernote({
 			height: 150,   //set editable area's height
-			// codemirror: { // codemirror options
-			// //   theme: 'monokai'
-			// }
+			codemirror: { // codemirror options
+			  theme: 'monokai'
+			}
 		});
 		// $(document).ready(function (){
 			new Clipboard('.cli');

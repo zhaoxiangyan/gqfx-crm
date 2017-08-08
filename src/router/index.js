@@ -91,10 +91,10 @@ export default new Router({
             path: '/admin/client/index',
             component: resolve => require(['../components/admin/client/index.vue'], resolve)
         },       
-        // {
-        //     path: '/admin/client/edit',
-        //     component: resolve => require(['../components/admin/client/edit.vue'], resolve)
-        // },  
+        {
+            path: '/admin/client/edit',
+            component: resolve => require(['../components/admin/client/edit.vue'], resolve)
+        },  
         {
             path: '/admin/client/message',
             component: resolve => require(['../components/admin/client/message.vue'], resolve)

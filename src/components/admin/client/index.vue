@@ -4,7 +4,7 @@
 			<div class="row wrapper border-bottom white-bg page-heading">
 				<div class="col-lg-10">
 					<h2 class="pull-left m-r-sm">Client</h2>
-					<div class="heading-tools"><a href="#" class="btn btn-sm btn-default" data-cta-target=".new" data-disable-scroll="true"><i class="fa fa-plus fa-fw"></i>New</a></div>
+					<div class="heading-tools"><a href="javascript:void(0)" class="btn btn-sm btn-default" @click="modalshow()"><i class="fa fa-plus fa-fw"></i>New</a></div>
 				</div>
 			</div>
 			
@@ -479,7 +479,7 @@
 				<ul class="dropdown-menu">
 					<li><a href="#" data-toggle="modal" data-target="#client"><i class="fa fa-user-circle fa-fw"></i>Cilent</a></li>
 					<li><a href="#" data-toggle="modal" data-target="#account"><i class="fa fa-cube fa-fw"></i>Account</a></li>
-					<li><a href="edit.html"><i class="fa fa-edit fa-fw"></i>Edit</a></li>
+					<li><router-link to="/admin/client/edit"><i class="fa fa-edit fa-fw"></i>Edit</router-link></li>
 					<li><a href="javascript:void(0)"><span class="text-danger"><i class="fa fa-trash fa-fw"></i>Delete</span></a></li>
 				</ul>
 	   </template>
@@ -529,8 +529,8 @@
 			</div>
 
 	<!-- Modal New -->
-	<div class="modal modal-2 new">
-		<span class="modal-close-btn"></span>
+	<div class="modal modal-2 new animated  pulse" v-bind:class="{ show: show }">
+		<span class="modal-close-btn" @click="modalshow()"></span>
 		<div class="row">
 			<div class="col-lg-6 col-lg-offset-3">
 				<div class="ibox">
@@ -1558,7 +1558,7 @@
 <script>
 // import '../../../assets/css/plugins/daterangepicker/daterangepicker-bs3.css'
 // import '../../../assets/css/plugins/datapicker/datepicker3.css'
-import '../../../assets/css/plugins/footable/footable.core.css'
+// import '../../../assets/css/plugins/footable/footable.core.css'
 // import '../../../assets/css/plugins/footable3/footable.bootstrap.min.css'
 // import '../../../assets/css/plugins/select/bootstrap-select.css'
 // import '../../../assets/css/plugins/jasny/jasny-bootstrap.min.css'
@@ -1572,10 +1572,11 @@ import 'vue-multiselect/dist/vue-multiselect.min.css'
 // import 'bootstrap-select/dist/css/bootstrap-select.css'
 // import 'bootstrap-select/dist/js/i18n/defaults-es_CL.js'
 import Multiselect from 'vue-multiselect'
-import Footable from '../../../assets/js/plugins/footable/footable.all.min.js'
+// import Footable from '../../../assets/js/plugins/footable/footable.all.min.js'
 // import Footable3 from '../../../assets/js/plugins/footable3/footable.min.js'
 // import Datepicker from '../../../assets/js/plugins/datapicker/bootstrap-datepicker.js'
 // import Cta from '../../assets/js/plugins/cta/cta.min.js'
+// import cta from 'cta/dist/cta.js'
 // import ElementUI from 'element-ui'
 // import 'element-ui/lib/theme-default/index.css'
 // Vue.use(ElementUI)
@@ -1583,6 +1584,8 @@ export default {
     name: 'client-index',
 	data () {
 		return {
+			// new 打开模态框
+			show:false,
 			options1: [{
 				label: 'Registration',
 				options: [{
@@ -1776,6 +1779,11 @@ export default {
     //    Cta
 	},
 	methods: {
+		// new模态框
+		modalshow(){
+			this.show = !this.show;
+			$("body").toggleClass("disable-scroll");
+		},
 		formatter(row, column) {
            return row.address;
         },
@@ -1788,12 +1796,12 @@ export default {
 		}
 	},
     mounted: function(){
-        $('.footable').footable({
-				breakpoints: {
-					phone: 640,
-					tablet: 1024
-				}
-		});
+        // $('.footable').footable({
+		// 		breakpoints: {
+		// 			phone: 640,
+		// 			tablet: 1024
+		// 		}
+		// });
 
         // $('.datepicker').datepicker({
 		// 	format: 'yyyy/dd/mm',
