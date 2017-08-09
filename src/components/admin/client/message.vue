@@ -231,7 +231,8 @@ export default {
 	border-right:none;
 	border-left:30px solid transparent;
 }
-.note-editor.note-frame.fullscreen{
-	
+/*全屏按钮bug，隐藏掉*/
+.btn-fullscreen{
+	display:none!important;
 }
 </style>

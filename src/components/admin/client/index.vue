@@ -24,7 +24,7 @@
 								<div class="row">
 								  <div class="col-sm-3">
 										<label>Client ID</label>
-										<div class="form-group"><input class="form-control"></div>
+										<div class="form-group"><el-input  placeholder=""></el-input></div>
 									</div>
 									<div class="col-sm-3">
 										<label>Name</label>
@@ -408,7 +408,7 @@
   <el-table
     :data="tableData"
     border
-    style="width: 100%"
+    style="width: 100%;font-size:13px;"
     :default-sort = "{prop: 'date', order: 'descending'}"
     >
     <el-table-column
@@ -1562,7 +1562,7 @@
 // import '../../../assets/css/plugins/footable3/footable.bootstrap.min.css'
 // import '../../../assets/css/plugins/select/bootstrap-select.css'
 // import '../../../assets/css/plugins/jasny/jasny-bootstrap.min.css'
-import 'vue-multiselect/dist/vue-multiselect.min.css'
+// import 'vue-multiselect/dist/vue-multiselect.min.css'
 
 // import Mom from '../../../assets/js/plugins/fullcalendar/moment.min.js'
 // import  Dat from '../../../assets/js/plugins/daterangepicker/daterangepicker.js'  
@@ -1571,7 +1571,7 @@ import 'vue-multiselect/dist/vue-multiselect.min.css'
 // import Bootstrapselect from 'bootstrap-select'
 // import 'bootstrap-select/dist/css/bootstrap-select.css'
 // import 'bootstrap-select/dist/js/i18n/defaults-es_CL.js'
-import Multiselect from 'vue-multiselect'
+// import Multiselect from 'vue-multiselect'
 // import Footable from '../../../assets/js/plugins/footable/footable.all.min.js'
 // import Footable3 from '../../../assets/js/plugins/footable3/footable.min.js'
 // import Datepicker from '../../../assets/js/plugins/datapicker/bootstrap-datepicker.js'
@@ -1771,7 +1771,7 @@ export default {
     //    Jasny,
 	//    Selectt,
     //    Bootstrapselect,
-	Multiselect
+	// Multiselect
 	// ElementUI,
     //    Footable,
 	//    Footable3,
@@ -1784,9 +1784,9 @@ export default {
 			this.show = !this.show;
 			$("body").toggleClass("disable-scroll");
 		},
-		formatter(row, column) {
-           return row.address;
-        },
+		// formatter(row, column) {
+        //    return row.address;
+        // },
 		// 饿了么分页
 		handleSizeChange(val) {
         console.log(`每页 ${val} 条`);

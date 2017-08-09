@@ -14,7 +14,7 @@
 					<div class="tabs-container">
 						<ul class="nav nav-tabs" role="tablist">
 							<li role="presentation" class="active">
-								<a href="#reqested" data-toggle="tab" aria-controls="requested">Requested <span class="badge badge-info">2</span></a>
+								<a href="#requested" data-toggle="tab" aria-controls="requested">Requested <span class="badge badge-info">2</span></a>
 							</li>
 							<li role="presentation">
 								<a href="#pending" data-toggle="tab" aria-controls="pending">Pending <span class="badge">15</span></a>
@@ -42,7 +42,7 @@
 										<div class="clearfix"></div>
 									</div>
 									<div class="table-responsive">
-										<table class="footable table table-hover toggle-arrow-tiny">
+										<!--<table class="footable table table-hover toggle-arrow-tiny">
 											<thead>
 												<tr>
 													<th data-class="expand">Cilent ID</th>
@@ -126,8 +126,81 @@
 													</td>
 												</tr>
 											</tfoot>
-										</table>
+										</table>-->
+<template>
+  <el-table
+    :data="RequestedData"
+    border
+    style="width: 100%;font-size:13px;"
+    :default-sort = "{prop: 'date', order: 'descending'}"
+    >
+    <el-table-column
+      prop="clientID"
+      label="Client ID"
+      sortable>
+    </el-table-column>
+    <el-table-column
+      prop="name"
+      label="Name"
+      sortable>
+    </el-table-column>
+    <el-table-column
+      prop="clientLevel"
+      label="Client Level"
+      sortable>
+    </el-table-column>
+	<el-table-column
+      prop="currentRank"
+      label="Current Rank"
+      sortable>
+    </el-table-column>
+    <el-table-column
+      prop="requestedRank"
+      label="Requested Rank"
+      sortable>
+    </el-table-column>
+    <el-table-column
+      prop="requestDate"
+      label="Request Date"
+      sortable>
+    </el-table-column>
+	<el-table-column
+      prop="rankupCondition"
+      label="Rank Up Condition"
+      sortable>
+    </el-table-column>
+	<el-table-column
+      prop="status"
+      label="Status"
+      sortable>
+    </el-table-column>
+	<el-table-column 
+	   label="Action"
+	   width="100">
+	   <template scope="scope">
+	           <button class="btn btn-default btn-sm text-info dropdown-toggle" data-toggle="dropdown">Actions <span class="caret"></span></button>
+					<ul class="dropdown-menu">
+						<li><a href="#" data-toggle="modal" data-target="#rank-request"><i class="fa fa-pencil-square fa-fw"></i>Approve</a></li>
+						<li><a href="#" data-toggle="modal" data-target="#client"><i class="fa fa-user-circle fa-fw"></i>Client</a></li>
+						<li><a href="javascript:void(0)"><span class="text-danger"><i class="fa fa-trash fa-fw"></i>Delete</span></a></li>
+					</ul>
+	   </template>
+	</el-table-column>
+  </el-table>
+</template>											
 									</div>
+<template>
+    <el-pagination
+      @size-change="handleSizeChange1"
+      @current-change="handleCurrentChange1"
+      :current-page="currentPage1"
+      :page-sizes="[10, 25, 50, 100]"
+      :page-size="100"
+      layout="total, sizes, prev, pager, next "
+      :total="100"
+	  style="text-align:right;padding:8px 0;">
+    </el-pagination>
+</template>									
 								</div>
 							</div>
 							<!-- tab-pane End -->
@@ -148,7 +221,7 @@
 										<div class="clearfix"></div>
 									</div>
 									<div class="table-responsive">
-										<table class="footable table table-hover toggle-arrow-tiny">
+										<!--<table class="footable table table-hover toggle-arrow-tiny">
 											<thead>
 												<tr>
 													<th data-class="expand">Cilent ID</th>
@@ -232,8 +305,81 @@
 													</td>
 												</tr>
 											</tfoot>
-										</table>
+										</table>-->
+<template>
+  <el-table
+    :data="PendingData"
+    border
+    style="width: 100%;font-size:13px;"
+    :default-sort = "{prop: 'date', order: 'descending'}"
+    >
+	<el-table-column
+      prop="clientID"
+      label="Client ID"
+      sortable>
+    </el-table-column>
+    <el-table-column
+      prop="name"
+      label="Name"
+      sortable>
+    </el-table-column>
+    <el-table-column
+      prop="clientLevel"
+      label="Client Level"
+      sortable>
+    </el-table-column>
+	<el-table-column
+      prop="currentRank"
+      label="Current Rank"
+      sortable>
+    </el-table-column>
+    <el-table-column
+      prop="requestedRank"
+      label="Requested Rank"
+      sortable>
+    </el-table-column>
+    <el-table-column
+      prop="requestDate"
+      label="Request Date"
+      sortable>
+    </el-table-column>
+	<el-table-column
+      prop="rankupCondition"
+      label="Rank Up Condition"
+      sortable>
+    </el-table-column>
+	<el-table-column
+      prop="status"
+      label="Status"
+      sortable>
+    </el-table-column>
+	<el-table-column 
+	   label="Action"
+	   width="100">
+	   <template scope="scope">
+	           <button class="btn btn-default btn-sm text-info dropdown-toggle" data-toggle="dropdown">Actions <span class="caret"></span></button>
+					<ul class="dropdown-menu">
+						<li><a href="#" data-toggle="modal" data-target="#rank-request"><i class="fa fa-pencil-square fa-fw"></i>Approve</a></li>
+						<li><a href="#" data-toggle="modal" data-target="#client"><i class="fa fa-user-circle fa-fw"></i>Client</a></li>
+						<li><a href="javascript:void(0)"><span class="text-danger"><i class="fa fa-trash fa-fw"></i>Delete</span></a></li>
+					</ul>
+	   </template>
+	</el-table-column>
+  </el-table>
+</template>																
 									</div>
+<template>
+<el-pagination
+      @size-change="handleSizeChange2"
+      @current-change="handleCurrentChange2"
+      :current-page="currentPage2"
+      :page-sizes="[10, 25, 50, 100]"
+      :page-size="100"
+      layout="total, sizes, prev, pager, next "
+      :total="100"
+	  style="text-align:right;padding:8px 0;">
+    </el-pagination>
+</template>										
 								</div>
 							</div>
 							<!-- tab-pane End -->
@@ -254,7 +400,7 @@
 										<div class="clearfix"></div>
 									</div>
 									<div class="table-responsive">
-										<table class="footable table table-hover toggle-arrow-tiny">
+										<!--<table class="footable table table-hover toggle-arrow-tiny">
 											<thead>
 												<tr>
 													<th data-class="expand">Cilent ID</th>
@@ -338,8 +484,81 @@
 													</td>
 												</tr>
 											</tfoot>
-										</table>
+										</table>-->
+<template>
+  <el-table
+    :data="DeclinedData"
+    border
+    style="width: 100%;font-size:13px;"
+    :default-sort = "{prop: 'date', order: 'descending'}"
+    >
+	<el-table-column
+      prop="clientID"
+      label="Client ID"
+      sortable>
+    </el-table-column>
+    <el-table-column
+      prop="name"
+      label="Name"
+      sortable>
+    </el-table-column>
+    <el-table-column
+      prop="clientLevel"
+      label="Client Level"
+      sortable>
+    </el-table-column>
+	<el-table-column
+      prop="currentRank"
+      label="Current Rank"
+      sortable>
+    </el-table-column>
+    <el-table-column
+      prop="requestedRank"
+      label="Requested Rank"
+      sortable>
+    </el-table-column>
+    <el-table-column
+      prop="requestDate"
+      label="Request Date"
+      sortable>
+    </el-table-column>
+	<el-table-column
+      prop="rankupCondition"
+      label="Rank Up Condition"
+      sortable>
+    </el-table-column>
+	<el-table-column
+      prop="status"
+      label="Status"
+      sortable>
+    </el-table-column>
+	<el-table-column 
+	   label="Action"
+	   width="100">
+	   <template scope="scope">
+	           <button class="btn btn-default btn-sm text-info dropdown-toggle" data-toggle="dropdown">Actions <span class="caret"></span></button>
+					<ul class="dropdown-menu">
+						<li><a href="#" data-toggle="modal" data-target="#rank-request"><i class="fa fa-pencil-square fa-fw"></i>Approve</a></li>
+						<li><a href="#" data-toggle="modal" data-target="#client"><i class="fa fa-user-circle fa-fw"></i>Client</a></li>
+						<li><a href="javascript:void(0)"><span class="text-danger"><i class="fa fa-trash fa-fw"></i>Delete</span></a></li>
+					</ul>
+	   </template>
+	</el-table-column>
+  </el-table>
+</template>											
 									</div>
+<template>
+<el-pagination
+      @size-change="handleSizeChange3"
+      @current-change="handleCurrentChange3"
+      :current-page="currentPage3"
+      :page-sizes="[10, 25, 50, 100]"
+      :page-size="100"
+      layout="total, sizes, prev, pager, next "
+      :total="100"
+	  style="text-align:right;padding:8px 0;">
+    </el-pagination>
+</template>										
 								</div>
 							</div>
 							<!-- tab-pane End -->
@@ -401,7 +620,7 @@
 								<th>IB Document</th>
 								<td>
 									<span class="m-r-sm"><i class="fa fa-file-pdf-o fa-fw"></i>IB-agreetment.pdf</span>
-									<a href="" class="btn btn-link"><i class="fa fa-download"></i></a>
+									<a href="javascript:void(0)" class="btn btn-link"><i class="fa fa-download"></i></a>
 								</td>
 							</tr>
 						</tbody>
@@ -542,34 +761,165 @@
 </div>
 </template>
 <script>
-import '../../../assets/css/plugins/daterangepicker/daterangepicker-bs3.css'
+// import '../../../assets/css/plugins/daterangepicker/daterangepicker-bs3.css'
 import '../../../assets/css/plugins/clockpicker/clockpicker.css'
-import '../../../assets/css/plugins/footable/footable.core.css'
-import Footable from '../../../assets/js/plugins/footable/footable.all.min.js'
-import Datepicker from '../../../assets/js/plugins/datapicker/bootstrap-datepicker.js'
+// import '../../../assets/css/plugins/footable/footable.core.css'
+// import Footable from '../../../assets/js/plugins/footable/footable.all.min.js'
+// import Datepicker from '../../../assets/js/plugins/datapicker/bootstrap-datepicker.js'
 export default {
     name: 'rank',
+	data () {
+		return {
+			// Requested表格数据
+			RequestedData: [{
+				clientID: '22451222',
+				name: 'Alan Smith',
+				clientLevel: 'Level-1',
+				currentRank: 'Trader',
+				requestedRank: 'IB',
+				requestDate: '2017-03-08 10:55',
+				rankupCondition: 'Achived',
+				status: 'Requested'
+			    },{
+				clientID: '22451222',
+				name: 'Alan Smith',
+				clientLevel: 'Level-1',
+				currentRank: 'Trader',
+				requestedRank: 'IB',
+				requestDate: '2017-03-08 10:55',
+				rankupCondition: 'Achived',
+				status: 'Requested'
+			    },{
+				clientID: '22451222',
+				name: 'Alan Smith',
+				clientLevel: 'Level-1',
+				currentRank: 'Trader',
+				requestedRank: 'IB',
+				requestDate: '2017-03-08 10:55',
+				rankupCondition: 'Achived',
+				status: 'Requested'
+			}],
+			// 分页
+			currentPage1: 3,
+			// Pending表格数据
+			PendingData: [{
+				clientID: '22451222',
+				name: 'Alan Smith',
+				clientLevel: 'Level-1',
+				currentRank: 'Trader',
+				requestedRank: 'IB',
+				requestDate: '2017-03-08 10:55',
+				rankupCondition: 'Achived',
+				status: 'Pending'
+			    },{
+				clientID: '22451222',
+				name: 'Alan Smith',
+				clientLevel: 'Level-1',
+				currentRank: 'Trader',
+				requestedRank: 'IB',
+				requestDate: '2017-03-08 10:55',
+				rankupCondition: 'Achived',
+				status: 'Pending'
+			    },{
+				clientID: '22451222',
+				name: 'Alan Smith',
+				clientLevel: 'Level-1',
+				currentRank: 'Trader',
+				requestedRank: 'IB',
+				requestDate: '2017-03-08 10:55',
+				rankupCondition: 'Achived',
+				status: 'Pending'
+			}],
+		    // 分页
+			currentPage2: 4,
+			// Declined表格数据
+			DeclinedData: [{
+				clientID: '22451222',
+				name: 'Alan Smith',
+				clientLevel: 'Level-1',
+				currentRank: 'Trader',
+				requestedRank: 'IB',
+				requestDate: '2017-03-08 10:55',
+				rankupCondition: 'Achived',
+				status: 'Declined'
+			    },{
+				clientID: '22451222',
+				name: 'Alan Smith',
+				clientLevel: 'Level-1',
+				currentRank: 'Trader',
+				requestedRank: 'IB',
+				requestDate: '2017-03-08 10:55',
+				rankupCondition: 'Achived',
+				status: 'Declined'
+			    },{
+				clientID: '22451222',
+				name: 'Alan Smith',
+				clientLevel: 'Level-1',
+				currentRank: 'Trader',
+				requestedRank: 'IB',
+				requestDate: '2017-03-08 10:55',
+				rankupCondition: 'Achived',
+				status: 'Declined'
+			}],
+			// 分页
+			currentPage3: 5
+		}
+	},
     components: {
-       Footable,
-       Datepicker
+    //    Footable,
+    //    Datepicker
     },
+	methods: {
+		// Requested表格
+		// formatter(row, column) {
+        //    return row.address;
+        // },
+		// 饿了么分页
+		handleSizeChange1(val) {
+        console.log(`每页 ${val} 条`);
+		},
+		handleCurrentChange1(val) {
+			console.log(`当前页: ${val}`);
+		},
+		handleSizeChange2(val) {
+        console.log(`每页 ${val} 条`);
+		},
+		handleCurrentChange2(val) {
+			console.log(`当前页: ${val}`);
+		},
+		handleSizeChange3(val) {
+        console.log(`每页 ${val} 条`);
+		},
+		handleCurrentChange3(val) {
+			console.log(`当前页: ${val}`);
+		}
+	},	
     mounted: function(){
         // $('input[name="daterange"]').daterangepicker({
 		// 	timePicker: true,
 	    // });
-        $('.datepicker').datepicker({
-			format: 'yyyy/dd/mm',
-			startDate: '-3d'
-	    });
-        $('.footable').footable({
-            breakpoints: {
-                phone: 640,
-                tablet: 1024
-            }
-        });
+        // $('.datepicker').datepicker({
+		// 	format: 'yyyy/dd/mm',
+		// 	startDate: '-3d'
+	    // });
+        // $('.footable').footable({
+        //     breakpoints: {
+        //         phone: 640,
+        //         tablet: 1024
+        //     }
+        // });
     }
 }
 </script>
 <style scoped>
-
+/*action展开菜单*/
+.tab-content td .dropdown-menu{
+	top:-70%;
+}
+.tab-content tr:first-child .dropdown-menu{
+	top:0
+}
+.tab-content tr:last-child .dropdown-menu{
+	top:-63px;
+}
 </style>

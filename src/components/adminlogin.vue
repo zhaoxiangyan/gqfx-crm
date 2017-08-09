@@ -5,34 +5,34 @@
 <div class="main">
   <div class="header">
     <img src="../assets/logo-w.png">
-    <span>管理后台登录</span>
+    <span>Admin|GQFX</span>
   </div>
   <div class="content"> 
       <form action="index-.html" class="panel-body">
                     <div class="form-group">
-                        <label class="control-label" style="color:#fff;">用户名</label>
-                        <input type="text" placeholder="用户名" class="form-control" name="username" id="username" value="">
+                        <label class="control-label" style="color:#fff;">User Name</label>
+                        <input type="text" placeholder="username" class="form-control" name="username" id="username" value="">
                     </div>
                     <div class="form-group">
-                        <label class="control-label" style="color:#fff;">密码</label>
-                        <input type="password" placeholder="密码" class="form-control" name="passwd" id="passwd" value="">
+                        <label class="control-label" style="color:#fff;">Password</label>
+                        <input type="password" placeholder="password" class="form-control" name="passwd" id="passwd" value="">
                     </div>
                     <div class="form-group">
-                        <label class="control-label" style="color:#fff;">验证码</label>
+                        <label class="control-label" style="color:#fff;">Verification Code</label>
                         <input type="text" id="code" name="code" class="form-control">
                     </div>
                     <div class="form-group ">
-                        <a href="#" class="fr" style="margin-top: 20px;
+                        <a href="javascript:void(0)" class="fr" style="margin-top: 20px;
                            display: block; "><img src="../assets/index.png" id="imgCode" style="cursor:pointer;"></a>
                     </div>
 
                     <div class="checkbox">
                         <label>
                             <input type="checkbox" name="remember" id="remember" value="1">
-                            保持登录状态 </label>
+                             Keep login status</label>
                     </div>
                     <button type="button" class="btn btn-warning" name="loginin" id="loginin" style="width: 100%; font-family:'微软雅黑'">
-                           <router-link to="/admin">登 录</router-link></button>
+                           <router-link to="/admin">Sign In</router-link></button>
                     <div class="line line-dashed"></div>
                 </form>
   </div>

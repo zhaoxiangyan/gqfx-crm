@@ -39,7 +39,7 @@
 
 							<div class="ibox-content">
 								<div class="table-responsive">
-									<table class="table table-hover footable toggle-arrow-tiny">
+									<!--<table class="table table-hover footable toggle-arrow-tiny">
 										<thead>
 											<tr>
 												<th data-toggle="true">MT5 Account</th>
@@ -150,8 +150,85 @@
 												</td>
 											</tr>
 										</tfoot>
-									</table>
+									</table>-->
+<template>
+  <el-table
+    :data="DepositData"
+    border
+    style="width: 100%;font-size:13px;"
+    :default-sort = "{prop: 'date', order: 'descending'}"
+    >
+	<el-table-column
+      prop="account"
+      label="MT5 Account"
+      sortable>
+    </el-table-column>
+    <el-table-column
+      prop="clientID"
+      label="Client ID"
+      sortable>
+    </el-table-column>
+    <el-table-column
+      prop="name"
+      label="Name"
+      sortable>
+    </el-table-column>
+    <el-table-column
+      prop="method"
+      label="Method"
+      sortable>
+    </el-table-column>
+	<el-table-column
+      prop="payedAmount"
+      label="Payed Amount"
+      sortable>
+    </el-table-column>
+    <el-table-column
+      prop="fee"
+      label="Fee"
+      sortable>
+    </el-table-column>
+    <el-table-column
+      prop="exRate"
+      label="Ex.Rate"
+      sortable>
+    </el-table-column>
+	<el-table-column
+      prop="depositAmount"
+      label="DepositAmount"
+      sortable>
+    </el-table-column>
+    <el-table-column
+      prop="depositDate"
+      label="DepositDate"
+      sortable>
+    </el-table-column>
+	<el-table-column 
+	   label="Action"
+	   width="100">
+	   <template scope="scope">
+	            <button class="btn btn-default btn-sm text-info dropdown-toggle" data-toggle="dropdown">Actions <span class="caret"></span></button>
+				<ul class="dropdown-menu">
+					<li><a href="#" data-toggle="modal" data-target="#client"><i class="fa fa-user-circle fa-fw"></i>Client</a></li>
+					<li><a href="javascript:void(0)"><span class="text-danger"><i class="fa fa-trash fa-fw"></i>Delete</span></a></li>
+				</ul>
+	   </template>
+	</el-table-column>
+  </el-table>
+</template>															
 								</div>
+<template>
+<el-pagination
+      @size-change="handleSizeChange"
+      @current-change="handleCurrentChange"
+      :current-page="currentPage"
+      :page-sizes="[10, 25, 50, 100]"
+      :page-size="100"
+      layout="total, sizes, prev, pager, next "
+      :total="100"
+	  style="text-align:right;padding:8px 0;">
+    </el-pagination>
+</template>									
 							</div>
 						</div>
 						<!-- ibox End -->
@@ -273,24 +350,89 @@
 </div>
 </template>
 <script>
-import '../../../assets/css/plugins/footable/footable.core.css'
-import Footable from '../../../assets/js/plugins/footable/footable.all.min.js'
+// import '../../../assets/css/plugins/footable/footable.core.css'
+// import Footable from '../../../assets/js/plugins/footable/footable.all.min.js'
 export default {
    name: 'deposite',
+   data () {
+	   return {
+		   DepositData: [{
+			    account: '55001188',
+				clientID: '22451222',
+				name: 'Zhao',
+				method: 'UnionPay',
+				payedAmount: 'USD 1000',
+				fee: '50.00',
+				exRate: '1',
+				depositAmount: '950.00',
+				depositDate: '2017-03-10 10:55',
+				status: 'Processing'
+			    },{
+				account: '55001188',
+				clientID: '22451222',
+				name: 'Zhao',
+				method: 'UnionPay',
+				payedAmount: 'USD 1000',
+				fee: '50.00',
+				exRate: '1',
+				depositAmount: '950.00',
+				depositDate: '2017-03-10 10:55',
+				status: 'Processing'
+			    },{
+				account: '55001188',
+				clientID: '22451222',
+				name: 'Zhao',
+				method: 'UnionPay',
+				payedAmount: 'USD 1000',
+				fee: '50.00',
+				exRate: '1',
+				depositAmount: '950.00',
+				depositDate: '2017-03-10 10:55',
+				status: 'Processing'
+				},{
+				account: '55001188',
+				clientID: '22451222',
+				name: 'Zhao',
+				method: 'UnionPay',
+				payedAmount: 'USD 1000',
+				fee: '50.00',
+				exRate: '1',
+				depositAmount: '950.00',
+				depositDate: '2017-03-10 10:55',
+				status: 'Processing'
+			}],
+			// 分页
+			currentPage: 2
+	   }
+   },
    components: {
-     Footable 
+    //  Footable 
+   },
+   methods: {
+	    // 饿了么分页
+		handleSizeChange(val) {
+        console.log(`每页 ${val} 条`);
+		},
+		handleCurrentChange(val) {
+			console.log(`当前页: ${val}`);
+		},
    },
    mounted: function() {
-        $('.footable').footable({
-				breakpoints: {
-					phone: 640,
-					tablet: 1024
-				}
-	    });
-
+        // $('.footable').footable({
+		// 		breakpoints: {
+		// 			phone: 640,
+		// 			tablet: 1024
+		// 		}
+	    // });
    }
 }
 </script>
 <style scoped>
-
+/*action展开菜单*/
+.ibox-content td .dropdown-menu{
+	top:0;
+}
+.ibox-content tr:last-child .dropdown-menu{
+	top:-30px;
+}
 </style>

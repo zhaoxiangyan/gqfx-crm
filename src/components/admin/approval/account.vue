@@ -13,7 +13,7 @@
 					<div class="tabs-container">
 						<ul class="nav nav-tabs" role="tablist">
 							<li role="presentation" class="active">
-								<a href="#reqested" data-toggle="tab" aria-controls="requested">Requested <span class="badge badge-success">8</span></a>
+								<a href="#requested" data-toggle="tab" aria-controls="requested">Requested <span class="badge badge-success">8</span></a>
 							</li>
 							<li role="presentation">
 								<a href="#pending" data-toggle="tab" aria-controls="pending">Pending <span class="badge">15</span></a>
@@ -41,7 +41,7 @@
 										<div class="clearfix"></div>
 									</div>
 									<div class="table-responsive">
-										<table class="table table-hover footable toggle-arrow-tiny">
+										<!--<table class="table table-hover footable toggle-arrow-tiny">
 											<thead>
 												<tr>
 													<th data-toggle="true">Cilent ID</th>
@@ -123,8 +123,79 @@
 													</td>
 												</tr>
 											</tfoot>
-										</table>
+										</table>-->
+<template>
+  <el-table
+    :data="RequestedData"
+    border
+    style="width: 100%;font-size:13px;"
+    :default-sort = "{prop: 'date', order: 'descending'}"
+    >
+    <el-table-column
+      prop="clientID"
+      label="Client ID"
+      sortable>
+    </el-table-column>
+    <el-table-column
+      prop="name"
+      label="Name"
+      sortable>
+    </el-table-column>
+    <el-table-column
+      prop="phone"
+      label="Phone"
+      sortable>
+    </el-table-column>
+	<el-table-column
+      prop="email"
+      label="Email"
+      sortable>
+    </el-table-column>
+    <el-table-column
+      prop="agentID"
+      label="Agent ID"
+      sortable>
+    </el-table-column>
+    <el-table-column
+      prop="signupDate"
+      label="Signup Date"
+      sortable>
+    </el-table-column>
+	<el-table-column
+      prop="requestDate"
+      label="Request Date"
+      sortable>
+    </el-table-column>
+    <el-table-column
+      prop="verification"
+      label="Verification"
+      sortable>
+    </el-table-column>
+	<el-table-column 
+	   label="Action"
+	   width="100">
+	   <template scope="scope">
+	            <button class="btn btn-default btn-sm text-info dropdown-toggle" data-toggle="dropdown">Actions <span class="caret"></span></button>
+				<ul class="dropdown-menu">
+					<li><a href="#" data-toggle="modal" data-target="#account"><i class="fa fa-pencil-square fa-fw"></i>Approve</a></li>
+					<li><a href="javascript:void(0)"><span class="text-danger"><i class="fa fa-trash fa-fw"></i>Delete</span></a></li>
+				</ul>
+	   </template>
+	</el-table-column>
+  </el-table>
+</template>										
 									</div>
+<template>
+<el-pagination
+      @size-change="handleSizeChange1"
+      @current-change="handleCurrentChange1"
+      :current-page="currentPage1"
+      :page-sizes="[10, 25, 50, 100]"
+      :page-size="100"
+      layout="total, sizes, prev, pager, next "
+      :total="100">
+    </el-pagination>
+</template>									
 								</div>
 							</div>
 							<!-- tab-pane End -->
@@ -145,7 +216,7 @@
 										<div class="clearfix"></div>
 									</div>
 									<div class="table-responsive">
-										<table class="table table-hover footable toggle-arrow-tiny">
+										<!--<table class="table table-hover footable toggle-arrow-tiny">
 											<thead>
 												<tr>
 													<th data-toggle="true">Cilent ID</th>
@@ -227,8 +298,79 @@
 													</td>
 												</tr>
 											</tfoot>
-										</table>
+										</table>-->
+<template>
+  <el-table
+    :data="PendingData"
+    border
+    style="width: 100%;font-size:13px;"
+    :default-sort = "{prop: 'date', order: 'descending'}"
+    >
+    <el-table-column
+      prop="clientID"
+      label="Client ID"
+      sortable>
+    </el-table-column>
+    <el-table-column
+      prop="name"
+      label="Name"
+      sortable>
+    </el-table-column>
+    <el-table-column
+      prop="phone"
+      label="Phone"
+      sortable>
+    </el-table-column>
+	<el-table-column
+      prop="email"
+      label="Email"
+      sortable>
+    </el-table-column>
+    <el-table-column
+      prop="agentID"
+      label="Agent ID"
+      sortable>
+    </el-table-column>
+    <el-table-column
+      prop="signupDate"
+      label="Signup Date"
+      sortable>
+    </el-table-column>
+	<el-table-column
+      prop="requestDate"
+      label="Request Date"
+      sortable>
+    </el-table-column>
+    <el-table-column
+      prop="verification"
+      label="Verification"
+      sortable>
+    </el-table-column>
+	<el-table-column 
+	   label="Action"
+	   width="100">
+	   <template scope="scope">
+	            <button class="btn btn-default btn-sm text-info dropdown-toggle" data-toggle="dropdown">Actions <span class="caret"></span></button>
+				<ul class="dropdown-menu">
+					<li><a href="#" data-toggle="modal" data-target="#account"><i class="fa fa-pencil-square fa-fw"></i>Approve</a></li>
+					<li><a href="javascript:void(0)"><span class="text-danger"><i class="fa fa-trash fa-fw"></i>Delete</span></a></li>
+				</ul>
+	   </template>
+	</el-table-column>
+  </el-table>
+</template>																	
 									</div>
+<template>
+<el-pagination
+      @size-change="handleSizeChange2"
+      @current-change="handleCurrentChange2"
+      :current-page="currentPage2"
+      :page-sizes="[10, 25, 50, 100]"
+      :page-size="100"
+      layout="total, sizes, prev, pager, next "
+      :total="100">
+    </el-pagination>
+</template>										
 								</div>
 							</div>
 							<!-- tab-pane End -->
@@ -249,7 +391,7 @@
 										<div class="clearfix"></div>
 									</div>
 									<div class="table-responsive">
-										<table class="table table-hover footable toggle-arrow-tiny">
+										<!--<table class="table table-hover footable toggle-arrow-tiny">
 											<thead>
 												<tr>
 													<th data-toggle="true">Cilent ID</th>
@@ -331,8 +473,79 @@
 													</td>
 												</tr>
 											</tfoot>
-										</table>
+										</table>-->
+<template>
+  <el-table
+    :data="DeclinedData"
+    border
+    style="width: 100%;font-size:13px;"
+    :default-sort = "{prop: 'date', order: 'descending'}"
+    >
+    <el-table-column
+      prop="clientID"
+      label="Client ID"
+      sortable>
+    </el-table-column>
+    <el-table-column
+      prop="name"
+      label="Name"
+      sortable>
+    </el-table-column>
+    <el-table-column
+      prop="phone"
+      label="Phone"
+      sortable>
+    </el-table-column>
+	<el-table-column
+      prop="email"
+      label="Email"
+      sortable>
+    </el-table-column>
+    <el-table-column
+      prop="agentID"
+      label="Agent ID"
+      sortable>
+    </el-table-column>
+    <el-table-column
+      prop="signupDate"
+      label="Signup Date"
+      sortable>
+    </el-table-column>
+	<el-table-column
+      prop="requestDate"
+      label="Request Date"
+      sortable>
+    </el-table-column>
+    <el-table-column
+      prop="verification"
+      label="Verification"
+      sortable>
+    </el-table-column>
+	<el-table-column 
+	   label="Action"
+	   width="100">
+	   <template scope="scope">
+	            <button class="btn btn-default btn-sm text-info dropdown-toggle" data-toggle="dropdown">Actions <span class="caret"></span></button>
+				<ul class="dropdown-menu">
+					<li><a href="#" data-toggle="modal" data-target="#account"><i class="fa fa-pencil-square fa-fw"></i>Approve</a></li>
+					<li><a href="javascript:void(0)"><span class="text-danger"><i class="fa fa-trash fa-fw"></i>Delete</span></a></li>
+				</ul>
+	   </template>
+	</el-table-column>
+  </el-table>
+</template>											
 									</div>
+<template>
+<el-pagination
+      @size-change="handleSizeChange3"
+      @current-change="handleCurrentChange3"
+      :current-page="currentPage3"
+      :page-sizes="[10, 25, 50, 100]"
+      :page-size="100"
+      layout="total, sizes, prev, pager, next "
+      :total="100">
+    </el-pagination>
+</template>										
 								</div>
 							</div>
 							<!-- tab-pane End -->
@@ -449,20 +662,29 @@
 									<div class="tab-pane active" id="id-photo">
 										<div class="panel-body">
 											<div class="doc-box m-b-md">
-												<div class="checkbox pull-left"><input id="checkbox1" type="checkbox"><label for="checkbox1"> ID(Front)</label></div>
+												<div class="pull-left">
+												     <!-- <input id="checkbox1" type="checkbox"><label for="checkbox1"> ID(Front)</label>-->
+<template>
+  <el-checkbox >ID(Front)</el-checkbox>
+</template>
+												</div>
 												<div class="ibox-tools">
 													<span class="label label-primary">Approved</span>
 													<a href="static/img/p1.jpg" data-lightbox="image-1" data-title="ID(Front)"><i class="fa fa-expand"></i></a>
-													<a href=""><i class="fa fa-download"></i></a>
+													<a href="javascript:void(0)"><i class="fa fa-download"></i></a>
 												</div>
 												<div class="m-t-xs"><img src="../../../assets/img/p1.jpg" class="img-responsive"></div>
 											</div>
 											<div class="doc-box m-b-md">
-												<div class="checkbox pull-left"><input id="checkbox2" type="checkbox"><label for="checkbox2"> ID(Back)</label></div>
+												<div class="pull-left">
+<template>
+  <el-checkbox >ID(Back)</el-checkbox>
+</template>												
+												</div>
 												<div class="ibox-tools">
 													<span class="label label-warning">Pending</span>
 													<a href="static/img/12.jpg" data-lightbox="image-2" data-title="ID(Back)"><i class="fa fa-expand"></i></a>
-													<a href=""><i class="fa fa-download"></i></a>
+													<a href="javascript:void(0)"><i class="fa fa-download"></i></a>
 												</div>
 												<div class="m-t-xs"><img src="../../../assets/img/12.jpg" class="img-responsive"></div>
 											</div>
@@ -476,29 +698,41 @@
 									<div class="tab-pane" id="res-card">
 										<div class="panel-body">
 											<div class="doc-box m-b-md">
-												<div class="checkbox pull-left"><input id="checkbox4" type="checkbox"><label for="checkbox4"> Proof of Residence</label></div>
+												<div class="pull-left">
+<template>
+  <el-checkbox >Proof of Residence</el-checkbox>
+</template>													
+												</div>
 												<div class="ibox-tools">
 													<span class="label label-primary">Approved</span>
 													<a href="static/img/p1.jpg" data-lightbox="image-1" data-title="Proof of Residence"><i class="fa fa-expand"></i></a>
-													<a href=""><i class="fa fa-download"></i></a>
+													<a href="javascript:void(0)"><i class="fa fa-download"></i></a>
 												</div>
 												<div class="m-t-xs"><img src="../../../assets/img/p1.jpg" class="img-responsive"></div>
 											</div>
 											<div class="doc-box m-b-md">
-												<div class="checkbox pull-left"><input id="checkbox5" type="checkbox"><label for="checkbox5"> Debit/Credit Card(Front)</label></div>
+												<div class="pull-left">
+<template>
+  <el-checkbox >Debit/Credit Card(Front)</el-checkbox>
+</template>													
+												</div>
 												<div class="ibox-tools">
 													<span class="label label-warning">Pending</span>
 													<a href="static/img/12.jpg" data-lightbox="image-2" data-title="Debit/Credit Card(Front)"><i class="fa fa-expand"></i></a>
-													<a href=""><i class="fa fa-download"></i></a>
+													<a href="javascript:void(0)"><i class="fa fa-download"></i></a>
 												</div>
 												<div class="m-t-xs"><img src="../../../assets/img/12.jpg" class="img-responsive"></div>
 											</div>
 											<div class="doc-box m-b-md">
-												<div class="checkbox pull-left"><input id="checkbox6" type="checkbox"><label for="checkbox6"> Debit/Credit Card(Back) </label></div>
+												<div class="pull-left">
+<template>
+  <el-checkbox >Debit/Credit Card(Back)</el-checkbox>
+</template>													
+												</div>
 												<div class="ibox-tools">
 													<span class="label label-danger">Declined</span>
 													<a href="static/img/p3.jpg" data-lightbox="image-3" data-title="Debit/Credit Card(Back) "><i class="fa fa-expand"></i></a>
-													<a href=""><i class="fa fa-download"></i></a>
+													<a href="javascript:void(0)"><i class="fa fa-download"></i></a>
 												</div>
 												<div class="m-t-xs"><img src="../../../assets/img/p3.jpg" class="img-responsive"></div>
 											</div>
@@ -541,36 +775,172 @@
 </div>
 </template>
 <script>
-import '../../../assets/css/plugins/footable/footable.core.css'
-import '../../../assets/css/plugins/daterangepicker/daterangepicker-bs3.css'
+// import '../../../assets/css/plugins/footable/footable.core.css'
+// import '../../../assets/css/plugins/daterangepicker/daterangepicker-bs3.css'
 // import '../../../assets/css/plugins/lightbox/lightbox.css'
-import '../../../assets/css/plugins/jasny/jasny-bootstrap.min.css'
-import '../../../assets/css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css'
+// import '../../../assets/css/plugins/jasny/jasny-bootstrap.min.css'
+// import '../../../assets/css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css'
 
-import Jasny from '../../../assets/js/plugins/jasny/jasny-bootstrap.min.js'
-import Footable from '../../../assets/js/plugins/footable/footable.all.min.js'
+// import Jasny from '../../../assets/js/plugins/jasny/jasny-bootstrap.min.js'
+// import Footable from '../../../assets/js/plugins/footable/footable.all.min.js'
 // import Lightbox from '../../../assets/js/plugins/lightbox/lightbox.min.js'
 import Lightbox from 'lightbox2'
 import 'lightbox2/dist/css/lightbox.css'
 // global. = Raphael
 export default {
     name: 'account',
+	data () {
+		return {
+			// Requested表格数据
+			RequestedData: [{
+				clientID: '22558833',
+				name: 'Patrick Smith',
+				phone: '1517982071',
+				email: '9876703@qq.com',
+				agentID: '22001177',
+				signupDate: '2017-02-10 14:30',
+				requestDate: '2017-08-07 17:46',
+				verification: 'Verified'
+			    },{
+				clientID: '22558833',
+				name: 'Patrick Smith',
+				phone: '1517982071',
+				email: '9876703@qq.com',
+				agentID: '22001177',
+				signupDate: '2017-02-10 14:30',
+				requestDate: '2017-08-07 17:46',
+				verification: 'Verified'
+			    },{
+				clientID: '22558833',
+				name: 'Patrick Smith',
+				phone: '1517982071',
+				email: '9876703@qq.com',
+				agentID: '22001177',
+				signupDate: '2017-02-10 14:30',
+				requestDate: '2017-08-07 17:46',
+				verification: 'Verified'
+			}],
+			// 分页
+			currentPage1: 3,
+			// Pending表格数据
+			PendingData: [{
+				clientID: '22451833',
+				name: 'Andy',
+				phone: '8883797',
+				email: '151416703@qq.com',
+				agentID: '4781177',
+				signupDate: '2017-08-01 14:30',
+				requestDate: '2017-08-09 17:46',
+				verification: 'Verified'
+			    },{
+				clientID: '22451833',
+				name: 'Andy',
+				phone: '8883797',
+				email: '151416703@qq.com',
+				agentID: '4781177',
+				signupDate: '2017-08-01 14:30',
+				requestDate: '2017-08-09 17:46',
+				verification: 'Verified'
+			    },{
+				clientID: '22451833',
+				name: 'Andy',
+				phone: '8883797',
+				email: '151416703@qq.com',
+				agentID: '4781177',
+				signupDate: '2017-08-01 14:30',
+				requestDate: '2017-08-09 17:46',
+				verification: 'Verified'	
+			}],
+		    // 分页
+			currentPage2: 4,
+			// Declined表格数据
+			DeclinedData: [{
+				clientID: '22451222',
+				name: 'Zhao',
+				phone: '8145623797',
+				email: '14516703@qq.com',
+				agentID: '47814877',
+				signupDate: '2017-06-22 14:30',
+				requestDate: '2017-08-01 17:46',
+				verification: 'Verified'
+			    },{
+				clientID: '224547133',
+				name: 'Adsf',
+				phone: '888127487',
+				email: '168456703@qq.com',
+				agentID: '4781117577',
+				signupDate: '2017-05-01 14:30',
+				requestDate: '2017-07-02 17:46',
+				verification: 'Verified'
+			    },{
+				clientID: '21476833',
+				name: 'Yan',
+				phone: '1745864',
+				email: '52701803@qq.com',
+				agentID: '47174677',
+				signupDate: '2017-07-22 14:30',
+				requestDate: '2017-06-12 17:46',
+				verification: 'Verified'
+			}],
+			// 分页
+			currentPage3: 5
+		}
+	},
     components: {
-         Lightbox,
-        Jasny,
-        Footable
+         Lightbox
+        // Jasny,
+        // Footable
     },
+	methods: {
+		// Requested表格
+		// formatter(row, column) {
+        //    return row.address;
+        // },
+		// 饿了么分页
+		handleSizeChange1(val) {
+        console.log(`每页 ${val} 条`);
+		},
+		handleCurrentChange1(val) {
+			console.log(`当前页: ${val}`);
+		},
+		handleSizeChange2(val) {
+        console.log(`每页 ${val} 条`);
+		},
+		handleCurrentChange2(val) {
+			console.log(`当前页: ${val}`);
+		},
+		handleSizeChange3(val) {
+        console.log(`每页 ${val} 条`);
+		},
+		handleCurrentChange3(val) {
+			console.log(`当前页: ${val}`);
+		}
+	},
     mounted: function() {
-        $('.footable').footable({
-			breakpoints: {
-				phone: 640,
-				tablet: 1024
-			}
-	    });
+        // $('.footable').footable({
+		// 	breakpoints: {
+		// 		phone: 640,
+		// 		tablet: 1024
+		// 	}
+	    // });
     }
 }
 </script>
 <style scoped>
-
+.tab-content td .dropdown-menu{
+	top:0;
+}
+.tab-content tr:last-child .dropdown-menu{
+	top:-30px;
+}
+/*分页*/
+.el-pagination{
+	text-align:right;
+	padding:8px 0;
+}
+/*checkbox复选框*/
+.el-checkbox{
+	color:#676a6c;
+}
 </style>
 

@@ -99,14 +99,14 @@ export default new Router({
             path: '/admin/client/message',
             component: resolve => require(['../components/admin/client/message.vue'], resolve)
         },  
-        // {
-        //     path: '/admin/infomation/info-edit',
-        //     component: resolve => require(['../components/admin/infomation/info-edit.vue'], resolve)
-        // },      
-        // {
-        //     path: '/admin/infomation/info-new',
-        //     component: resolve => require(['../components/admin/infomation/info-new.vue'], resolve)
-        // },      
+        {
+            path: '/admin/infomation/info-edit',
+            component: resolve => require(['../components/admin/infomation/info-edit.vue'], resolve)
+        },      
+        {
+            path: '/admin/infomation/info-new',
+            component: resolve => require(['../components/admin/infomation/info-new.vue'], resolve)
+        },      
         {
             path: '/admin/infomation/index',
             component: resolve => require(['../components/admin/infomation/index.vue'], resolve)
