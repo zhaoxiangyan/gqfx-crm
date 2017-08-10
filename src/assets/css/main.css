@@ -1230,7 +1230,7 @@ button.dim:active:before {
 .onoffswitch-checkbox:disabled + .onoffswitch-label,
 .onoffswitch-checkbox:disabled + .onoffswitch-label .onoffswitch-switch {
   border-color: #919191;
-}
+} 
 /* CHOSEN PLUGIN */
 .chosen-container-single .chosen-single {
   background: #ffffff;
@@ -1908,13 +1908,13 @@ div.dt-button-info {
   background-color: #FFFFFF;
 	color: #1AB394;
 }
-.onoffswitch-inner:after {
+ .onoffswitch-inner:after {
   content: "ON";
   padding-right: 7px;
 	background-color: #1AB394;
   color: #FFFFFF;
   text-align: right;
-}
+} 
 .onoffswitch-switch {
   display: block;
   width: 18px;
@@ -1936,7 +1936,7 @@ div.dt-button-info {
 }
 .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
   right: 0;
-}
+}  
 
 /* Nestable list */
 .dd {

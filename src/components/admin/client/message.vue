@@ -64,10 +64,9 @@
     <el-date-picker
       v-model="value"
       type="datetime"
-      placeholder="Select date time" 
-	  >
+      placeholder="Select date time"  >
     </el-date-picker>
-</template>							
+</template>					
 									</div>
 								</div>
 							</div>
@@ -186,9 +185,18 @@ export default {
     name: 'message',
 	// props: ["value1"],
 	data () {
-       return {
-		   value: ''
-	   };
+        return {
+		    value: ''
+		    // pickerOptions1: {	
+			// 		onClick(picker) {
+			// 		const date = new Date();
+			// 		picker.$emit('pick', date);
+			// 		}
+			// }
+	    };
+	},
+	props: {
+		valueData: ''
 	},
 	methods: {
 		

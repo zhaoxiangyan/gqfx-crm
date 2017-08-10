@@ -131,9 +131,7 @@
   <el-table
     :data="RequestedData"
     border
-    style="width: 100%;font-size:13px;"
-    :default-sort = "{prop: 'date', order: 'descending'}"
-    >
+    style="width: 100%;font-size:13px;">
     <el-table-column
       prop="clientID"
       label="Client ID"
@@ -310,9 +308,7 @@
   <el-table
     :data="PendingData"
     border
-    style="width: 100%;font-size:13px;"
-    :default-sort = "{prop: 'date', order: 'descending'}"
-    >
+    style="width: 100%;font-size:13px;" >
 	<el-table-column
       prop="clientID"
       label="Client ID"
@@ -489,9 +485,7 @@
   <el-table
     :data="DeclinedData"
     border
-    style="width: 100%;font-size:13px;"
-    :default-sort = "{prop: 'date', order: 'descending'}"
-    >
+    style="width: 100%;font-size:13px;">
 	<el-table-column
       prop="clientID"
       label="Client ID"
@@ -781,22 +775,22 @@ export default {
 				rankupCondition: 'Achived',
 				status: 'Requested'
 			    },{
-				clientID: '22451222',
-				name: 'Alan Smith',
-				clientLevel: 'Level-1',
-				currentRank: 'Trader',
-				requestedRank: 'IB',
-				requestDate: '2017-03-08 10:55',
+				clientID: '1985142',
+				name: 'Bob',
+				clientLevel: 'Level-2',
+				currentRank: 'IB',
+				requestedRank: 'MIB',
+				requestDate: '2017-02-07 08:32',
 				rankupCondition: 'Achived',
 				status: 'Requested'
 			    },{
-				clientID: '22451222',
-				name: 'Alan Smith',
-				clientLevel: 'Level-1',
+				clientID: '2141574138',
+				name: 'Paul',
+				clientLevel: 'Level-3',
 				currentRank: 'Trader',
 				requestedRank: 'IB',
-				requestDate: '2017-03-08 10:55',
-				rankupCondition: 'Achived',
+				requestDate: '2017-05-02 19:14',
+				rankupCondition: 'Unachived',
 				status: 'Requested'
 			}],
 			// 分页

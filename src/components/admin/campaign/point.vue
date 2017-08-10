@@ -44,23 +44,39 @@
 									</div>
 									<div class="collapse" id="volume">
 										<table class="table">
-											<tr>
-												<td><input class="form-control" type="text" placeholder="Over $"></td>
-												<td><input class="form-control" type="text" placeholder="Point"></td>
-												<td width="50%"><input class="form-control" type="text" name="daterange" placeholder="Term"></td>
-												<td><button class="btn btn-sm btn-default text-info" data-toggle="tooltip" data-placement="top" title="Add"><i class="fa fa-check"></i></button></td>
-											</tr>
+										    <tbody>
+												<tr>
+													<td><input class="form-control" type="text" placeholder="Over $"></td>
+													<td><input class="form-control" type="text" placeholder="Point"></td>
+													<td width="50%">
+													<!--<input class="form-control" type="text" name="daterange" placeholder="Term">-->
+<template>
+    <el-date-picker
+      v-model="value"
+      type="daterange"
+      placeholder="Select date range">
+    </el-date-picker>
+</template>													
+													</td>
+													<td><button class="btn btn-sm btn-default text-info" data-toggle="tooltip" data-placement="top" title="Add"><i class="fa fa-check"></i></button></td>
+												</tr>
+											</tbody>
 										</table>
 									</div>
 								</div>
 								<div class="col-sm-1 p-xxs">
-									<div class="onoffswitch">
+									<!--<div class="onoffswitch">
 										<input class="onoffswitch-checkbox" id="deposit-bouns" type="checkbox" checked="">
 										<label class="onoffswitch-label" for="deposit-bouns">
 											<span class="onoffswitch-inner"></span>
 											<span class="onoffswitch-switch"></span>
 										</label>
-									</div>
+									</div>-->
+<el-switch
+  v-model="value1"
+  on-color="#13ce66"
+  off-color="#ff4949">
+</el-switch>									
 								</div>
 								<div class="col-sm-3">
 									<small><i class="fa fa-pencil"></i> Transaction volume within the period.</small>
@@ -98,22 +114,29 @@
 									</div>
 									<div class="collapse" id="deposit">
 										<table class="table">
-											<tr>
-												<td><input class="form-control" type="text" placeholder="Over $"></td>
-												<td><input class="form-control" type="text" placeholder="Point"></td>
-												<td><button class="btn btn-sm btn-default text-info" data-toggle="tooltip" data-placement="top" title="Add"><i class="fa fa-check"></i></button></td>
-											</tr>
+										    <tbody>
+												<tr>
+													<td><input class="form-control" type="text" placeholder="Over $"></td>
+													<td><input class="form-control" type="text" placeholder="Point"></td>
+													<td><button class="btn btn-sm btn-default text-info" data-toggle="tooltip" data-placement="top" title="Add"><i class="fa fa-check"></i></button></td>
+												</tr>
+											</tbody>
 										</table>
 									</div>
 								</div>
 								<div class="col-sm-1 col-sm-offset-2 p-xxs">
-									<div class="onoffswitch">
+									<!--<div class="onoffswitch">
 										<input class="onoffswitch-checkbox" id="deposit-bouns" type="checkbox" checked="">
 										<label class="onoffswitch-label" for="deposit-bouns">
 											<span class="onoffswitch-inner"></span>
 											<span class="onoffswitch-switch"></span>
 										</label>
-									</div>
+									</div>-->
+<el-switch
+  v-model="value2"
+  on-color="#13ce66"
+  off-color="#ff4949">
+</el-switch>									
 								</div>
 								<div class="col-sm-3">
 									<small><i class="fa fa-pencil"></i> For one deposit amount.</small>
@@ -128,13 +151,18 @@
 									<div class="input-group"><span class="input-group-addon">P</span> <input class="form-control" type="text"></div>
 								</div>
 								<div class="col-sm-1 p-xxs">
-									<div class="onoffswitch">
+									<!--<div class="onoffswitch">
 										<input class="onoffswitch-checkbox" id="deposit-bouns" type="checkbox" checked="">
 										<label class="onoffswitch-label" for="deposit-bouns">
 											<span class="onoffswitch-inner"></span>
 											<span class="onoffswitch-switch"></span>
 										</label>
-									</div>
+									</div>-->
+<el-switch
+  v-model="value3"
+  on-color="#13ce66"
+  off-color="#ff4949">
+</el-switch>									
 								</div>
 							</div>
 						</div>
@@ -156,24 +184,34 @@
 </div>
 </template>
 <script>
-import '../../../assets/css/plugins/daterangepicker/daterangepicker-bs3.css'
-import Datepicker from '../../../assets/js/plugins/datapicker/bootstrap-datepicker.js'
+// import '../../../assets/css/plugins/daterangepicker/daterangepicker-bs3.css'
+// import Datepicker from '../../../assets/js/plugins/datapicker/bootstrap-datepicker.js'
 export default {
     name: 'point',
+	data() {
+      return {
+        value1: true,
+        value2: false,
+		value3: true,
+		value: ''
+      }
+    },
     components: {
-       Datepicker
+    //    Datepicker
     },
     mounted: function(){
     //   $('input[name="daterange"]').daterangepicker({
 	// 			timePicker: false,
 	//   });
-      $('.datepicker').datepicker({
-			format: 'yyyy-mm-dd',
-			startDate: '-3d'
-	  });     
+    //   $('.datepicker').datepicker({
+	// 		format: 'yyyy-mm-dd',
+	// 		startDate: '-3d'
+	//   });     
     }
 }
 </script>
-<style scoped>
-
+<style>
+.el-input__inner{
+	height:34px!important;
+}
 </style>
