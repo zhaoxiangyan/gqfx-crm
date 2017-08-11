@@ -71,10 +71,10 @@ export default new Router({
             path: '/admin/campaign/bonuslog',
             component: resolve => require(['../components/admin/campaign/bonuslog.vue'], resolve)
         }, 
-        // {
-        //     path: '/admin/campaign/list-edit',
-        //     component: resolve => require(['../components/admin/campaign/list-edit.vue'], resolve)
-        // }, 
+        {
+            path: '/admin/campaign/list-edit',
+            component: resolve => require(['../components/admin/campaign/list-edit.vue'], resolve)
+        }, 
         {
             path: '/admin/campaign/list-new',
             component: resolve => require(['../components/admin/campaign/list-new.vue'], resolve)

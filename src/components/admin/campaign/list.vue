@@ -4,7 +4,7 @@
 	<div class="row wrapper border-bottom white-bg page-heading">
 		<div class="col-lg-10">
 			<h2 class="pull-left m-r-sm">Campaign Bunner and List / <small>Mypage of Client</small></h2>
-			<div class="heading-tools"><a href="list-new.html" class="btn btn-sm btn-default"><i class="fa fa-plus"></i> New</a></div>
+			<div class="heading-tools"><router-link to="/admin/campaign/list-new" class="btn btn-sm btn-default"><i class="fa fa-plus"></i> New</router-link></div>
 		</div>
 	</div>
 	
@@ -46,9 +46,9 @@
 										<span class="m-r-lg">Publish Date<i class="fa fa-clock-o"></i> 2017-04-01</span><span>End Date<i class="fa fa-clock-o"></i> 2017-04-30</span>
 									</div>
 									<div class="col-sm-4 text-right">
-										<a class="btn btn-sm btn-white text-info" href="list-edit.html"><i class="fa fa-edit fa-fw"></i>Edit</a>
+										<router-link class="btn btn-sm btn-white text-info" to="/admin/campaign/list-edit"><i class="fa fa-edit fa-fw"></i>Edit</router-link>
 										<a class="btn btn-sm btn-white" href="#" data-toggle="modal" data-target="#view"><i class="fa fa-eye fa-fw"></i>Preview</a>
-										<a class="btn btn-sm btn-white" href="#"><i class="fa fa-trash"></i></a>
+										<a class="btn btn-sm btn-white" href="javascript:void(0)"><i class="fa fa-trash"></i></a>
 									</div>
 								</div>
 							</li>
@@ -59,9 +59,9 @@
 										<span class="m-r-lg">Publish Date<i class="fa fa-clock-o"></i> 2017-04-01</span><span>End Date<i class="fa fa-clock-o"></i> 2017-04-30</span>
 									</div>
 									<div class="col-sm-4 text-right">
-										<a class="btn btn-sm btn-white text-info" href="list-edit.html"><i class="fa fa-edit fa-fw"></i>Edit</a>
+										<router-link class="btn btn-sm btn-white text-info" to="/admin/campaign/list-edit"><i class="fa fa-edit fa-fw"></i>Edit</router-link>
 										<a class="btn btn-sm btn-white" href="#" data-toggle="modal" data-target="#view"><i class="fa fa-eye fa-fw"></i>Preview</a>
-										<a class="btn btn-sm btn-white" href="#"><i class="fa fa-trash"></i></a>
+										<a class="btn btn-sm btn-white" href="javascript:void(0)"><i class="fa fa-trash"></i></a>
 									</div>
 								</div>
 							</li>
@@ -72,9 +72,9 @@
 										<span class="m-r-lg">Publish Date<i class="fa fa-clock-o"></i> 2017-04-01</span><span>End Date<i class="fa fa-clock-o"></i> 2017-04-30</span>
 									</div>
 									<div class="col-sm-4 text-right">
-										<a class="btn btn-sm btn-white text-info" href="list-edit.html"><i class="fa fa-edit fa-fw"></i>Edit</a>
+										<router-link class="btn btn-sm btn-white text-info" to="/admin/campaign/list-edit"><i class="fa fa-edit fa-fw"></i>Edit</router-link>
 										<a class="btn btn-sm btn-white" href="#" data-toggle="modal" data-target="#view"><i class="fa fa-eye fa-fw"></i>Preview</a>
-										<a class="btn btn-sm btn-white" href="#"><i class="fa fa-trash"></i></a>
+										<a class="btn btn-sm btn-white" href="javascript:void(0)"><i class="fa fa-trash"></i></a>
 									</div>
 								</div>
 							</li>
@@ -158,15 +158,15 @@
 </div>
 </template>
 <script>
-import '../../../assets/css/plugins/footable/footable.core.css'
-import '../../../assets/css/plugins/daterangepicker/daterangepicker-bs3.css'
+// import '../../../assets/css/plugins/footable/footable.core.css'
+// import '../../../assets/css/plugins/daterangepicker/daterangepicker-bs3.css'
 import JqueryUI from '../../../assets/js/plugins/jquery-ui/jquery-ui.min.js'
 // import Custum from '../../assets/js/custum.js'
 export default {
     name: 'list',
 	components:{
 	//   Custum,
-      JqueryUI
+    //   JqueryUI
 	},
     mounted: function(){
       	$("#sortable").sortable();

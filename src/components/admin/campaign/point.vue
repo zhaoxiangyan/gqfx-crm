@@ -35,7 +35,7 @@
 												<td><input class="form-control" type="text" value="1,000"></td>
 												<td><input class="form-control" type="text" value="100"></td>
 												<td><input class="form-control" type="text" value="2017-04-01-2017-04-30"></td>
-												<td><a href="#" class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash"></i></a></td>
+												<td><a href="javascript:void(0)" class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash"></i></a></td>
 											</tr>
 										</tbody>
 									</table>
@@ -54,7 +54,8 @@
     <el-date-picker
       v-model="value"
       type="daterange"
-      placeholder="Select date range">
+      placeholder="Select date range"
+	  class="eee">
     </el-date-picker>
 </template>													
 													</td>
@@ -105,7 +106,7 @@
 											<tr>
 												<td><input class="form-control" type="text" value="10,000"></td>
 												<td><input class="form-control" type="text" value="200"></td>
-												<td><a href="#" class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash"></i></a></td>
+												<td><a href="javascript:void(0)" class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash"></i></a></td>
 											</tr>	
 										</tbody>
 									</table>
@@ -211,7 +212,7 @@ export default {
 }
 </script>
 <style>
-.el-input__inner{
-	height:34px!important;
+.eee>.el-input__inner{
+	height:34px;
 }
 </style>

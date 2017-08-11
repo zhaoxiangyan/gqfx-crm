@@ -15,6 +15,7 @@ import 'bootstrap/dist/js/bootstrap.min.js'
 import 'font-awesome/css/font-awesome.min.css'
 import 'animate.css/animate.css'
 
+import './assets/css/main.css'
 // import Cta from 'cta'
 import 'summernote/dist/summernote.css'
 import 'summernote/dist/summernote.js'

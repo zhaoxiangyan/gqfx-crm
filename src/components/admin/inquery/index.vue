@@ -1,6 +1,6 @@
 <template>
 <div>		
-	<div class="wrapper wrapper-content  animated fadeInRight">
+	<div class="wrapper wrapper-content  animated fadeInRight" >
 		<div class="row">
 			<div class="col-sm-8">
 				<div class="ibox">
@@ -88,8 +88,8 @@
 										</table>
 										<nav aria-label="Page navigation">
 											<ul class="pagination pull-right">
-												<li><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
-												<li><a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+												<li><a href="javascript:void(0)" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+												<li><a href="javascript:void(0)" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
 											</ul>
 										</nav>
 									</div>
@@ -160,8 +160,8 @@
 										</table>
 										<nav aria-label="Page navigation">
 											<ul class="pagination pull-right">
-												<li><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
-												<li><a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+												<li><a href="javascript:void(0)" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+												<li><a href="javascript:void(0)" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
 											</ul>
 										</nav>
 									</div>
@@ -187,7 +187,7 @@
 									</div>
 									<div class="col-lg-5">
 										<a href="#" class="btn btn-sm btn-default btn-block" data-toggle="modal" data-target="#client"><i class="fa fa-user-circle fa-fw"></i>Client</a>
-										<a href="#" class="btn btn-primary btn-sm btn-block" data-cta-target=".modal-message"><i class="fa fa-reply fa-fw"></i>Reply
+										<a href="javascript:void(0)" @click="hideshow()" class="btn btn-primary btn-sm btn-block" ><i class="fa fa-reply fa-fw"></i>Reply
 										</a>
 									</div>
 								</div>
@@ -202,9 +202,9 @@
 											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
 											<p>
 												<span><i class="fa fa-paperclip fa-fw"></i>attachments - </span>
-												<a href="#">sample.txt</a>
+												<a href="javascript:void(0)">sample.txt</a>
 												|
-												<a href="#">image.jpg</a>
+												<a href="javascript:void(0)">image.jpg</a>
 											</p>
 
 										</li>
@@ -593,8 +593,8 @@
 	</div>
 	
 	<!-- Modal Send message -->
-	<div class="modal modal-message">
-		<span class="modal-close-btn m-t-n-xs"></span>
+	<div class="modal modal-message animated bounceInRight" v-bind:class="{show: show}">
+		<span class="modal-close-btn m-t-n-xs" @click="hideshow()"></span>
 		<div class="ibox">
 			<div class="ibox-title black-bg"><h5 class="text-white">Reply Message</h5></div>
 			<div class="ibox-content">
@@ -643,9 +643,21 @@ import "../../../assets/css/plugins/jasny/jasny-bootstrap.min.css"
 import Jasny from '../../../assets/js/plugins/jasny/jasny-bootstrap.min.js'
 export default {
     name: 'inquery-index',
+	data () {
+		return {
+			// 模态框 
+			show: false
+		}
+	},
 	components:{
         // Cta,
         Jasny
+	},
+	methods: {
+		hideshow(){
+			this.show = !this.show;
+			$("body").toggleClass("disable-mouse");
+		}
 	},
     mounted: function(){
        

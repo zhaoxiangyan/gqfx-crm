@@ -1,5 +1,5 @@
 <template>
-<div class="navbar-default navbar-static-side" role="navigation">
+<div class="navbar-default navbar-static-side navbar_bg" role="navigation">
 			<div class="sidebar-collapse">
 				<ul class="nav metismenu skin-3" id="side-menu">
 					<li class="nav-header">
@@ -121,5 +121,8 @@ export default {
 }
 </script>
 <style scoped>
-
+.navbar_bg{
+	background:#2f4050;
+	min-height:100%;
+}
 </style>

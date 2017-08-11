@@ -180,7 +180,7 @@ import '../../../assets/css/plugins/summernote/monokai.min.css'
 // import Formatting from '../../../assets/js/plugins/summernote/formatting.min.js'
 // import Clipboardmin from '../../../assets/js/plugins/clipboard/clipboard.min.js'
 import Clipboard from 'clipboard'
-import codemirror from '../../../assets/js/plugins/summernote/codemirror.min.js'
+// import codemirror from '../../../assets/js/plugins/summernote/codemirror.min.js'
 export default {
     name: 'message',
 	// props: ["value1"],

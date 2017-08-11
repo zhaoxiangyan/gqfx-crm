@@ -5,8 +5,9 @@
 </template>
 
 <script>
+// import '../static/css/main.css'
 import Custum from './assets/js/main.js'
-export default {
+export default { 
   name: 'app',
   components: {
     Custum
@@ -15,7 +16,8 @@ export default {
 </script>
 
 <style>
-@import './assets/css/main.css';
+/*@import '../static/css/style.css';*/
+/*@import '../static/css/main.css';*/
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
