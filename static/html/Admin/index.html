@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Admin | GQFX</title>
+
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<link href="css/plugins/morris/morris-0.4.3.min.css" rel="stylesheet">
+	<link href="css/animate.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+	<div id="wrapper">
+		<nav class="navbar-default navbar-static-side" role="navigation">
+			<div class="sidebar-collapse">
+				<ul class="nav metismenu skin-3" id="side-menu">
+					<li class="nav-header">
+						<div class="dropdown profile-element"><span><img src="img/logo-w.png" class="img-responsive"></span>
+							<span class="block m-t-xs text-white"> <strong class="font-bold">Admin user name</strong></span>
+						</div>
+						<div class="logo-element">
+							GQ
+						</div>
+					</li>
+					<li class="active">
+						<a href="index.html"><i class="fa fa-th-large"></i> <span class="nav-label">Dashboard</span></a>
+					</li>
+					<li>
+						<a href="client/index.html"><i class="fa fa-users"></i> <span class="nav-label">Client</span></a>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-snowflake-o"></i> <span class="nav-label">Apploval</span><span class="fa arrow"></span></a>
+						<ul class="nav nav-second-level collapse">
+							<li><a href="approval/account.html">Account Opening</a></li>
+							<li><a href="approval/deposit.html">Deposit</a></li>
+							<li><a href="approval/withdrawal.html">Withdrawal</a></li>
+							<li><a href="approval/rank.html">Rank Request</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="infomation/index.html"><i class="fa fa-flag"></i> <span class="nav-label">infomation</span></a>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-puzzle-piece "></i> <span class="nav-label">Campaign</span><span class="fa arrow"></span></a>
+						<ul class="nav nav-second-level collapse">
+							<li><a href="campaign/bonus.html">Bonus</a></li>
+							<li><a href="campaign/bonuslog.html">Bonus Log</a></li>
+							<li><a href="campaign/point.html">Point</a></li>
+							<li><a href="campaign/list.html">Campaign List</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="inquery/index.html"><i class="fa fa-inbox"></i> <span class="nav-label">Inquery</span></a>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">Report</span><span class="fa arrow"></span></a>
+						<ul class="nav nav-second-level collapse">
+							<li><a href="report/history.html">Transaction History</a></li>
+							<li><a href="report/ranking.html">Trade Ranking</a></li>
+							<li><a href="report/volume.html">Transaction Volume</a></li>
+							<li><a href="report/commission.html">Commission</a></li>
+							<li><a href="report/deposit.html">Deposits</a></li>
+							<li><a href="report/withdrawal.html">Withdrawals</a></li>
+							<li><a href="report/transfer.html">Internal Transfers</a></li>
+							<li><a href="report/summary.html">Overall Summary</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-pie-chart"></i> <span class="nav-label">Agent</span><span class="fa arrow"></span></a>
+						<ul class="nav nav-second-level collapse">
+							<li><a href="agent/relationship.html">IB Relationship</a></li>
+							<li><a href="agent/statistics.html">IB Statistics</a></li>
+							<li><a href="agent/scheme.html">Commission Scheme</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-envelope"></i> <span class="nav-label">Mail</span><span class="fa arrow"></span></a>
+						<ul class="nav nav-second-level collapse">
+							<li><a href="mail/stepmail.html">Step Mail</a></li>
+							<li><a href="mail/maillog.html">Mail Log</a></li>
+							<li><a href="mail/trigger.html">Trigger Mail</a></li>
+							<li><a href="mail/template.html">Mail Template</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="media/index.html"><i class="fa fa-photo"></i> <span class="nav-label">Media Library</span></a>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-cogs"></i> <span class="nav-label">System Settings</span><span class="fa arrow"></span></a>
+						<ul class="nav nav-second-level collapse">
+							<li><a href="system/user.html">Admin User</a></li>
+							<li><a href="system/role.html">System Role</a></li>
+							<li><a href="system/demo.html">Demo Account</a></li>
+							<li><a href="system/account-group.html">Account Group</a></li>
+							<li><a href="system/level.html">Client Level</a></li>
+							<li><a href="system/rank.html">Ranks</a></li>
+							<li><a href="system/d-w.html">D/W Settings</a></li>
+							<li><a href="system/rate.html">Exchange Rate</a></li>
+							<li><a href="system/email-profile.html">Email Profile</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</nav>
+
+		<div id="page-wrapper" class="gray-bg">
+			<div class="row border-bottom">
+				<nav class="navbar navbar-static-top white-bg" role="navigation" style="margin-bottom: 0">
+					<div class="navbar-header">
+						<a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i></a>
+					</div>
+					<ul class="nav navbar-top-links navbar-right">
+						<li>
+							<a href="monitor/online.html" target="_blank"><i class="fa fa-superpowers fa-fw"></i>Trade Monitor</a>
+						</li>
+						<li>
+						  <a href="risk-mng/index.html" target="_blank"><i class="fa fa-shield fa-fw"></i>Risk Mangement</a>
+						</li>
+						<li class="dropdown">
+							<a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+								<i class="fa fa-envelope"></i> <span class="label label-warning">12</span>
+							</a>
+							<ul class="dropdown-menu dropdown-messages">
+								<li>
+									<div class="dropdown-messages-box">
+										<div>
+											<small class="pull-right">20m ago</small>
+											<strong>Mike Loreipsum started following Monica Smith</strong>.
+											<br>
+											<small class="text-muted">11:37 - 2017-03-05</small>
+										</div>
+									</div>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<div class="dropdown-messages-box">
+										<div>
+											<small class="pull-right">1h ago</small>
+											<strong>Chris Johnatan Overtunk started following Monica Smith</strong>.
+											<br>
+											<small class="text-muted">10:30 - 2017-03-05</small>
+										</div>
+									</div>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<div class="dropdown-messages-box">
+										<div>
+											<small class="pull-right">2h ago</small>
+											<strong>Monica Smith love Kim Smith</strong>.
+											<br>
+											<small class="text-muted">10:30 - 2017-03-05</small>
+										</div>
+									</div>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<div class="dropdown-messages-box">
+										<div>
+											<small class="pull-right">3h ago</small>
+											<strong>Monica Smith love Kim Smith</strong>.
+											<br>
+											<small class="text-muted">10:30 - 2017-03-05</small>
+										</div>
+									</div>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<div class="dropdown-messages-box">
+										<div>
+											<small class="pull-right">10h ago</small>
+											<strong>Monica Smith love Kim Smith</strong>.
+											<br>
+											<small class="text-muted">10:30 - 2017-03-05</small>
+										</div>
+									</div>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<div class="text-center link-block">
+										<a href="inquery/index.html">
+											<i class="fa fa-envelope"></i> <strong>Read All Messages</strong>
+										</a>
+									</div>
+								</li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+								<i class="fa fa-bell"></i>  <span class="label label-primary">8</span>
+							</a>
+							<ul class="dropdown-menu dropdown-alerts">
+								<li>
+									<a href="approval/withdrawal.html">
+										<div>
+											<i class="fa fa-suitcase fa-fw"></i> Withdrawal Request
+											<span class="pull-right badge badge-danger m-t-xs">15</span>
+										</div>
+									</a>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<a href="approval/account.index.html">
+										<div>
+											<i class="fa fa-address-card-o fa-fw"></i> Document Request
+											<span class="pull-right badge badge-success m-t-xs">15</span>
+										</div>
+									</a>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<a href="approval/rank.html">
+										<div>
+											<i class="fa fa-pie-chart fa-fw"></i> Rank Request
+											<span class="pull-right badge badge-info m-t-xs">2</span>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+								<img src="img/flags/16/United-Kingdom.png" alt="EN">
+							</a>
+							<ul class="dropdown-menu">
+								<li>
+									<a class="btn active"><img src="img/flags/16/United-Kingdom.png" alt="EN"> English</a>
+								</li>
+								<li>
+									<a class="btn"><img src="img/flags/16/china.png" alt="ZH"> Chinese</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="login.html">
+								<i class="fa fa-sign-out"></i> Log out
+							</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+
+			<div class="wrapper wrapper-content">
+				<div class="row">
+					<div class="col-lg-3 col-sm-6">
+						<div class="ibox float-e-margins">
+							<div class="ibox-title">
+								<span class="label label-success pull-right">Today</span>
+								<h5>Account</h5>
+							</div>
+							<div class="ibox-content">
+								<h1 class="no-margins">130</h1>
+								<small>No.of Client</small>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 col-sm-6">
+						<div class="ibox float-e-margins">
+							<div class="ibox-title">
+								<span class="label label-info pull-right">This Month</span>
+								<h5>Account</h5>
+							</div>
+							<div class="ibox-content">
+								<h1 class="no-margins">19,821</h1>
+								<div class="stat-percent font-bold text-navy">120% <i class="fa fa-level-up"></i></div>
+								<small>No.of Client</small>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 col-sm-6">
+						<div class="ibox float-e-margins">
+							<div class="ibox-title">
+								<span class="label label-success pull-right">Today</span>
+								<h5>Commission</h5>
+							</div>
+							<div class="ibox-content">
+								<h1 class="no-margins">6,247.80</h1>
+								<div class="stat-percent font-bold text-navy">144% <i class="fa fa-level-up"></i></div>
+								<small>Commission Paid</small>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 col-sm-6">
+						<div class="ibox float-e-margins">
+							<div class="ibox-title">
+								<span class="label label-info pull-right">This Month</span>
+								<h5>Commission</h5>
+							</div>
+							<div class="ibox-content">
+								<h1 class="no-margins">54,057.52</h1>
+								<div class="stat-percent font-bold text-danger">98% <i class="fa fa-level-down"></i></div>
+								<small>Commission Paid</small>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="ibox float-e-margins">
+							<div class="ibox-title">
+								<h5>Activity</h5>
+								<div class="pull-right">
+									<div class="btn-group">
+										<button type="button" class="btn btn-xs btn-white active">Today</button>
+										<button type="button" class="btn btn-xs btn-white">Monthly</button>
+										<button type="button" class="btn btn-xs btn-white">Annual</button>
+									</div>
+								</div>
+							</div>
+							<div class="ibox-content">
+								<div class="row">
+									<div class="col-lg-9">
+										<div class="flot-chart">
+											<div class="flot-chart-content" id="flot-dashboard-chart"></div>
+										</div>
+									</div>
+									<div class="col-lg-3">
+										<ul class="stat-list">
+											<li>
+												<h2 class="no-margins">2,346</h2>
+												<small>Active Login</small>
+												<div class="stat-percent">112% <i class="fa fa-level-up text-navy"></i></div>
+												<div class="progress progress-mini">
+													<div style="width: 100%;" class="progress-bar"></div>
+												</div>
+											</li>
+											<li>
+												<h2 class="no-margins ">744,422</h2>
+												<small>Transaction Volume</small>
+												<div class="stat-percent">90% <i class="fa fa-level-down text-navy"></i></div>
+												<div class="progress progress-mini">
+													<div style="width: 90%;" class="progress-bar"></div>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+-->
+				<div class="row">
+					<div class="col-lg-6 col-md-6">
+						<div class="widget style1">
+							<div class="row">
+								<div class="col-xs-2 text-center">
+									<i class="fa fa-trophy fa-5x"></i>
+								</div>
+								<div class="col-xs-5 text-right">
+									<span> Today Deposit </span>
+									<h2 class="font-bold">$ 3,300.00</h2>
+								</div>
+								<div class="col-xs-5 text-right">
+									<span> This Month Deposit </span>
+									<h2 class="font-bold">$ 84,232.00</h2>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6 col-md-6">
+						<div class="widget style1">
+							<div class="row">
+								<div class="col-xs-2 text-center">
+									<i class="fa fa-briefcase fa-5x"></i>
+								</div>
+								<div class="col-xs-5 text-right">
+									<span> Today Withdrawal </span>
+									<h2 class="font-bold">$ 1,232.00</h2>
+								</div>
+								<div class="col-xs-5 text-right">
+									<span> This Month Withdrawal </span>
+									<h2 class="font-bold">$ 4,232.50</h2>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="wrapper wrapper-content">
+					<div class="row">
+						<div class="col-lg-8">
+							<div class="ibox float-e-margins">
+								<div class="ibox-title">
+									<h5>Close Trade</h5>
+									<div class="ibox-tools">
+										<a class="collapse-link">
+											<i class="fa fa-chevron-up"></i>
+										</a>
+									</div>
+								</div>
+								<div class="ibox-content">
+									<div class="tabs-container">
+										<ul class="nav nav-tabs" role="tablist">
+											<li role="presentation" class="active">
+												<a href="#fx-today" data-toggle="tab" aria-controls="fx-today">FX<small class="label-white-outline m-l-xs">Today</small></a>
+											</li>
+											<li role="presentation">
+												<a href="#fx-monthly" data-toggle="tab" aria-controls="sfx-monthly">FX<small class="label-white-outline m-l-xs">This Month</small></a>
+											</li>
+											<li role="presentation">
+												<a href="#bo-today" data-toggle="tab" aria-controls="bo-today">BO<small class="label-white-outline m-l-xs">Today</small></a>
+											</li>
+											<li role="presentation">
+												<a href="#bo-monthly" data-toggle="tab" aria-controls="bo-monthly">BO<small class="label-white-outline m-l-xs">This Month</small></a>
+											</li>
+										</ul>
+
+										<div class="tab-content">
+											<div class="tab-pane active" id="fx-today">
+												<div class="panel-body">
+													<div class="row text-center">
+														<div class="col-sm-2 col-xs-4 m-b-xs">
+															<small>AUDUSD</small><h4>14,560.00</h4>
+														</div>
+														<div class="col-sm-2 col-xs-4 m-b-xs">
+															<small>EURUSD</small><h4>14,560.00</h4>
+														</div>
+														<div class="col-sm-2 col-xs-4 m-b-xs">
+															<small>GBPUSD</small><h4>14,560.00</h4>
+														</div>
+														<div class="col-sm-2 col-xs-4 m-b-xs">
+															<small>USDCAD</small><h4>14,560.00</h4>
+														</div>
+														<div class="col-sm-2 col-xs-4 m-b-xs">
+															<small>NZDUSD</small><h4>14,560.00</h4>
+														</div>
+														<div class="col-sm-2 col-xs-4 m-b-xs">
+															<small>EURGBP</small><h4>14,560.00</h4>
+														</div>
+														<div class="col-sm-2 col-xs-4 m-b-xs">
+															<small>AUDUSD</small><h4>14,560.00</h4>
+														</div>
+														<div class="col-sm-2 col-xs-4 m-b-xs">
+															<small>EURJPY</small><h4>14,560.00</h4>
+														</div>
+														<div class="col-sm-2 col-xs-4 m-b-xs">
+															<small>GBPJPY</small><h4>14,560.00</h4>
+														</div>
+														<div class="col-sm-2 col-xs-4 m-b-xs">
+															<small>AUDJPY</small><h4>14,560.00</h4>
+														</div>
+														<div class="col-sm-2 col-xs-4 m-b-xs">
+															<small>NZDJPY</small><h4>14,560.00</h4>
+														</div>
+														<div class="col-sm-2 col-xs-4 m-b-xs">
+															<small>XAGUSD</small><h4>14,560.00</h4>
+														</div>	
+														<div class="col-sm-2 col-xs-4 m-b-xs">
+															<small>XAUUSD</small><h4>14,560.00</h4>
+														</div>
+														<div class="col-sm-2 col-xs-4 m-b-xs">
+															<small>WTICrude</small><h4>14,560.00</h4>
+														</div>
+														<div class="col-sm-2 col-xs-4 m-b-xs">
+															<small>BrentCrude</small><h4>14,560.00</h4>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- tab-pane END -->
+											<div class="tab-pane" id="fx-monthly">
+												<div class="panel-body">
+													<div class="row text-center">
+														<div class="col-sm-2 col-xs-4 m-b-xs">
+															<small>AUDUSD</small><h4>214,560.00</h4>
+														</div>
+														<div class="col-sm-2 col-xs-4 m-b-xs">
+															<small>EURUSD</small><h4>214,560.00</h4>
+														</div>
+														<div class="col-sm-2 col-xs-4 m-b-xs">
+															<small>GBPUSD</small><h4>214,560.00</h4>
+														</div>
+														<div class="col-sm-2 col-xs-4 m-b-xs">
+															<small>USDCAD</small><h4>214,560.00</h4>
+														</div>
+														<div class="col-sm-2 col-xs-4 m-b-xs">
+															<small>NZDUSD</small><h4>214,560.00</h4>
+														</div>
+														<div class="col-sm-2 col-xs-4 m-b-xs">
+															<small>EURGBP</small><h4>214,560.00</h4>
+														</div>
+														<div class="col-sm-2 col-xs-4 m-b-xs">
+															<small>AUDUSD</small><h4>214,560.00</h4>
+														</div>
+														<div class="col-sm-2 col-xs-4 m-b-xs">
+															<small>EURJPY</small><h4>214,560.00</h4>
+														</div>
+														<div class="col-sm-2 col-xs-4 m-b-xs">
+															<small>GBPJPY</small><h4>214,560.00</h4>
+														</div>
+														<div class="col-sm-2 col-xs-4 m-b-xs">
+															<small>AUDJPY</small><h4>214,560.00</h4>
+														</div>
+														<div class="col-sm-2 col-xs-4 m-b-xs">
+															<small>NZDJPY</small><h4>214,560.00</h4>
+														</div>
+														<div class="col-sm-2 col-xs-4 m-b-xs">
+															<small>XAGUSD</small><h4>214,560.00</h4>
+														</div>
+														<div class="col-sm-2 col-xs-4 m-b-xs">
+															<small>XAUUSD</small><h4>214,560.00</h4>
+														</div>
+														<div class="col-sm-2 col-xs-4 m-b-xs">
+															<small>WTICrude</small><h4>214,560.00</h4>
+														</div>
+														<div class="col-sm-2 col-xs-4 m-b-xs">
+															<small>BrentCrude</small><h4>214,560.00</h4>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- tab-pane END -->
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- ibox END -->
+						</div>
+						
+						<div class="col-lg-4">
+							<div class="ibox float-e-margins">
+								<div class="ibox-title">
+									<h5>Rank Statistics</h5>
+									<div class="ibox-tools">
+										<a class="collapse-link">
+											<i class="fa fa-chevron-up"></i>
+										</a>
+									</div>
+								</div>
+								<div class="ibox-content p-xs">
+									<div id="donut-chart"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer">
+					<div>
+						<strong>Copyright</strong> GQ capital &copy; 2017
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!-- Mainly scripts -->
+	<script src="js/jquery-2.1.4.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+	<script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+		
+	<!-- Morris -->
+	<script src="js/plugins/morris/raphael-2.1.0.min.js"></script>
+	<script src="js/plugins/morris/morris.js"></script>
+	<script>
+		$(function() {
+			Morris.Donut({
+				element: 'donut-chart',
+				data: [{ label: "Trader", value: 20125 },
+							 { label: "IB", value: 2587 },
+							 { label: "MIB", value: 151 },
+							 { label: "PIB", value: 36 } ],
+				resize: true,
+				colors: ['#87d6c6', '#54cdb4','#1ab394'],
+			});
+
+		});
+	</script>
+　
+	<!-- Custom and plugin javascript -->
+	<script src="js/custum.js"></script>
+	<script src="js/plugins/pace/pace.min.js"></script>
+
+</body>
+
+</html>

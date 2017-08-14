@@ -1,0 +1,47 @@
+/*admin/client/index样式重置BEGIN*/
+/*多选select 时间范围选择*/
+.el-select {
+	width:100%;
+}
+/*.el-select input{
+	height:34px;
+}*/
+.form-control{
+	height:36px;
+	border-color:#bfcbd9;
+}
+.el-date-editor--daterange.el-input{
+	width:100%;
+}
+/*底部表格样式重置*/
+.el-table .cell{
+	font-size:13px;
+	line-height:1.4;
+}
+.ibox-content tr:last-child .dropdown-menu{
+	z-index:999;
+}
+.ibox-content td .dropdown-menu{
+	top:0px;
+}
+.ibox-content tr:last-child .dropdown-menu{
+	top:-74px;
+}
+/*分页*/
+.el-pagination{
+	text-align:right;
+	padding:8px 0;
+}
+/*底部选择器*/
+.table_cell{
+	display:table-cell;
+}
+.right_radius .el-input .el-input__inner{
+	border-top-right-radius:0px;
+	border-bottom-right-radius:0px;
+}  
+.left_radius.el-button{
+	border-top-left-radius:0px;
+	border-bottom-left-radius:0px;
+}
+/*admin/client/index样式重置END*/

@@ -28,46 +28,29 @@
 									</div>
 									<div class="col-sm-3">
 										<label>Name</label>
-										<div class="form-group"><input class="form-control"></div>
+										<div class="form-group"><el-input  placeholder=""></el-input></div>
 									</div>
 									<div class="col-sm-3">
 										<label>MT5 Account</label>
-										<div class="form-group"><input class="form-control"></div>
+										<div class="form-group"><el-input  placeholder=""></el-input></div>
 									</div>
 									<div class="col-sm-3">
 										<label>Phone</label>
-										<div class="form-group"><input class="form-control"></div>
+										<div class="form-group"><el-input  placeholder=""></el-input></div>
 									</div>
 								</div>
 								<div class="row">
 									<div class="col-sm-3">
 										<label>E-mail</label>
-										<div class="form-group"><input class="form-control"></div>
+										<div class="form-group"><el-input  placeholder=""></el-input></div>
 									</div>
 									<div class="col-sm-3">
 										<label>Agent ID</label>
-										<div class="form-group"><input class="form-control"></div>
+										<div class="form-group"><el-input  placeholder=""></el-input></div>
 									</div>
 									<div class="col-sm-3">
 										<label>Status</label>
 										<div class="form-group">
-											<!--<select class="selectpicker form-control" data-width="100%" data-size="10" multiple>
-												<optgroup label="Registration">
-													<option>Temporary</option>
-													<option>Registered</option>
-													<option>Unsubscribe</option>
-												</optgroup>
-												<optgroup label="Verification">
-													<option>Pending</option>
-													<option>Requested</option>
-													<option>Verified</option>
-													<option>Declined</option>
-												</optgroup>
-												<optgroup label="Client Status">
-													<option>Normal</option>
-													<option>Black List</option>
-												</optgroup>
-											</select>-->
 <template>
   <el-select v-model="value1" multiple placeholder="Nothing selected"  >
     <el-option-group
@@ -87,7 +70,7 @@
 									</div>
 									<div class="col-sm-3">
 										<label>National ID</label>
-										<div class="form-group"><input class="form-control"></div>
+										<div class="form-group"><el-input  placeholder=""></el-input></div>
 									</div>
 								</div>
 								<div class="row">
@@ -156,25 +139,25 @@
 									<div class="col-sm-3">
 										<label>Transaction Volume</label>
 										<div class="form-group">
-										  <div class="input-group"><input class="form-control" type="text"><span class="input-group-addon no-borders">～</span><input class="form-control" type="text"></div>
+										  <div class="input-group"><el-input  placeholder=""></el-input><span class="input-group-addon no-borders">～</span><el-input  placeholder=""></el-input></div>
 										</div>
 									</div>
 									<div class="col-sm-3">
 										<label>Transaction Balance</label>
 										<div class="form-group">
-											<div class="input-group"><input class="form-control" type="text"><span class="input-group-addon no-borders">～</span><input class="form-control" type="text"></div>
+											<div class="input-group"><el-input  placeholder=""></el-input><span class="input-group-addon no-borders">～</span><el-input  placeholder=""></el-input></div>
 										</div>
 									</div>
 									<div class="col-sm-3">
 										<label>Commission Amount</label>
 										<div class="form-group">
-											<div class="input-group"><input class="form-control" type="text"><span class="input-group-addon no-borders">～</span><input class="form-control" type="text"></div>
+											<div class="input-group"><el-input  placeholder=""></el-input><span class="input-group-addon no-borders">～</span><el-input  placeholder=""></el-input></div>
 										</div>
 									</div>
 									<div class="col-sm-3">
 										<label>Point</label>
 										<div class="form-group">
-											<div class="input-group"><input class="form-control" type="text"><span class="input-group-addon no-borders">～</span><input class="form-control" type="text"></div>
+											<div class="input-group"><el-input  placeholder=""></el-input><span class="input-group-addon no-borders">～</span><el-input  placeholder=""></el-input></div>
 										</div>
 									</div>
 								</div>
@@ -191,7 +174,6 @@
     </el-date-picker>
   </div>
 </template>
-										<!--  <input name="daterange" class="form-control" type="text"> -->
 										</div>
 									</div>
 									<div class="col-sm-3">
@@ -244,15 +226,6 @@
 									<button class="btn btn-primary">Search</button>
 									<button class="btn btn-default">Reset</button>
 								</div>
-								<div class="input-group input-sm pull-right">
-									<span class="input-group-addon no-borders">Show</span>
-									<select class="form-control">
-										<option>10</option>
-										<option selected>25</option>
-										<option>50</option>
-										<option>100</option>
-									</select>
-								</div>
 								<div class="clearfix"></div>
 							</div>
 						</div>
@@ -275,135 +248,6 @@
 							</div>
 							<div class="ibox-content">
 								<div class="table-responsive">
-									<!--<table class="footable table table-hover toggle-arrow-tiny">
-										<thead>
-											<tr>
-												<th data-toggle="true">Cilent ID</th>
-												<th data-class="expand">Name</th>
-												<th data-hide="phone">Ac.Group</th>
-												<th data-hide="phone">Client Level</th>
-												<th data-hide="phone">Rank</th>
-												<th data-hide="phone">Agent ID</th>
-												<th data-hide="phone,tablet">E-mail</th>
-												<th data-hide="phone,tablet">City</th>
-												<th data-hide="phone">Signup Date</th>
-												<th data-hide="phone,tablet">Last Login</th>
-												<th data-hide="phone,tablet">Registration</th>
-												<th data-class="expand">Verification</th>
-												<th data-class="expand">Action</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td>22558833</td>
-												<td>Patrick Smith</td>
-												<td>Default</td>
-												<td>Level-01</td>
-												<td>Trader</td>
-												<td>22001165</td>
-												<td>abcd12345@mail.com</td>
-												<td>London</td>
-												<td>2017-02-11 14:30</td>
-												<td>2017-03-21 10:51</td>
-												<td>Registered</td>
-												<td>Verified</td>
-												<td>
-													<div class="btn-group">
-														<button class="btn btn-default btn-sm text-info dropdown-toggle" data-toggle="dropdown">Actions <span class="caret"></span></button>
-														<ul class="dropdown-menu">
-															<li><a href="#" data-toggle="modal" data-target="#client"><i class="fa fa-user-circle fa-fw"></i>Cilent</a></li>
-															<li><a href="#" data-toggle="modal" data-target="#account"><i class="fa fa-cube fa-fw"></i>Account</a></li>
-															<li><a href="edit.html"><i class="fa fa-edit fa-fw"></i>Edit</a></li>
-															<li><a href="#"><span class="text-danger"><i class="fa fa-trash fa-fw"></i>Delete</span></a></li>
-														</ul>
-													</div>
-												</td>
-											</tr>
-											<tr>
-												<td>22558833</td>
-												<td>Patrick Smith</td>
-												<td>FX-01</td>
-												<td>Level-01</td>
-												<td>Trader</td>
-												<td>22001147</td>
-												<td>testsample@qq.com</td>
-												<td>Hongkong</td>
-												<td>2017-02-02 14:30</td>
-												<td>2017-03-25 10:51</td>
-												<td>Registered</td>
-												<td>Pending</td>
-												<td>
-													<div class="btn-group">
-														<button class="btn btn-default btn-sm text-info dropdown-toggle" data-toggle="dropdown">Actions <span class="caret"></span></button>
-														<ul class="dropdown-menu">
-															<li><a href="#" data-toggle="modal" data-target="#client"><i class="fa fa-user-circle fa-fw"></i>Cilent</a></li>
-															<li><a href="#" data-toggle="modal" data-target="#account"><i class="fa fa-cube fa-fw"></i>Account</a></li>
-															<li><a href="edit.html"><i class="fa fa-edit fa-fw"></i>Edit</a></li>
-															<li><a href="#"><span class="text-danger"><i class="fa fa-trash fa-fw"></i>Delete</span></a></li>
-														</ul>
-													</div>
-												</td>
-											</tr>
-											<tr>
-												<td>22558833</td>
-												<td>Patrick Smith</td>
-												<td>FX-01</td>
-												<td>Level-01</td>
-												<td>Trader</td>
-												<td>22001114</td>
-												<td>abcd12345@mail.com</td>
-												<td>London</td>
-												<td>2017-02-24 14:30</td>
-												<td>2017-03-18 10:51</td>
-												<td>Registered</td>
-												<td>Requested</td>
-												<td>
-													<div class="btn-group">
-														<button class="btn btn-default btn-sm text-info dropdown-toggle" data-toggle="dropdown">Actions <span class="caret"></span></button>
-														<ul class="dropdown-menu">
-															<li><a href="#" data-toggle="modal" data-target="#client"><i class="fa fa-user-circle fa-fw"></i>Cilent</a></li>
-															<li><a href="#" data-toggle="modal" data-target="#account"><i class="fa fa-cube fa-fw"></i>Account</a></li>
-															<li><a href="edit.html"><i class="fa fa-edit fa-fw"></i>Edit</a></li>
-															<li><a href="#"><span class="text-danger"><i class="fa fa-trash fa-fw"></i>Delete</span></a></li>
-														</ul>
-													</div>
-												</td>
-											</tr>
-											<tr>
-												<td>22558833</td>
-												<td>Patrick Smith</td>
-												<td>FX-01</td>
-												<td>Level-01</td>
-												<td>Trader</td>
-												<td>22001145</td>
-												<td>abcd12345@mail.com</td>
-												<td>London</td>
-												<td>2017-02-18 14:30</td>
-												<td>2017-03-19 10:51</td>
-												<td>Registered</td>
-												<td>Requested</td>
-												<td>
-													<div class="btn-group">
-														<button class="btn btn-default btn-sm text-info dropdown-toggle" data-toggle="dropdown">Actions <span class="caret"></span></button>
-														<ul class="dropdown-menu">
-															<li><a href="#" data-toggle="modal" data-target="#client"><i class="fa fa-user-circle fa-fw"></i>Cilent</a></li>
-															<li><a href="#" data-toggle="modal" data-target="#account"><i class="fa fa-cube fa-fw"></i>Account</a></li>
-															<li><a href="edit.html"><i class="fa fa-edit fa-fw"></i>Edit</a></li>
-															<li><a href="#"><span class="text-danger"><i class="fa fa-trash fa-fw"></i>Delete</span></a></li>
-														</ul>
-													</div>
-												</td>
-											</tr>
-										</tbody>
-										<tfoot>
-											<tr>
-												<td colspan="4">Showing 1 to 25 of 57 entries</td>
-												<td colspan="9">
-													<ul class="pagination pull-right"></ul>
-												</td>
-											</tr>
-										</tfoot>
-									</table>-->
 <template>
   <el-table
     :data="tableData"
@@ -514,6 +358,17 @@
 										<option>Level-03</option>
 									</select>
 									<span class="input-group-btn"><button class="btn btn-primary">Changes</button></span>
+								</div>
+								<div class="input-group col-md-4">
+<template>
+    <el-select class="table_cell right_radius"  v-model="select" slot="prepend" placeholder="请选择">
+      <el-option label="餐厅名" value="1"></el-option>
+      <el-option label="订单号" value="2"></el-option>
+      <el-option label="用户电话" value="3"></el-option>
+    </el-select>
+    <el-button class="table_cell left_radius" type="primary">Changes</el-button>
+</template>
+					
 								</div>
 							</div>
 						</div>
@@ -1762,7 +1617,26 @@ export default {
 				verification: 'Verified'	
 			}],
 			// 分页
-			currentPage: 4
+			currentPage: 4,
+			// 底部changes
+			select: ''
+			// options: [{
+			// 		value: '选项1',
+			// 		label: '黄金糕'
+			// 		}, {
+			// 		value: '选项2',
+			// 		label: '双皮奶'
+			// 		}, {
+			// 		value: '选项3',
+			// 		label: '蚵仔煎'
+			// 		}, {
+			// 		value: '选项4',
+			// 		label: '龙须面'
+			// 		}, {
+			// 		value: '选项5',
+			// 		label: '北京烤鸭'
+			// 		}],
+			// value: ''
         }	
 	},
 	components:{
@@ -1823,38 +1697,6 @@ export default {
     }
 }
 </script>
-<style scoped>
-/*多选select 时间范围选择 样式重置*/
-.el-select {
-	width:100%;
-}
-.el-select input{
-	height:34px;
-}
-.form-control{
-	height:36px;
-	border-color:#bfcbd9;
-}
-.el-date-editor--daterange.el-input{
-	width:100%;
-}
-/*底部表格样式重置*/
-.el-table .cell{
-	font-size:13px;
-	line-height:1.4;
-}
-.ibox-content tr:last-child .dropdown-menu{
-	z-index:999;
-}
-.ibox-content td .dropdown-menu{
-	top:0px;
-}
-.ibox-content tr:last-child .dropdown-menu{
-	top:-74px;
-}
-/*分页*/
-.el-pagination{
-	text-align:right;
-	padding:8px 0;
-}
+<style>
+
 </style>

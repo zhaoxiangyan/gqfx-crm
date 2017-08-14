@@ -15,7 +15,10 @@ import 'bootstrap/dist/js/bootstrap.min.js'
 import 'font-awesome/css/font-awesome.min.css'
 import 'animate.css/animate.css'
 
+// Bootstrap项目转移的样式
 import './assets/css/main.css'
+// 重置element样式
+import './assets/css/element_reset.css'
 // import Cta from 'cta'
 import 'summernote/dist/summernote.css'
 import 'summernote/dist/summernote.js'
