@@ -29,104 +29,13 @@
 								<div class="panel-body">
 									<h3>Requested</h3>
 									<div class="m-b-sm">
-										<div class="input-group col-sm-4 pull-left"><input class="form-control" type="text" placeholder="Table in Search"> <span class="input-group-btn">  <button class="btn btn-primary" type="button">Search</button></span></div>
-										<div class="input-group input-sm pull-right">
-											<span class="input-group-addon no-borders">Show</span>
-											<select class="form-control">
-												<option>10</option>
-												<option selected>25</option>
-												<option>50</option>
-												<option>100</option>
-											</select>
+										<div class="input-group col-sm-4 pull-left">
+										       <el-input class="table_cell right_radius" v-model="input1" placeholder="Table in Search"></el-input>
+											   <el-button class="table_cell left_radius" type="primary">Search</el-button>
 										</div>
 										<div class="clearfix"></div>
 									</div>
 									<div class="table-responsive">
-										<!--<table class="footable table table-hover toggle-arrow-tiny">
-											<thead>
-												<tr>
-													<th data-class="expand">Cilent ID</th>
-													<th data-class="expand">Name</th>
-													<th data-hide="phone,tablet">Client Level</th>
-													<th data-hide="phone">Current Rank</th>
-													<th data-class="expand">Requested Rank</th>
-													<th data-class="expand">Request Date</th>
-													<th data-hide="phone">Rank Up Condition</th>
-													<th data-hide="phone">Status</th>
-													<th data-class="expand">Action</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>22558833</td>
-													<td>Patrick Smith</td>
-													<td>Level-1</td>
-													<td>Trader</td>
-													<td>IB</td>
-													<td>2017-03-10 14:30</td>
-													<td>Achived</td>
-													<td>Requested</td>
-													<td>
-														<div class="btn-group">
-															<button class="btn btn-default btn-sm text-info dropdown-toggle" data-toggle="dropdown">Actions <span class="caret"></span></button>
-															<ul class="dropdown-menu">
-																<li><a href="#" data-toggle="modal" data-target="#rank-request"><i class="fa fa-pencil-square fa-fw"></i>Approve</a></li>
-																<li><a href="#" data-toggle="modal" data-target="#client"><i class="fa fa-user-circle fa-fw"></i>Client</a></li>
-																<li><a href="#"><span class="text-danger"><i class="fa fa-trash fa-fw"></i>Delete</span></a></li>
-															</ul>
-														</div>
-													</td>
-												</tr>
-												<tr>
-													<td>22558844</td>
-													<td>Patrick Smith</td>
-													<td>Level-2</td>
-													<td>IB</td>
-													<td>MIB</td>
-													<td>2017-02-10 17:30</td>
-													<td>Achived</td>
-													<td>Requested</td>
-													<td>
-														<div class="btn-group">
-															<button class="btn btn-default btn-sm text-info dropdown-toggle" data-toggle="dropdown">Actions <span class="caret"></span></button>
-															<ul class="dropdown-menu">
-																<li><a href="#" data-toggle="modal" data-target="#rank-request"><i class="fa fa-pencil-square fa-fw"></i>Approve</a></li>
-																<li><a href="#" data-toggle="modal" data-target="#client"><i class="fa fa-user-circle fa-fw"></i>Client</a></li>
-																<li><a href="#"><span class="text-danger"><i class="fa fa-trash fa-fw"></i>Delete</span></a></li>
-															</ul>
-														</div>
-													</td>
-												</tr>
-												<tr>
-													<td>22558855</td>
-													<td>Patrick Smith</td>
-													<td>Levlel-2</td>
-													<td>Trader</td>
-													<td>IB</td>
-													<td>2017-02/08 10:50</td>
-													<td>Unachieved</td>
-													<td>Requested</td>
-													<td>
-														<div class="btn-group">
-															<button class="btn btn-default btn-sm text-info dropdown-toggle" data-toggle="dropdown">Actions <span class="caret"></span></button>
-															<ul class="dropdown-menu">
-																<li><a href="#" data-toggle="modal" data-target="#rank-request"><i class="fa fa-pencil-square fa-fw"></i>Approve</a></li>
-																<li><a href="#" data-toggle="modal" data-target="#client"><i class="fa fa-user-circle fa-fw"></i>Client</a></li>
-																<li><a href="#"><span class="text-danger"><i class="fa fa-trash fa-fw"></i>Delete</span></a></li>
-															</ul>
-														</div>
-													</td>
-												</tr>
-											</tbody>
-											<tfoot>
-												<tr>
-													<td colspan="2">Showing 1 to 25 of 57 entries</td>
-													<td colspan="7">
-														<ul class="pagination pull-right"></ul>
-													</td>
-												</tr>
-											</tfoot>
-										</table>-->
 <template>
   <el-table
     :data="RequestedData"
@@ -206,104 +115,13 @@
 								<div class="panel-body">
 									<h3>Pending</h3>
 									<div class="m-b-sm">
-										<div class="input-group col-sm-4 pull-left"><input class="form-control" type="text" placeholder="Table in Search"> <span class="input-group-btn">  <button class="btn btn-primary" type="button">Search</button></span></div>
-										<div class="input-group input-sm pull-right">
-											<span class="input-group-addon no-borders">Show</span>
-											<select class="form-control">
-												<option>10</option>
-												<option selected>20</option>
-												<option>50</option>
-												<option>100</option>
-											</select>
+										<div class="input-group col-sm-4 pull-left">
+										     <el-input class="table_cell right_radius" v-model="input2" placeholder="Table in Search"></el-input>
+											 <el-button class="table_cell left_radius" type="primary">Search</el-button>
 										</div>
 										<div class="clearfix"></div>
 									</div>
 									<div class="table-responsive">
-										<!--<table class="footable table table-hover toggle-arrow-tiny">
-											<thead>
-												<tr>
-													<th data-class="expand">Cilent ID</th>
-													<th data-class="expand">Name</th>
-													<th data-hide="phone,tablet">Client Level</th>
-													<th data-hide="phone">Current Rank</th>
-													<th data-class="expand">Requested Rank</th>
-													<th data-class="expand">Request Date</th>
-													<th data-hide="phone">Rank Up Condition</th>
-													<th data-hide="phone">Status</th>
-													<th data-class="expand">Action</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>22558833</td>
-													<td>Patrick Smith</td>
-													<td>Level-1</td>
-													<td>Trader</td>
-													<td>IB</td>
-													<td>2017-03-10 14:30</td>
-													<td>Achived</td>
-													<td>Pending</td>
-													<td>
-														<div class="btn-group">
-															<button class="btn btn-default btn-sm text-info dropdown-toggle" data-toggle="dropdown">Actions <span class="caret"></span></button>
-															<ul class="dropdown-menu">
-																<li><a href="#" data-toggle="modal" data-target="#rank-request"><i class="fa fa-file fa-fw"></i>Detail</a></li>
-																<li><a href="#" data-toggle="modal" data-target="#client"><i class="fa fa-user-circle fa-fw"></i>Client</a></li>
-																<li><a href="#"><span class="text-danger"><i class="fa fa-trash fa-fw"></i>Delete</span></a></li>
-															</ul>
-														</div>
-													</td>
-												</tr>
-												<tr>
-													<td>22558844</td>
-													<td>Patrick Smith</td>
-													<td>Level-2</td>
-													<td>IB</td>
-													<td>MIB</td>
-													<td>2017-02-10 17:30</td>
-													<td>Achived</td>
-													<td>Pending</td>
-													<td>
-														<div class="btn-group">
-															<button class="btn btn-default btn-sm text-info dropdown-toggle" data-toggle="dropdown">Actions <span class="caret"></span></button>
-															<ul class="dropdown-menu">
-																<li><a href="#" data-toggle="modal" data-target="#rank-request"><i class="fa fa-file fa-fw"></i>Detail</a></li>
-																<li><a href="#" data-toggle="modal" data-target="#client"><i class="fa fa-user-circle fa-fw"></i>Client</a></li>
-																<li><a href="#"><span class="text-danger"><i class="fa fa-trash fa-fw"></i>Delete</span></a></li>
-															</ul>
-														</div>
-													</td>
-												</tr>
-												<tr>
-													<td>22558855</td>
-													<td>Patrick Smith</td>
-													<td>Levlel-2</td>
-													<td>Trader</td>
-													<td>IB</td>
-													<td>2017-02-08 10:50</td>
-													<td>Achived</td>
-													<td>Pending</td>
-													<td>
-														<div class="btn-group">
-															<button class="btn btn-default btn-sm text-info dropdown-toggle" data-toggle="dropdown">Actions <span class="caret"></span></button>
-															<ul class="dropdown-menu">
-																<li><a href="#" data-toggle="modal" data-target="#rank-request"><i class="fa fa-file fa-fw"></i>Detail</a></li>
-																<li><a href="#" data-toggle="modal" data-target="#client"><i class="fa fa-user-circle fa-fw"></i>Client</a></li>
-																<li><a href="#"><span class="text-danger"><i class="fa fa-trash fa-fw"></i>Delete</span></a></li>
-															</ul>
-														</div>
-													</td>
-												</tr>
-											</tbody>
-											<tfoot>
-												<tr>
-													<td colspan="2">Showing 1 to 25 of 57 entries</td>
-													<td colspan="7">
-														<ul class="pagination pull-right"></ul>
-													</td>
-												</tr>
-											</tfoot>
-										</table>-->
 <template>
   <el-table
     :data="PendingData"
@@ -383,104 +201,13 @@
 								<div class="panel-body">
 									<h3>Declined</h3>
 									<div class="m-b-sm">
-										<div class="input-group col-sm-4 pull-left"><input class="form-control" type="text" placeholder="Table in Search"> <span class="input-group-btn">  <button class="btn btn-primary" type="button">Search</button></span></div>
-										<div class="input-group input-sm pull-right">
-											<span class="input-group-addon no-borders">Show</span>
-											<select class="form-control">
-												<option>10</option>
-												<option selected>20</option>
-												<option>50</option>
-												<option>100</option>
-											</select>
+										<div class="input-group col-sm-4 pull-left">
+                                               <el-input class="table_cell right_radius" v-model="input3" placeholder="Table in Search"></el-input>
+										       <el-button class="table_cell left_radius" type="primary">Search</el-button>
 										</div>
 										<div class="clearfix"></div>
 									</div>
 									<div class="table-responsive">
-										<!--<table class="footable table table-hover toggle-arrow-tiny">
-											<thead>
-												<tr>
-													<th data-class="expand">Cilent ID</th>
-													<th data-class="expand">Name</th>
-													<th data-hide="phone,tablet">Client Level</th>
-													<th data-hide="phone">Current Rank</th>
-													<th data-class="expand">Requested Rank</th>
-													<th data-class="expand">Request Date</th>
-													<th data-hide="phone">Rank Up Condition</th>
-													<th data-hide="phone">Status</th>
-													<th data-class="expand">Action</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>22558833</td>
-													<td>Patrick Smith</td>
-													<td>Level-1</td>
-													<td>Trader</td>
-													<td>IB</td>
-													<td>2017-03-10 14:30</td>
-													<td>Achived</td>
-													<td>Declined</td>
-													<td>
-														<div class="btn-group">
-															<button class="btn btn-default btn-sm text-info dropdown-toggle" data-toggle="dropdown">Actions <span class="caret"></span></button>
-															<ul class="dropdown-menu">
-																<li><a href="#" data-toggle="modal" data-target="#rank-request"><i class="fa fa-file fa-fw"></i>Detail</a></li>
-																<li><a href="#" data-toggle="modal" data-target="#client"><i class="fa fa-user-circle fa-fw"></i>Client</a></li>
-																<li><a href="#"><span class="text-danger"><i class="fa fa-trash fa-fw"></i>Delete</span></a></li>
-															</ul>
-														</div>
-													</td>
-												</tr>
-												<tr>
-													<td>22558844</td>
-													<td>Patrick Smith</td>
-													<td>Level-2</td>
-													<td>IB</td>
-													<td>MIB</td>
-													<td>2017-02-10 17:30</td>
-													<td>Unachived</td>
-													<td>Declined</td>
-													<td>
-														<div class="btn-group">
-															<button class="btn btn-default btn-sm text-info dropdown-toggle" data-toggle="dropdown">Actions <span class="caret"></span></button>
-															<ul class="dropdown-menu">
-																<li><a href="#" data-toggle="modal" data-target="#rank-request"><i class="fa fa-file fa-fw"></i>Detail</a></li>
-																<li><a href="#" data-toggle="modal" data-target="#client"><i class="fa fa-user-circle fa-fw"></i>Client</a></li>
-																<li><a href="#"><span class="text-danger"><i class="fa fa-trash fa-fw"></i>Delete</span></a></li>
-															</ul>
-														</div>
-													</td>
-												</tr>
-												<tr>
-													<td>22558855</td>
-													<td>Patrick Smith</td>
-													<td>Levlel-2</td>
-													<td>Trader</td>
-													<td>IB</td>
-													<td>2017-02-08 10:50</td>
-													<td>Unachived</td>
-													<td>Declined</td>
-													<td>
-														<div class="btn-group">
-															<button class="btn btn-default btn-sm text-info dropdown-toggle" data-toggle="dropdown">Actions <span class="caret"></span></button>
-															<ul class="dropdown-menu">
-																<li><a href="#" data-toggle="modal" data-target="#rank-request"><i class="fa fa-file fa-fw"></i>Detail</a></li>
-																<li><a href="#" data-toggle="modal" data-target="#client"><i class="fa fa-user-circle fa-fw"></i>Client</a></li>
-																<li><a href="#"><span class="text-danger"><i class="fa fa-trash fa-fw"></i>Delete</span></a></li>
-															</ul>
-														</div>
-													</td>
-												</tr>
-											</tbody>
-											<tfoot>
-												<tr>
-													<td colspan="2">Showing 1 to 25 of 57 entries</td>
-													<td colspan="7">
-														<ul class="pagination pull-right"></ul>
-													</td>
-												</tr>
-											</tfoot>
-										</table>-->
 <template>
   <el-table
     :data="DeclinedData"
@@ -755,15 +482,15 @@
 </div>
 </template>
 <script>
-// import '../../../assets/css/plugins/daterangepicker/daterangepicker-bs3.css'
-import '../../../assets/css/plugins/clockpicker/clockpicker.css'
-// import '../../../assets/css/plugins/footable/footable.core.css'
-// import Footable from '../../../assets/js/plugins/footable/footable.all.min.js'
-// import Datepicker from '../../../assets/js/plugins/datapicker/bootstrap-datepicker.js'
+// import '../../../assets/css/plugins/clockpicker/clockpicker.css'
 export default {
     name: 'rank',
 	data () {
 		return {
+			// 搜索框数据
+			input1: '',
+			input2: '',
+			input3: '',
 			// Requested表格数据
 			RequestedData: [{
 				clientID: '22451222',
@@ -860,8 +587,7 @@ export default {
 		}
 	},
     components: {
-    //    Footable,
-    //    Datepicker
+
     },
 	methods: {
 		// Requested表格
@@ -889,19 +615,7 @@ export default {
 		}
 	},	
     mounted: function(){
-        // $('input[name="daterange"]').daterangepicker({
-		// 	timePicker: true,
-	    // });
-        // $('.datepicker').datepicker({
-		// 	format: 'yyyy/dd/mm',
-		// 	startDate: '-3d'
-	    // });
-        // $('.footable').footable({
-        //     breakpoints: {
-        //         phone: 640,
-        //         tablet: 1024
-        //     }
-        // });
+
     }
 }
 </script>

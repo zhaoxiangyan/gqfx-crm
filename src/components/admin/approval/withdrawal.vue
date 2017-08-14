@@ -29,117 +29,14 @@
 								<div class="panel-body">
 									<h3>Requested</h3>
 									<div class="m-b-sm">
-										<div class="input-group col-sm-4 pull-left"><input class="form-control" type="text" placeholder="Table in Search"> <span class="input-group-btn">  <button class="btn btn-primary" type="button">Search</button></span></div>
-										<div class="input-group input-sm pull-right">
-											<span class="input-group-addon no-borders">Show</span>
-											<select class="form-control">
-												<option>10</option>
-												<option selected>25</option>
-												<option>50</option>
-												<option>100</option>
-											</select>
+										<div class="input-group col-sm-4 pull-left">
+										    <el-input class="table_cell right_radius" v-model="input1" placeholder="Table in Search"></el-input>
+											<el-button class="table_cell left_radius" type="primary">Search</el-button>
 										</div>
 										<div class="clearfix"></div>
 									</div>
 									<div class="table-responsive">
-										<!--<table class="table table-hover footable toggle-arrow-tiny">
-											<thead>
-												<tr>
-													<th data-toggle="true">MT5 Account</th>
-													<th data-hide="phone">Cilent ID</th>
-													<th data-class="expand">Name</th>
-													<th data-hide="phone,tablet">Method</th>
-													<th data-class="expand">Req.Amount</th>
-													<th data-hide="phone">Fee</th>
-													<th data-hide="phone">Ex.Rate</th>
-													<th data-hide="phone">Wd.Amount</th>
-													<th data-class="expand">Request Date</th>
-													<th data-hide="phone,tablet">Audit Date</th>
-													<th data-hide="phone,tablet">Status</th>
-													<th data-class="expand">Action</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>55330011</td>
-													<td>22778822</td>
-													<td>Alan Smith</td>
-													<td>CNY</td>
-													<td>25,000.00</td>
-													<td>500</td>
-													<td>6.124566</td>
-													<td><span class="currency">CNY</span>4,500.50</td>
-													<td>2017-03-10 10:55</td>
-													<td></td>
-													<td>Requested</td>
-													<td>
-														<div class="btn-group">
-															<button class="btn btn-default btn-sm text-info dropdown-toggle" data-toggle="dropdown">Actions <span class="caret"></span></button>
-															<ul class="dropdown-menu">
-																<li><a href="#" data-toggle="modal" data-target="#audit"><i class="fa fa-pencil-square fa-fw"></i>Audit</a></li>
-																<li><a href="#" data-toggle="modal" data-target="#client"><i class="fa fa-user-circle fa-fw"></i>Cilent</a></li>
-																<li><a href="#"><span class="text-danger"><i class="fa fa-trash fa-fw"></i>Delete</span></a></li>
-															</ul>
-														</div>
-													</td>
-												</tr>
-												<tr>
-													<td>55229922</td>
-													<td>22558833</td>
-													<td>Patrick Smith</td>
-													<td>CNY</td>
-													<td>5,000.00</td>
-													<td>500</td>
-													<td>6.124566</td>
-													<td><span class="currency">CNY</span>718.50</td>
-													<td>2017-03-10 10:55</td>
-													<td></td>
-													<td>Requested</td>
-													<td>
-														<div class="btn-group">
-															<button class="btn btn-default btn-sm text-info dropdown-toggle" data-toggle="dropdown">Actions <span class="caret"></span></button>
-															<ul class="dropdown-menu">
-																<li><a href="#" data-toggle="modal" data-target="#audit"><i class="fa fa-pencil-square fa-fw"></i>Audit</a></li>
-																<li><a href="#" data-toggle="modal" data-target="#client"><i class="fa fa-user-circle fa-fw"></i>Cilent</a></li>
-																<li><a href="#"><span class="text-danger"><i class="fa fa-trash fa-fw"></i>Delete</span></a></li>
-															</ul>
-														</div>
-													</td>
-												</tr>
-												<tr>
-													<td>55228822</td>
-													<td>22558844</td>
-													<td>Patrick Smith</td>
-													<td>CNY</td>
-													<td>1,000.00</td>
-													<td>500</td>
-													<td>6.124566</td>
-													<td><span class="currency">CNY</span>800.15</td>
-													<td>2017-03-09 12:35</td>
-													<td></td>
-													<td>Requested</td>
-													<td>
-														<div class="btn-group">
-															<button class="btn btn-default btn-sm text-info dropdown-toggle" data-toggle="dropdown">Actions <span class="caret"></span></button>
-															<ul class="dropdown-menu">
-																<li><a href="#" data-toggle="modal" data-target="#audit"><i class="fa fa-pencil-square fa-fw"></i>Audit</a></li>
-																<li><a href="#" data-toggle="modal" data-target="#client"><i class="fa fa-user-circle fa-fw"></i>Cilent</a></li>
-																<li><a href="#"><span class="text-danger"><i class="fa fa-trash fa-fw"></i>Delete</span></a></li>
-															</ul>
-														</div>
-													</td>
-												</tr>
-											</tbody>
-											<tfoot>
-												<tr>
-													<td colspan="4">Showing 1 to 25 of 57 entries</td>
-													<td colspan="9">
-														<ul class="pagination pull-right m-n">
-														</ul>
-													</td>
-												</tr>
-											</tfoot>
-										</table>-->
+										
 <template>
   <el-table
     :data="RequestedData"
@@ -236,117 +133,14 @@
 								<div class="panel-body">
 									<h3>Pending</h3>
 									<div class="m-b-sm">
-										<div class="input-group col-sm-4 pull-left"><input class="form-control" type="text" placeholder="Table in Search"> <span class="input-group-btn">  <button class="btn btn-primary" type="button">Search</button></span></div>
-										<div class="input-group input-sm pull-right">
-											<span class="input-group-addon no-borders">Show</span>
-											<select class="form-control">
-												<option>10</option>
-												<option selected>20</option>
-												<option>50</option>
-												<option>100</option>
-											</select>
+										<div class="input-group col-sm-4 pull-left">
+										     <el-input class="table_cell right_radius" v-model="input2" placeholder="Table in Search"></el-input>
+											 <el-button class="table_cell left_radius" type="primary">Search</el-button>
 										</div>
 										<div class="clearfix"></div>
 									</div>
 									<div class="table-responsive">
-										<!--<table class="table table-hover footable toggle-arrow-tiny">
-											<thead>
-												<tr>
-													<th data-toggle="true">MT5 Account</th>
-													<th data-class="expand">Cilent ID</th>
-													<th data-hide="phone">Name</th>
-													<th data-hide="phone,tablet">Method</th>
-													<th data-class="expand">Req.Amount</th>
-													<th data-hide="phone">Fee</th>
-													<th data-hide="phone">Ex.Rate</th>
-													<th data-hide="phone">Wd.Amount</th>
-													<th data-class="expand">Request Date</th>
-													<th data-hide="phone,tablet">Audit Date</th>
-													<th data-hide="phone,tablet">Status</th>
-													<th data-class="expand">Action</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>55113322</td>
-													<td>22778822</td>
-													<td>Alan Smith</td>
-													<td>CNY</td>
-													<td>7,400.00</td>
-													<td>500</td>
-													<td>6.7894</td>
-													<td><span class="currency">CNY</span>180.00</td>
-													<td>2017-03-10 10:55</td>
-													<td>2017-03-15 12:20</td>
-													<td>Pending</td>
-													<td>
-														<div class="btn-group">
-															<button class="btn btn-default btn-sm text-info dropdown-toggle" data-toggle="dropdown">Actions <span class="caret"></span></button>
-															<ul class="dropdown-menu">
-																<li><a href="#" data-toggle="modal" data-target="#audit"><i class="fa fa-pencil-square fa-fw"></i>Audit</a></li>
-																<li><a href="#" data-toggle="modal" data-target="#client"><i class="fa fa-user-circle fa-fw"></i>Cilent</a></li>
-																<li><a href="#"><span class="text-danger"><i class="fa fa-trash fa-fw"></i>Delete</span></a></li>
-															</ul>
-														</div>
-													</td>
-												</tr>
-												<tr>
-													<td>55112244</td>
-													<td>22558833</td>
-													<td>Patrick Smith</td>
-													<td>CNY</td>
-													<td>2,000.00</td>
-													<td>500</td>
-													<td>6.7894</td>
-													<td><span class="currency">CNY</span>878.26</td>
-													<td>2017-03-10 10:55</td>
-													<td>2017-03-15 12:20</td>
-													<td>Pending</td>
-													<td>
-														<div class="btn-group">
-															<button class="btn btn-default btn-sm text-info dropdown-toggle" data-toggle="dropdown">Actions <span class="caret"></span></button>
-															<ul class="dropdown-menu">
-																<li><a href="#" data-toggle="modal" data-target="#audit"><i class="fa fa-pencil-square fa-fw"></i>Audit</a></li>
-																<li><a href="#" data-toggle="modal" data-target="#client"><i class="fa fa-user-circle fa-fw"></i>Cilent</a></li>
-																<li><a href="#"><span class="text-danger"><i class="fa fa-trash fa-fw"></i>Delete</span></a></li>
-															</ul>
-														</div>
-													</td>
-												</tr>
-												<tr>
-													<td>55884411</td>
-													<td>22558844</td>
-													<td>Patrick Smith</td>
-													<td>CNY</td>
-													<td>1,900.00</td>
-													<td>500</td>
-													<td>6.7894</td>
-													<td><span class="currency">CNY</span>878.26</td>
-													<td>2017-03-09  12:35</td>
-													<td>2017-03-15 12:20</td>
-													<td>Pending</td>
-													<td>
-														<div class="btn-group">
-															<button class="btn btn-default btn-sm text-info dropdown-toggle" data-toggle="dropdown">Actions <span class="caret"></span></button>
-															<ul class="dropdown-menu">
-																<li><a href="#" data-toggle="modal" data-target="#audit"><i class="fa fa-pencil-square fa-fw"></i>Audit</a></li>
-																<li><a href="#" data-toggle="modal" data-target="#client"><i class="fa fa-user-circle fa-fw"></i>Cilent</a></li>
-																<li><a href="#"><span class="text-danger"><i class="fa fa-trash fa-fw"></i>Delete</span></a></li>
-															</ul>
-														</div>
-													</td>
-												</tr>
-											</tbody>
-											<tfoot>
-												<tr>
-													<td colspan="4">Showing 1 to 25 of 57 entries</td>
-													<td colspan="9">
-														<ul class="pagination pull-right m-n">
-														</ul>
-													</td>
-												</tr>
-											</tfoot>
-										</table>-->
+									
 <template>
   <el-table
     :data="PendingData"
@@ -443,117 +237,14 @@
 								<div class="panel-body">
 									<h3>Declined</h3>
 									<div class="m-b-sm">
-										<div class="input-group col-sm-4 pull-left"><input class="form-control" type="text" placeholder="Table in Search"> <span class="input-group-btn">  <button class="btn btn-primary" type="button">Search</button></span></div>
-										<div class="input-group input-sm pull-right">
-											<span class="input-group-addon no-borders">Show</span>
-											<select class="form-control">
-												<option>10</option>
-												<option selected>25</option>
-												<option>50</option>
-												<option>100</option>
-											</select>
-										</div>
+										<div class="input-group col-sm-4 pull-left">
+										   <el-input class="table_cell right_radius" v-model="input3" placeholder="Table in Search"></el-input>
+											<el-button class="table_cell left_radius" type="primary">Search</el-button>
+									    </div>
 										<div class="clearfix"></div>
 									</div>
 									<div class="table-responsive">
-										<!--<table class="table table-hover footable toggle-arrow-tiny">
-											<thead>
-												<tr>
-													<th data-toggle="true">MT5 Account</th>
-													<th data-class="expand">Cilent ID</th>
-													<th data-hide="phone">Name</th>
-													<th data-hide="phone,tablet">Method</th>
-													<th data-class="expand">Req.Amount</th>
-													<th data-hide="phone">Fee</th>
-													<th data-hide="phone">Ex.Rate</th>
-													<th data-hide="phone">Wd.Amount</th>
-													<th data-class="expand">Request Date</th>
-													<th data-hide="phone,tablet">Audit Date</th>
-													<th data-hide="phone,tablet">Status</th>
-													<th data-class="expand">Action</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>55441122</td>
-													<td>22778822</td>
-													<td>Alan Smith</td>
-													<td>CNY</td>
-													<td>5,000.00</td>
-													<td>500</td>
-													<td>6.7894</td>
-													<td><span class="currency">CNY</span>878.26</td>
-													<td>2017-03-10 10:55</td>
-													<td>2017-03-11 18:00</td>
-													<td>Declined</td>
-													<td>
-														<div class="btn-group">
-															<button class="btn btn-default btn-sm text-info dropdown-toggle" data-toggle="dropdown">Actions <span class="caret"></span></button>
-															<ul class="dropdown-menu">
-																<li><a href="#" data-toggle="modal" data-target="#audit"><i class="fa fa-pencil-square fa-fw"></i>Audit</a></li>
-																<li><a href="#" data-toggle="modal" data-target="#client"><i class="fa fa-user-circle fa-fw"></i>Cilent</a></li>
-																<li><a href="#"><span class="text-danger"><i class="fa fa-trash fa-fw"></i>Delete</span></a></li>
-															</ul>
-														</div>
-													</td>
-												</tr>
-												<tr>
-													<td>55005500</td>
-													<td>22558833</td>
-													<td>Patrick Smith</td>
-													<td>CNY</td>
-													<td>5,000.75</td>
-													<td>500</td>
-													<td>6.7894</td>
-													<td><span class="currency">CNY</span>878.26</td>
-													<td>2017-03-10 10:55</td>
-													<td>2017-03-15 13:18</td>
-													<td>Declined</td>
-													<td>
-														<div class="btn-group">
-															<button class="btn btn-default btn-sm text-info dropdown-toggle" data-toggle="dropdown">Actions <span class="caret"></span></button>
-															<ul class="dropdown-menu">
-																<li><a href="#" data-toggle="modal" data-target="#audit"><i class="fa fa-pencil-square fa-fw"></i>Audit</a></li>
-																<li><a href="#" data-toggle="modal" data-target="#client"><i class="fa fa-user-circle fa-fw"></i>Cilent</a></li>
-																<li><a href="#"><span class="text-danger"><i class="fa fa-trash fa-fw"></i>Delete</span></a></li>
-															</ul>
-														</div>
-													</td>
-												</tr>
-												<tr>
-													<td>55225500</td>
-													<td>22558844</td>
-													<td>Patrick Smith</td>
-													<td>CNY</td>
-													<td>20,000.00</td>
-													<td>500</td>
-													<td>6.7894</td>
-													<td><span class="currency">CNY</span>5,878.26</td>
-													<td>2017-03-09 12:35</td>
-													<td>2017-03-15 13:18</td>
-													<td>Declined</td>
-													<td>
-														<div class="btn-group">
-															<button class="btn btn-default btn-sm text-info dropdown-toggle" data-toggle="dropdown">Actions <span class="caret"></span></button>
-															<ul class="dropdown-menu">
-																<li><a href="#" data-toggle="modal" data-target="#audit"><i class="fa fa-pencil-square fa-fw"></i>Audit</a></li>
-																<li><a href="#" data-toggle="modal" data-target="#client"><i class="fa fa-user-circle fa-fw"></i>Cilent</a></li>
-																<li><a href="#"><span class="text-danger"><i class="fa fa-trash fa-fw"></i>Delete</span></a></li>
-															</ul>
-														</div>
-													</td>
-												</tr>
-											</tbody>
-											<tfoot>
-												<tr>
-													<td colspan="4">Showing 1 to 25 of 57 entries</td>
-													<td colspan="9">
-														<ul class="pagination pull-right m-n">
-														</ul>
-													</td>
-												</tr>
-											</tfoot>
-										</table>-->
+									
 <template>
   <el-table
     :data="DeclinedData"
@@ -870,14 +561,14 @@
 </div>
 </template>
 <script>
-// import '../../../assets/css/plugins/footable/footable.core.css'
-// import '../../../assets/css/plugins/daterangepicker/daterangepicker-bs3.css'
-// import Footable from '../../../assets/js/plugins/footable/footable.all.min.js'
-// import Datepicker from '../../../assets/js/plugins/datapicker/bootstrap-datepicker.js'
 export default {
     name: 'withdrawal',
 	data () {
 		return {
+			// 搜索框数据
+			input1: '',
+			input2: '',
+			input3: '',
 			// Requested表格数据
 			RequestedData: [{
 				account: '55001188',
@@ -1001,8 +692,7 @@ export default {
 		}
 	},
     components: {
-        // Footable,
-        // Datepicker
+
     },
 	methods: {
 		// Requested表格
@@ -1030,19 +720,7 @@ export default {
 		}
 	},
     mounted: function(){
-        // $('input[name="daterange"]').daterangepicker({
-		// 	timePicker: false,
-		// });
-        // $('.datepicker').datepicker({
-		// 	format: 'yyyy/dd/mm',
-		// 	startDate: '-3d'
-		// });
-        // $('.footable').footable({
-        //     breakpoints: {
-        //         phone: 640,
-        //         tablet: 1024
-        //     }
-		// });
+
     }
 }
 </script>

@@ -28,15 +28,9 @@
 								<div class="panel-body">
 									<h3>Requested</h3>
 									<div class="m-b-sm">
-										<div class="input-group col-sm-4 pull-left"><input class="form-control" type="text" placeholder="Table in Search"> <span class="input-group-btn">  <button class="btn btn-primary" type="button">Search</button></span></div>
-										<div class="input-group input-sm pull-right">
-											<span class="input-group-addon no-borders">Show</span>
-											<select class="form-control">
-												<option>10</option>
-												<option selected>25</option>
-												<option>50</option>
-												<option>100</option>
-											</select>
+										<div class="input-group col-sm-4 pull-left">
+											<el-input class="table_cell right_radius" v-model="input1" placeholder="Table in Search"></el-input>
+											<el-button class="table_cell left_radius" type="primary">Search</el-button>
 										</div>
 										<div class="clearfix"></div>
 									</div>
@@ -203,102 +197,13 @@
 								<div class="panel-body">
 									<h3>Pending</h3>
 									<div class="m-b-sm">
-										<div class="input-group col-sm-4 pull-left"><input class="form-control" type="text" placeholder="Table in Search"> <span class="input-group-btn">  <button class="btn btn-primary" type="button">Search</button></span></div>
-										<div class="input-group input-sm pull-right">
-											<span class="input-group-addon no-borders">Show</span>
-											<select class="form-control">
-												<option>10</option>
-												<option selected>25</option>
-												<option>50</option>
-												<option>100</option>
-											</select>
+										<div class="input-group col-sm-4 pull-left">
+										    <el-input class="table_cell right_radius" v-model="input2" placeholder="Table in Search"></el-input>
+											<el-button class="table_cell left_radius" type="primary">Search</el-button>
 										</div>
 										<div class="clearfix"></div>
 									</div>
 									<div class="table-responsive">
-										<!--<table class="table table-hover footable toggle-arrow-tiny">
-											<thead>
-												<tr>
-													<th data-toggle="true">Cilent ID</th>
-													<th data-class="expand">Name</th>
-													<th data-hide="phone,tablet">Phone</th>
-													<th data-hide="phone,tablet">Email</th>
-													<th data-hide="phone">Agent ID</th>
-													<th data-hide="phone">Signup Date</th>
-													<th data-class="expand">Request Date</th>
-													<th data-hide="phone">Verification</th>
-													<th data-class="expand">Action</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>22558833</td>
-													<td>Patrick Smith</td>
-													<td>+852 1144-8877</td>
-													<td>sample123@gmail.com</td>
-													<td>22660088</td>
-													<td>2017-03-10 15:00</td>
-													<td>2017-03-10 15:07</td>
-													<td>Requested</td>
-													<td>
-														<div class="btn-group">
-															<button class="btn btn-default btn-sm text-info dropdown-toggle" data-toggle="dropdown">Actions <span class="caret"></span></button>
-															<ul class="dropdown-menu">
-																<li><a href="#" data-toggle="modal" data-target="#account"><i class="fa fa-pencil-square fa-fw"></i>Approve</a></li>
-																<li><a href="#"><span class="text-danger"><i class="fa fa-trash fa-fw"></i>Delete</span></a></li>
-															</ul>
-														</div>
-													</td>
-												</tr>
-												<tr>
-													<td>22558844</td>
-													<td>Patrick Smith</td>
-													<td>+852 1144-8877</td>
-													<td>sample123@gmail.com</td>
-													<td>22999900</td>
-													<td>02017-03-10 16:10</td>
-													<td>02017-03-10 17:38</td>
-													<td>Requested</td>
-													<td>
-														<div class="btn-group">
-															<button class="btn btn-default btn-sm text-info dropdown-toggle" data-toggle="dropdown">Actions <span class="caret"></span></button>
-															<ul class="dropdown-menu">
-																<li><a href="#" data-toggle="modal" data-target="#account"><i class="fa fa-pencil-square fa-fw"></i>Approve</a></li>
-																<li><a href="#"><span class="text-danger"><i class="fa fa-trash fa-fw"></i>Delete</span></a></li>
-															</ul>
-														</div>
-													</td>
-												</tr>
-												<tr>
-													<td>22558855</td>
-													<td>Patrick Smith</td>
-													<td>+852 1144-8877</td>
-													<td>sample123@gmail.com</td>
-													<td>22999900</td>
-													<td>2017-03-09 10:15</td>
-													<td>2017-03-09 21:20</td>
-													<td>Declined</td>
-													<td>
-														<div class="btn-group">
-															<button class="btn btn-default btn-sm text-info dropdown-toggle" data-toggle="dropdown">Actions <span class="caret"></span></button>
-															<ul class="dropdown-menu">
-																<li><a href="#" data-toggle="modal" data-target="#account"><i class="fa fa-pencil-square fa-fw"></i>Approve</a></li>
-																<li><a href="#"><span class="text-danger"><i class="fa fa-trash fa-fw"></i>Delete</span></a></li>
-															</ul>
-														</div>
-													</td>
-												</tr>
-											</tbody>
-											<tfoot>
-												<tr>
-													<td colspan="2">Showing 1 to 25 of 57 entries</td>
-													<td colspan="7">
-														<ul class="pagination pull-right m-n">
-														</ul>
-													</td>
-												</tr>
-											</tfoot>
-										</table>-->
 <template>
   <el-table
     :data="PendingData"
@@ -378,102 +283,13 @@
 								<div class="panel-body">
 									<h3>Declined</h3>
 									<div class="m-b-sm">
-										<div class="input-group col-sm-4 pull-left"><input class="form-control" type="text" placeholder="Table in Search"> <span class="input-group-btn">  <button class="btn btn-primary" type="button">Search</button></span></div>
-										<div class="input-group input-sm pull-right">
-											<span class="input-group-addon no-borders">Show</span>
-											<select class="form-control">
-												<option>10</option>
-												<option selected>25</option>
-												<option>50</option>
-												<option>100</option>
-											</select>
+										<div class="input-group col-sm-4 pull-left">
+									        <el-input class="table_cell right_radius" v-model="input3" placeholder="Table in Search"></el-input>
+											<el-button class="table_cell left_radius" type="primary">Search</el-button>
 										</div>
 										<div class="clearfix"></div>
 									</div>
 									<div class="table-responsive">
-										<!--<table class="table table-hover footable toggle-arrow-tiny">
-											<thead>
-												<tr>
-													<th data-toggle="true">Cilent ID</th>
-													<th data-class="expand">Name</th>
-													<th data-hide="phone,tablet">Phone</th>
-													<th data-hide="phone,tablet">Email</th>
-													<th data-hide="phone">Agent ID</th>
-													<th data-hide="phone">Signup Date</th>
-													<th data-class="expand">Request Date</th>
-													<th data-hide="phone">Verification</th>
-													<th data-class="expand">Action</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>22558833</td>
-													<td>Patrick Smith</td>
-													<td>+852 1144-8877</td>
-													<td>sample123@gmail.com</td>
-													<td>0</td>
-													<td>2017-03-09 15:00</td>
-													<td>2017-03-09 15:07</td>
-													<td>Requested</td>
-													<td>
-														<div class="btn-group">
-															<button class="btn btn-default btn-sm text-info dropdown-toggle" data-toggle="dropdown">Actions <span class="caret"></span></button>
-															<ul class="dropdown-menu">
-																<li><a href="#" data-toggle="modal" data-target="#account"><i class="fa fa-pencil-square fa-fw"></i>Approve</a></li>
-																<li><a href="#"><span class="text-danger"><i class="fa fa-trash fa-fw"></i>Delete</span></a></li>
-															</ul>
-														</div>
-													</td>
-												</tr>
-												<tr>
-													<td>22558844</td>
-													<td>Patrick Smith</td>
-													<td>+852 1144-8877</td>
-													<td>sample123@gmail.com</td>
-													<td>22445566</td>
-													<td>2017-03-10 16:10</td>
-													<td>2017-03-10 17:38</td>
-													<td>Requested</td>
-													<td>
-														<div class="btn-group">
-															<button class="btn btn-default btn-sm text-info dropdown-toggle" data-toggle="dropdown">Actions <span class="caret"></span></button>
-															<ul class="dropdown-menu">
-																<li><a href="#" data-toggle="modal" data-target="#account"><i class="fa fa-pencil-square fa-fw"></i>Approve</a></li>
-																<li><a href="#"><span class="text-danger"><i class="fa fa-trash fa-fw"></i>Delete</span></a></li>
-															</ul>
-														</div>
-													</td>
-												</tr>
-												<tr>
-													<td>22558855</td>
-													<td>Patrick Smith</td>
-													<td>+852 1144-8877</td>
-													<td>sample123@gmail.com</td>
-													<td>22334477</td>
-													<td>2017-03-09 10:15</td>
-													<td>2017-03-09 21:20</td>
-													<td>Declined</td>
-													<td>
-														<div class="btn-group">
-															<button class="btn btn-default btn-sm text-info dropdown-toggle" data-toggle="dropdown">Actions <span class="caret"></span></button>
-															<ul class="dropdown-menu">
-																<li><a href="#" data-toggle="modal" data-target="#account"><i class="fa fa-pencil-square fa-fw"></i>Approve</a></li>
-																<li><a href="#"><span class="text-danger"><i class="fa fa-trash fa-fw"></i>Delete</span></a></li>
-															</ul>
-														</div>
-													</td>
-												</tr>
-											</tbody>
-											<tfoot>
-												<tr>
-													<td colspan="2">Showing 1 to 25 of 57 entries</td>
-													<td colspan="7">
-														<ul class="pagination pull-right m-n">
-														</ul>
-													</td>
-												</tr>
-											</tfoot>
-										</table>-->
 <template>
   <el-table
     :data="DeclinedData"
@@ -775,15 +591,6 @@
 </div>
 </template>
 <script>
-// import '../../../assets/css/plugins/footable/footable.core.css'
-// import '../../../assets/css/plugins/daterangepicker/daterangepicker-bs3.css'
-// import '../../../assets/css/plugins/lightbox/lightbox.css'
-// import '../../../assets/css/plugins/jasny/jasny-bootstrap.min.css'
-// import '../../../assets/css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css'
-
-// import Jasny from '../../../assets/js/plugins/jasny/jasny-bootstrap.min.js'
-// import Footable from '../../../assets/js/plugins/footable/footable.all.min.js'
-// import Lightbox from '../../../assets/js/plugins/lightbox/lightbox.min.js'
 import Lightbox from 'lightbox2'
 import 'lightbox2/dist/css/lightbox.css'
 // global. = Raphael
@@ -791,6 +598,10 @@ export default {
     name: 'account',
 	data () {
 		return {
+			// 搜索框数据
+			input1: '',
+			input2: '',
+			input3: '',
 			// Requested表格数据
 			RequestedData: [{
 				clientID: '22558833',
@@ -888,8 +699,6 @@ export default {
 	},
     components: {
          Lightbox
-        // Jasny,
-        // Footable
     },
 	methods: {
 		// Requested表格
@@ -917,12 +726,7 @@ export default {
 		}
 	},
     mounted: function() {
-        // $('.footable').footable({
-		// 	breakpoints: {
-		// 		phone: 640,
-		// 		tablet: 1024
-		// 	}
-	    // });
+
     }
 }
 </script>
@@ -933,14 +737,9 @@ export default {
 .tab-content tr:last-child .dropdown-menu{
 	top:-30px;
 }
-/*分页*/
-.el-pagination{
-	text-align:right;
-	padding:8px 0;
-}
 /*checkbox复选框*/
-.el-checkbox{
+/*.el-checkbox{
 	color:#676a6c;
-}
+}*/
 </style>
 

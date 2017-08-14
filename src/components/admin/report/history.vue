@@ -16,24 +16,36 @@
 						<div class="row">
 							<div class="col-md-3">
 								<label>Date</label>
-								<div class="form-group"><input name="daterange" class="form-control" type="text"></div>
+								<div class="form-group">
+<template>
+    <el-date-picker
+      v-model="value1"
+      type="daterange"
+      placeholder="选择日期范围">
+    </el-date-picker>
+</template>
+								</div>
 							</div>
 							<div class="col-md-2">
 								<label>MT5 Account</label>
-								<div class="form-group"><input class="form-control"></div>
+								<div class="form-group">
+<el-input v-model="input2" placeholder="请输入内容"></el-input>
+								</div>
 							</div>
 							<div class="col-md-2">
 								<label>Client ID</label>
-								<div class="form-group"><input class="form-control"></div>
+								<div class="form-group">
+<el-input v-model="input3" placeholder="请输入内容"></el-input>								
+								</div>
 							</div>
 							<div class="col-md-2">
 								<label>Account Group</label>
 								<div class="form-group">
-									<select class="form-control">
-										<option>Nothing Selected</option>
-										<option>Default</option>
-										<option>FX-01</option>
-									</select>
+<el-select v-model="select" placeholder="请选择">
+    <el-option label="餐厅名" value="1"></el-option>
+    <el-option label="订单号" value="2"></el-option>
+    <el-option label="用户电话" value="3"></el-option>
+</el-select>								
 								</div>
 							</div>
 							<div class="col-md-3">
@@ -358,16 +370,23 @@
   
 </template>
 <script>
-import '../../../assets/css/plugins/footable/footable.core.css'
-import '../../../assets/css/plugins/daterangepicker/daterangepicker-bs3.css'
+// import '../../../assets/css/plugins/footable/footable.core.css'
+// import '../../../assets/css/plugins/daterangepicker/daterangepicker-bs3.css'
 
-import Datepicker from '../../../assets/js/plugins/datapicker/bootstrap-datepicker.js'
-import Footable from '../../../assets/js/plugins/footable/footable.all.min.js'
+// import Datepicker from '../../../assets/js/plugins/datapicker/bootstrap-datepicker.js'
+// import Footable from '../../../assets/js/plugins/footable/footable.all.min.js'
 export default {
     name: 'history',
+	data () {
+       return {
+		   value1: '',
+		   value2: '',
+		   value3: ''
+	   }
+	},
     components: {
-      Datepicker,
-      Footable
+    //   Datepicker,
+    //   Footable
     },
     mounted: function(){
        $('.footable').footable({
@@ -376,11 +395,7 @@ export default {
 					tablet: 1024
 				}
 		});
-        // $(function() {
-		// 	$('input[name="daterange"]').daterangepicker({
-		// 		timePicker: false,
-		// 	});
-		// });
+
     }
 }
 </script>

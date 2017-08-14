@@ -11,146 +11,25 @@
 					<div class="col-lg-12">
 						<div class="ibox float-e-margins">
 							<div class="ibox-title">
-								<div class="ibox-tools">
-									<div class="input-group col-sm-2 pull-left m-b-sm m-r-sm"><input class="form-control" type="text" placeholder="Table in Search"> </div>
-									<div class="input-group col-sm-2 pull-left m-b-sm">
-										<div class="form-group">
-											<select class="form-control">
-												<option>Status</option>
-												<option>Processed</option>
-												<option>Processing</option>
-												<option>failed</option>
-											</select>
-										</div>
-									</div>
-									<div class="input-group pull-left m-l-xs"><button class="btn btn-primary" type="button">Search</button></div>
-									<div class="input-group input-sm pull-right">
-										<span class="input-group-addon no-borders">Show</span>
-										<select class="form-control">
-											<option>10</option>
-											<option selected>25</option>
-											<option>50</option>
-											<option>100</option>
-										</select>
-									</div>
+								<div class="ibox-tools">		
+<div class="col-sm-6" style="padding:0px;">								
+<el-input placeholder="Table in Search" v-model="input">
+    <el-select v-model="select" slot="prepend" placeholder="Please select">
+	  <el-option label="All" value="0"></el-option>
+      <el-option label="Processing" value="1"></el-option>
+      <el-option label="Processed" value="2"></el-option>
+      <el-option label="Failed" value="3"></el-option>
+	  <el-option label="Declined" value="4"></el-option>
+    </el-select>
+    <el-button slot="append" icon="search"></el-button>
+</el-input>	
+</div>									
 									<div class="clearfix"></div>
 								</div>
 							</div>
 
 							<div class="ibox-content">
 								<div class="table-responsive">
-									<!--<table class="table table-hover footable toggle-arrow-tiny">
-										<thead>
-											<tr>
-												<th data-toggle="true">MT5 Account</th>
-												<th data-class="expand">Cilent ID</th>
-												<th data-hide="phone">Name</th>
-												<th data-hide="phone">Method</th>
-												<th data-hide="phone">Payed Amount</th>
-												<th data-hide="phone,tablet">Fee</th>
-												<th data-hide="phone,tablet">Ex.Rate</th>
-												<th data-class="expand">Deposit Amount</th>
-												<th data-hide="phone">Deposit Date</th>
-												<th ddata-class="expand">Status</th>
-												<th data-class="expand">Action</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td>55001188</td>
-												<td>22558833</td>
-												<td>Patrick Smith</td>
-												<td>UnionPay</td>
-												<td><span class="currency">USD</span>1,000</td>
-												<td>50.00</td>
-												<td>1</td>
-												<td>950.00</td>
-												<td>2017-03-10 10:55</td>
-												<td>Processing</td>
-												<td>
-													<div class="btn-group">
-														<button class="btn btn-default btn-sm text-info dropdown-toggle" data-toggle="dropdown">Actions <span class="caret"></span></button>
-														<ul class="dropdown-menu">
-															<li><a href="#" data-toggle="modal" data-target="#client"><i class="fa fa-user-circle fa-fw"></i>Client</a></li>
-															<li><a href="#"><span class="text-danger"><i class="fa fa-trash fa-fw"></i>Delete</span></a></li>
-														</ul>
-													</div>
-												</td>
-											</tr>
-											<tr>
-												<td>55001188</td>
-												<td>22558833</td>
-												<td>Patrick Smith</td>	
-												<td>UnionPay</td>
-												<td><span class="currency">USD</span>1,000</td>
-												<td>50.00</td>
-												<td>1</td>
-												<td>950.00</td>
-												<td>2017-03-10 10:55</td>
-												<td>Processed</td>
-												<td>
-													<div class="btn-group">
-														<button class="btn btn-default btn-sm text-info dropdown-toggle" data-toggle="dropdown">Actions <span class="caret"></span></button>
-														<ul class="dropdown-menu">
-															<li><a href="#" data-toggle="modal" data-target="#client"><i class="fa fa-user-circle fa-fw"></i>Client</a></li>
-															<li><a href="#"><span class="text-danger"><i class="fa fa-trash fa-fw"></i>Delete</span></a></li>
-														</ul>
-													</div>
-												</td>
-											</tr>
-											<tr>
-												<td>55221166</td>
-												<td>22558844</td>
-												<td>Patrick Smith</td>
-												<td>UnionPay</td>
-												<td><span class="currency">USD</span>800</td>
-												<td>40.00</td>
-												<td>1</td>
-												<td>760.24</td>
-												<td>2017-03-10 9:38</td>
-												<td>Failed</td>
-												<td>
-													<div class="btn-group">
-														<button class="btn btn-default btn-sm text-info dropdown-toggle" data-toggle="dropdown">Actions <span class="caret"></span></button>
-														<ul class="dropdown-menu">
-															<li><a href="#" data-toggle="modal" data-target="#client"><i class="fa fa-user-circle fa-fw"></i>Client</a></li>
-															<li><a href="#"><span class="text-danger"><i class="fa fa-trash fa-fw"></i>Delete</span></a></li>
-														</ul>
-													</div>
-												</td>
-											</tr>
-											<tr>
-												<td>55004477</td>
-												<td>22558855</td>
-												<td>Patrick Smith</td>
-												<td>Bank Transfer</td>
-												<td><span class="currency">CNY</span>3,000</td>
-												<td>150.00</td>
-												<td>6.415263</td>
-												<td>2,850.50</td>
-												<td>2017-03-09 21:20</td>
-												<td>Declined</td>
-												<td>
-													<div class="btn-group">
-														<button class="btn btn-default btn-sm text-info dropdown-toggle" data-toggle="dropdown">Actions <span class="caret"></span></button>
-														<ul class="dropdown-menu">
-															<li><a href="#" data-toggle="modal" data-target="#client"><i class="fa fa-user-circle fa-fw"></i>Client</a></li>
-															<li><a href="#"><span class="text-danger"><i class="fa fa-trash fa-fw"></i>Delete</span></a></li>
-														</ul>
-													</div>
-												</td>
-											</tr>
-										</tbody>
-										<tfoot>
-											<tr>
-												<td colspan="3">Showing 1 to 25 of 57 entries</td>
-												<td colspan="8">
-													<ul class="pagination pull-right m-n">
-													</ul>
-												</td>
-											</tr>
-										</tfoot>
-									</table>-->
 <template>
   <el-table
     :data="DepositData"
@@ -203,6 +82,11 @@
       label="DepositDate"
       sortable>
     </el-table-column>
+	<el-table-column
+	  prop="status"
+	  label="Status"
+	  sortable>
+	</el-table-column>
 	<el-table-column 
 	   label="Action"
 	   width="100">
@@ -350,12 +234,13 @@
 </div>
 </template>
 <script>
-// import '../../../assets/css/plugins/footable/footable.core.css'
-// import Footable from '../../../assets/js/plugins/footable/footable.all.min.js'
 export default {
    name: 'deposite',
    data () {
 	   return {
+		//    搜索框
+		   input: '',
+		   select: '',
 		   DepositData: [{
 			    account: '55001188',
 				clientID: '22451222',
@@ -377,7 +262,7 @@ export default {
 				exRate: '1',
 				depositAmount: '950.00',
 				depositDate: '2017-03-10 10:55',
-				status: 'Processing'
+				status: 'Processed'
 			    },{
 				account: '55001188',
 				clientID: '22451222',
@@ -388,7 +273,7 @@ export default {
 				exRate: '1',
 				depositAmount: '950.00',
 				depositDate: '2017-03-10 10:55',
-				status: 'Processing'
+				status: 'Failed'
 				},{
 				account: '55001188',
 				clientID: '22451222',
@@ -399,7 +284,7 @@ export default {
 				exRate: '1',
 				depositAmount: '950.00',
 				depositDate: '2017-03-10 10:55',
-				status: 'Processing'
+				status: 'Declined'
 			}],
 			// 分页
 			currentPage: 2
@@ -418,12 +303,6 @@ export default {
 		},
    },
    mounted: function() {
-        // $('.footable').footable({
-		// 		breakpoints: {
-		// 			phone: 640,
-		// 			tablet: 1024
-		// 		}
-	    // });
    }
 }
 </script>
@@ -434,5 +313,8 @@ export default {
 }
 .ibox-content tr:last-child .dropdown-menu{
 	top:-30px;
+}
+.ibox-title{
+	padding:15px 20px;
 }
 </style>

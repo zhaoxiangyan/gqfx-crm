@@ -252,7 +252,6 @@
   <el-table
     :data="tableData"
     border
-    style="width: 100%;font-size:13px;"
     :default-sort = "{prop: 'date', order: 'descending'}"
     >
     <el-table-column
@@ -351,20 +350,12 @@
 									<button type="button" class="btn btn-default text-info" data-toggle="modal" data-target="#point">Point</button>
 								</div>
 								<div class="input-group col-md-4">
-									<select class="form-control" style="height:34px;">
-										<option selected>Client Level</option>
-										<option>Level-01</option>
-										<option>Level-02</option>
-										<option>Level-03</option>
-									</select>
-									<span class="input-group-btn"><button class="btn btn-primary">Changes</button></span>
-								</div>
-								<div class="input-group col-md-4">
 <template>
-    <el-select class="table_cell right_radius"  v-model="select" slot="prepend" placeholder="请选择">
-      <el-option label="餐厅名" value="1"></el-option>
-      <el-option label="订单号" value="2"></el-option>
-      <el-option label="用户电话" value="3"></el-option>
+    <el-select class="table_cell right_radius"  v-model="select" slot="prepend" placeholder="Please select">
+	  <el-option label="Client Level" value="0"></el-option>
+      <el-option label="Level-01"     value="1"></el-option>
+      <el-option label="Level-02"     value="2"></el-option>
+      <el-option label="Level-03"     value="3"></el-option>
     </el-select>
     <el-button class="table_cell left_radius" type="primary">Changes</el-button>
 </template>
@@ -1411,30 +1402,6 @@
 </div>    	
 </template>
 <script>
-// import '../../../assets/css/plugins/daterangepicker/daterangepicker-bs3.css'
-// import '../../../assets/css/plugins/datapicker/datepicker3.css'
-// import '../../../assets/css/plugins/footable/footable.core.css'
-// import '../../../assets/css/plugins/footable3/footable.bootstrap.min.css'
-// import '../../../assets/css/plugins/select/bootstrap-select.css'
-// import '../../../assets/css/plugins/jasny/jasny-bootstrap.min.css'
-// import 'vue-multiselect/dist/vue-multiselect.min.css'
-
-// import Mom from '../../../assets/js/plugins/fullcalendar/moment.min.js'
-// import  Dat from '../../../assets/js/plugins/daterangepicker/daterangepicker.js'  
-// import Jasny from '../../../assets/js/plugins/jasny/jasny-bootstrap.min.js'
-// import Selectt from '../../../assets/js/plugins/select/bootstrap-select.min.js'
-// import Bootstrapselect from 'bootstrap-select'
-// import 'bootstrap-select/dist/css/bootstrap-select.css'
-// import 'bootstrap-select/dist/js/i18n/defaults-es_CL.js'
-// import Multiselect from 'vue-multiselect'
-// import Footable from '../../../assets/js/plugins/footable/footable.all.min.js'
-// import Footable3 from '../../../assets/js/plugins/footable3/footable.min.js'
-// import Datepicker from '../../../assets/js/plugins/datapicker/bootstrap-datepicker.js'
-// import Cta from '../../assets/js/plugins/cta/cta.min.js'
-// import cta from 'cta/dist/cta.js'
-// import ElementUI from 'element-ui'
-// import 'element-ui/lib/theme-default/index.css'
-// Vue.use(ElementUI)
 export default {
     name: 'client-index',
 	data () {
@@ -1697,6 +1664,11 @@ export default {
     }
 }
 </script>
-<style>
-
+<style scoped>
+.ibox-content td .dropdown-menu{
+	top:0px;
+}
+.ibox-content tr:last-child .dropdown-menu{
+	top:-74px;
+}
 </style>
