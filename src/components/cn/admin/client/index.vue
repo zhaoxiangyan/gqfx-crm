@@ -1562,7 +1562,7 @@
 // import '../../../assets/css/plugins/footable3/footable.bootstrap.min.css'
 // import '../../../assets/css/plugins/select/bootstrap-select.css'
 // import '../../../assets/css/plugins/jasny/jasny-bootstrap.min.css'
-import 'vue-multiselect/dist/vue-multiselect.min.css'
+// import 'vue-multiselect/dist/vue-multiselect.min.css'
 
 // import Mom from '../../../assets/js/plugins/fullcalendar/moment.min.js'
 // import  Dat from '../../../assets/js/plugins/daterangepicker/daterangepicker.js'  
@@ -1571,7 +1571,7 @@ import 'vue-multiselect/dist/vue-multiselect.min.css'
 // import Bootstrapselect from 'bootstrap-select'
 // import 'bootstrap-select/dist/css/bootstrap-select.css'
 // import 'bootstrap-select/dist/js/i18n/defaults-es_CL.js'
-import Multiselect from 'vue-multiselect'
+// import Multiselect from 'vue-multiselect'
 // import Footable from '../../../assets/js/plugins/footable/footable.all.min.js'
 // import Footable3 from '../../../assets/js/plugins/footable3/footable.min.js'
 // import Datepicker from '../../../assets/js/plugins/datapicker/bootstrap-datepicker.js'
@@ -1766,16 +1766,16 @@ export default {
         }	
 	},
 	components:{
-		// Mom,
-		// Dat,
+	// Mom,
+	// Dat,
     //    Jasny,
 	//    Selectt,
     //    Bootstrapselect,
-	Multiselect
+	// Multiselect
 	// ElementUI,
     //    Footable,
 	//    Footable3,
-    //    Datepicker
+    //    Datepicker,
     //    Cta
 	},
 	methods: {
