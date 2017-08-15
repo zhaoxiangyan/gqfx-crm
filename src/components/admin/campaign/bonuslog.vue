@@ -51,7 +51,7 @@
                                      </div>
 									 <div class="input-group col-sm-6 pull-left m-b-sm m-r-sm">
 <el-input placeholder="Table in Search" v-model="input">
-    <el-select v-model="select" slot="prepend" placeholder="Bonus Type">
+    <el-select v-model="select" slot="prepend" placeholder="Bonus Type" class="Width150">
       <el-option label="Deposit" value="1"></el-option>
       <el-option label="Welcome" value="2"></el-option>
       <el-option label="Withdrawal Fee" value="3"></el-option>
@@ -272,11 +272,6 @@ export default {
     }
 }
 </script>
-<style>
-.el-select .el-input {
-    width: 150px;
-}
-.el-date-editor--daterange.el-input{
-	width:100%;
-}
+<style scoped>
+
 </style>

@@ -29,13 +29,13 @@
 							<div class="col-md-2">
 								<label>MT5 Account</label>
 								<div class="form-group">
-<el-input v-model="input2" placeholder="请输入内容"></el-input>
+<el-input v-model="input1" placeholder="请输入内容"></el-input>
 								</div>
 							</div>
 							<div class="col-md-2">
 								<label>Client ID</label>
 								<div class="form-group">
-<el-input v-model="input3" placeholder="请输入内容"></el-input>								
+<el-input v-model="input2" placeholder="请输入内容"></el-input>								
 								</div>
 							</div>
 							<div class="col-md-2">
@@ -51,15 +51,6 @@
 							<div class="col-md-3">
 								<div class="form-inline m-t-mdl">
 									<button class="btn btn-primary">Search</button>
-									<div class="input-group input-sm pull-right">
-										<span class="input-group-addon no-borders">Show</span>
-										<select class="form-control">
-											<option>10</option>
-											<option selected>25</option>
-											<option>50</option>
-											<option>100</option>
-										</select>
-									</div>
 								</div>
 							</div>
 						</div>
@@ -370,31 +361,20 @@
   
 </template>
 <script>
-// import '../../../assets/css/plugins/footable/footable.core.css'
-// import '../../../assets/css/plugins/daterangepicker/daterangepicker-bs3.css'
-
-// import Datepicker from '../../../assets/js/plugins/datapicker/bootstrap-datepicker.js'
-// import Footable from '../../../assets/js/plugins/footable/footable.all.min.js'
 export default {
     name: 'history',
 	data () {
        return {
 		   value1: '',
-		   value2: '',
-		   value3: ''
+		   input1: '',
+		   input2: '',
+		   select: ''
 	   }
 	},
     components: {
-    //   Datepicker,
-    //   Footable
+
     },
     mounted: function(){
-       $('.footable').footable({
-				breakpoints: {
-					phone: 640,
-					tablet: 1024
-				}
-		});
 
     }
 }

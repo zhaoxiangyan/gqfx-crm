@@ -14,7 +14,7 @@
 								<div class="ibox-tools">		
 <div class="col-sm-6" style="padding:0px;">								
 <el-input placeholder="Table in Search" v-model="input">
-    <el-select v-model="select" slot="prepend" placeholder="Please select">
+    <el-select v-model="select" slot="prepend" placeholder="Please select" class="Width150">
 	  <el-option label="All" value="0"></el-option>
       <el-option label="Processing" value="1"></el-option>
       <el-option label="Processed" value="2"></el-option>
@@ -317,4 +317,5 @@ export default {
 .ibox-title{
 	padding:15px 20px;
 }
+
 </style>

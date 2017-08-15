@@ -14,22 +14,8 @@
 							<div class="ibox-content">
 								<div class="form-horizontal">
 									<div class="form-group"><label class="col-sm-2 control-label">Campaign Title</label>
-										<div class="col-sm-10"><input class="form-control" type="text"></div>
+										<div class="col-sm-10"><el-input v-model="input" placeholder=""></el-input></div>
 									</div>
-									<!--<div class="form-group"><label class="col-sm-2 control-label">Publish Start Date</label>
-										<div class="col-sm-4">
-											<div class="input-group date">
-												<span class="input-group-addon"><i class="fa fa-calendar"></i></span><input class="form-control" type="text" data-provide="datepicker">
-											</div>
-										</div>
-									</div>
-									<div class="form-group"><label class="col-sm-2 control-label">Publish End Date</label>
-										<div class="col-sm-4">
-											<div class="input-group date">
-												<span class="input-group-addon"><i class="fa fa-calendar"></i></span><input class="form-control" type="text" data-provide="datepicker">
-											</div>
-										</div>
-									</div>-->
 							<div class="form-group"><label class="col-sm-2 control-label">Publish Date</label>
 								<div class="col-sm-10">
 									<div class="form-inline">
@@ -75,40 +61,22 @@
 </div>
 </template>
 <script>
-// import '../../../assets/css/plugins/footable/footable.core.css'
-// import '../../../assets/css/plugins/daterangepicker/daterangepicker-bs3.css'
-// import '../../../assets/css/plugins/datapicker/datepicker3.css'
-// import '../../../assets/css/plugins/summernote/summernote.css'
+
 import '../../../assets/css/plugins/summernote/codemirror.min.css'
 import '../../../assets/css/plugins/summernote/monokai.min.css'
-// import Datapicker from '../../../assets/js/plugins/datapicker/bootstrap-datepicker.js'
-// import Summernote from '../../assets/js/plugins/summernote/summernote.js'
-// import Code from '../../assets/js/plugins/summernote/codemirror.min.js'
-// import Xml from '../../../assets/js/plugins/summernote/xml.min.js'
-// import Formatting from '../../../assets/js/plugins/summernote/formatting.min.js'
-// import codemirror from '../../../assets/js/plugins/summernote/codemirror.min.js'
+
 export default {
     name: 'list-new',
 	data () {
 		return {
+			input: '',
 			value: ''
 		}
 	},
 	components:{
-    //   Datapicker,
-    //   Summernote,
-    //   Code,
-    //   Xml,
-    //   Formatting
+
 	},
     mounted: function(){
-      	// $('input[name="daterange"]').daterangepicker({
-		// 		timePicker: true,
-		// });
-        // $('.datepicker').datepicker({
-		// 	format: 'yyyy-mm-dd',
-		// 	startDate: '-3d'
-		// });
 		$('.summernote1').summernote({
 			height: 150,   //set editable area's height
 			// htmlMode:true,
@@ -125,7 +93,7 @@ export default {
     }
 }
 </script>
-<style>
+<style scoped>
 .note-editor.note-frame{
 	border:1px solid #a9a9a9!important;
 }
@@ -133,8 +101,5 @@ export default {
 	border-right:none;
 	border-left:30px solid transparent;
 }
-/*全屏按钮bug，隐藏掉*/
-.btn-fullscreen{
-	display:none!important;
-}
+
 </style>

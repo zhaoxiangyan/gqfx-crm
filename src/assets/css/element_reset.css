@@ -39,8 +39,13 @@
 }
 /*admin/approval/account样式重置END*/
 
-/*admin/approval/deposit样式重置BEGIN*/
-.el-select .el-input {
-    width: 150px;
+/*admin/approval/deposit样式重置BEGIN  添加类名Width150*/
+.Width150.el-select .el-input {
+	  width: 150px;  
 }
 /*admin/approval/deposit样式重置END*/
+
+/*全屏按钮bug，隐藏掉*/
+.btn-fullscreen{
+	display:none!important;
+}
