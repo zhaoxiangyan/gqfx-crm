@@ -21,7 +21,7 @@
     <el-date-picker
       v-model="value1"
       type="daterange"
-      placeholder="选择日期范围">
+      placeholder="Select date range">
     </el-date-picker>
 </template>
 								</div>
@@ -29,22 +29,21 @@
 							<div class="col-md-2">
 								<label>MT5 Account</label>
 								<div class="form-group">
-<el-input v-model="input1" placeholder="请输入内容"></el-input>
+<el-input v-model="input1" placeholder=""></el-input>
 								</div>
 							</div>
 							<div class="col-md-2">
 								<label>Client ID</label>
 								<div class="form-group">
-<el-input v-model="input2" placeholder="请输入内容"></el-input>								
+<el-input v-model="input2" placeholder=""></el-input>								
 								</div>
 							</div>
 							<div class="col-md-2">
 								<label>Account Group</label>
 								<div class="form-group">
-<el-select v-model="select" placeholder="请选择">
-    <el-option label="餐厅名" value="1"></el-option>
-    <el-option label="订单号" value="2"></el-option>
-    <el-option label="用户电话" value="3"></el-option>
+<el-select v-model="select" placeholder="Nothing Selected">
+    <el-option label="Default" value="1"></el-option>
+    <el-option label="FX-01" value="2"></el-option>
 </el-select>								
 								</div>
 							</div>
@@ -68,7 +67,7 @@
 					<div class="ibox-title">
 						<h5>Total: <span class="agg">Volume</span>355,720｜<span class="agg">Loss</span>1,457.50</h5>
 						<div class="ibox-tools">
-							<a class="btn btn-xs btn-default btn-rounded" href="#">CSV Download</a>
+							<a class="btn btn-xs btn-default btn-rounded" href="javascript:void(0)">CSV Download</a>
 							<a class="collapse-link">
 								<i class="fa fa-chevron-up"></i>
 							</a>
@@ -76,7 +75,7 @@
 					</div>
 					<div class="ibox-content">
 						<div class="table-responsive">
-							<table class="table table-hover footable toggle-arrow-tiny report-hs-table">
+							<!--<table class="table table-hover footable toggle-arrow-tiny report-hs-table">
 								<thead>
 									<tr>
 										<th data-toggle="true">Order ID</th>
@@ -180,8 +179,108 @@
 										</td>
 									</tr>
 								</tfoot>
-							</table>
+							</table>-->
+<template>
+  <el-table
+    :data="HistoryData"
+    border
+    style="width: 100%;font-size:13px;"
+    >
+	<el-table-column
+	   prop="orderID"
+	   label="Order ID"
+	   sortable>
+	</el-table-column>
+	<el-table-column
+      prop="account"
+      label="MT5 Account"
+      sortable>
+    </el-table-column>
+    <el-table-column
+      prop="clientID"
+      label="Client ID"
+      sortable>
+    </el-table-column>
+    <el-table-column
+      prop="name"
+      label="Name"
+      sortable>
+    </el-table-column>
+    <el-table-column
+      prop="symbol"
+      label="Symbol"
+      sortable>
+    </el-table-column>
+	<el-table-column
+      prop="type"
+      label="Type"
+      sortable>
+    </el-table-column>
+    <el-table-column
+      prop="volume"
+      label="Volume"
+      sortable>
+    </el-table-column>
+    <el-table-column
+      prop="orderDate"
+      label="Order Date"
+      sortable>
+    </el-table-column>
+	<el-table-column
+      prop="orderRate"
+      label="Order Rate"
+      sortable>
+    </el-table-column>
+    <el-table-column
+      prop="sl"
+      label="S/L"
+      sortable>
+    </el-table-column>
+	<el-table-column
+	  prop="tp"
+	  label="T/P"
+	  sortable>
+	</el-table-column>
+	<el-table-column
+	  prop="periodDate"
+	  label="Period Date"
+	  sortable>
+	</el-table-column>
+	<el-table-column
+	  prop="periodRate"
+	  label="Period Rate"
+	  sortable>
+	</el-table-column>
+	<el-table-column
+	  prop="profit"
+	  label="Profit"
+	  sortable>
+	</el-table-column>
+	<el-table-column
+	  prop="channel"
+	  label="Channel"
+	  sortable>
+	</el-table-column>
+	<el-table-column
+	  prop="note"
+	  label="Note"
+	  sortable>
+	</el-table-column>
+  </el-table>
+</template>								
 						</div>
+<template>
+<el-pagination
+      @size-change="handleSizeChange"
+      @current-change="handleCurrentChange"
+      :current-page="currentPage"
+      :page-sizes="[10, 25, 50, 100]"
+      :page-size="100"
+      layout="total, sizes, prev, pager, next "
+      :total="100"
+	  style="text-align:right;padding:8px 0;">
+    </el-pagination>
+</template>							
 					</div>
 				</div>
 				<!-- ibox End -->
@@ -368,14 +467,115 @@ export default {
 		   value1: '',
 		   input1: '',
 		   input2: '',
-		   select: ''
+		   select: '',
+		   HistoryData: [{
+			    orderID: '100001224',
+			    account: '55001188',
+				clientID: '22451222',
+				name: 'Zhao',
+				symbol: 'USDJPYbo',
+				type: 'Up',
+				volume: '100',
+				orderDate: '2017-03-09 15:20:25',
+				orderRate: '112.501015',
+				sl: '0',
+				tp: '0',
+				periodDate: '2017-05-12 15:35:14',
+				periodRate: '112.645515',
+				profit: '76.00',
+				channel: 'MT5PC',
+				note: '1m-76%'
+				},{
+	            orderID: '100001224',
+			    account: '55001188',
+				clientID: '22451222',
+				name: 'Zhao',
+				symbol: 'USDJPYbo',
+				type: 'Up',
+				volume: '100',
+				orderDate: '2017-03-09 15:20:25',
+				orderRate: '112.501015',
+				sl: '0',
+				tp: '0',
+				periodDate: '2017-05-12 15:35:14',
+				periodRate: '112.645515',
+				profit: '76.00',
+				channel: 'MT5PC',
+				note: '1m-76%'
+				},{
+                orderID: '100001224',
+			    account: '55001188',
+				clientID: '22451222',
+				name: 'Zhao',
+				symbol: 'USDJPYbo',
+				type: 'Up',
+				volume: '100',
+				orderDate: '2017-03-09 15:20:25',
+				orderRate: '112.501015',
+				sl: '0',
+				tp: '0',
+				periodDate: '2017-05-12 15:35:14',
+				periodRate: '112.645515',
+				profit: '76.00',
+				channel: 'MT5PC',
+				note: '1m-76%'
+				},{
+				orderID: '100001224',
+			    account: '55001188',
+				clientID: '22451222',
+				name: 'Zhao',
+				symbol: 'USDJPYbo',
+				type: 'Up',
+				volume: '100',
+				orderDate: '2017-03-09 15:20:25',
+				orderRate: '112.501015',
+				sl: '0',
+				tp: '0',
+				periodDate: '2017-05-12 15:35:14',
+				periodRate: '112.645515',
+				profit: '76.00',
+				channel: 'MT5PC',
+				note: '1m-76%'	
+			}],
+			// 分页
+			currentPage: 2
 	   }
 	},
     components: {
 
     },
+	methods: {
+			// 饿了么分页
+			handleSizeChange(val) {
+			console.log(`每页 ${val} 条`);
+			},
+			handleCurrentChange(val) {
+				console.log(`当前页: ${val}`);
+			},
+	},	
     mounted: function(){
-
+		$('.collapse-link').on('click', function () {
+		    var ibox = $(this).closest('div.ibox');
+		    var button = $(this).find('i');
+		    var content = ibox.find('div.ibox-content');
+		    content.slideToggle(200);
+		    button.toggleClass('fa-chevron-up').toggleClass('fa-chevron-down');
+		    ibox.toggleClass('').toggleClass('border-bottom');
+		    setTimeout(function () {
+		        ibox.resize();    
+				// 会报错-->raphael
+		        ibox.find('[id^=map-]').resize();
+		    }, 50);
+		});
     }
 }
 </script>
+<style scoped>
+/*action展开菜单*/
+.ibox-content td .dropdown-menu{
+	top:0;
+}
+.ibox-content tr:last-child .dropdown-menu{
+	top:-30px;
+}
+</style>
